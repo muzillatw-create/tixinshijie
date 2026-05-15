@@ -3,13 +3,21 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: 貼心世界 API specification
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: orders
+    description: Order operations
+  - name: contact
+    description: Contact operations
+  - name: videos
+    description: Video operations
+  - name: admin
+    description: Admin operations
 paths:
   /healthz:
     get:
@@ -24,6 +32,267 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /orders:
+    post:
+      operationId: createOrder
+      tags: [orders]
+      summary: Create a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrderInput"
+      responses:
+        "201":
+          description: Order created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /orders/lookup:
+    post:
+      operationId: lookupOrder
+      tags: [orders]
+      summary: Look up order status by ID and phone verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrderLookupInput"
+      responses:
+        "200":
+          description: Order found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+        "403":
+          description: Phone verification failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Order not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /contact:
+    post:
+      operationId: sendContactMessage
+      tags: [contact]
+      summary: Send a contact message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "200":
+          description: Message sent successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /videos:
+    get:
+      operationId: listVideos
+      tags: [videos]
+      summary: List published videos
+      responses:
+        "200":
+          description: List of videos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Video"
+
+  /admin/orders:
+    get:
+      operationId: adminListOrders
+      tags: [admin]
+      summary: Admin list all orders
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: key
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of orders
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Order"
+        "403":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /admin/orders/{orderId}/ship:
+    post:
+      operationId: adminShipOrder
+      tags: [admin]
+      summary: Mark order as shipped
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ShipOrderInput"
+      responses:
+        "200":
+          description: Order shipped
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /admin/orders/{orderId}/status:
+    patch:
+      operationId: adminUpdateOrderStatus
+      tags: [admin]
+      summary: Update order status
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrderStatusUpdate"
+      responses:
+        "200":
+          description: Order updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+        "403":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /admin/videos:
+    post:
+      operationId: adminAddVideo
+      tags: [admin]
+      summary: Add a video
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VideoInput"
+      responses:
+        "201":
+          description: Video added
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Video"
+        "403":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /admin/videos/{videoId}:
+    delete:
+      operationId: adminDeleteVideo
+      tags: [admin]
+      summary: Delete a video
+      parameters:
+        - name: videoId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "403":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +303,189 @@ components:
       required:
         - status
 
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+
+    SuccessResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+      required:
+        - ok
+
+    OrderInput:
+      type: object
+      properties:
+        name:
+          type: string
+        phone:
+          type: string
+        quantity:
+          type: integer
+        storeId:
+          type: string
+        storeName:
+          type: string
+        storeBrand:
+          type: string
+        storeAddress:
+          type: ["string", "null"]
+        notes:
+          type: ["string", "null"]
+        paymentMethod:
+          type: string
+          enum: [cod, online]
+      required:
+        - name
+        - phone
+        - quantity
+        - storeId
+        - storeName
+        - storeBrand
+        - paymentMethod
+
+    OrderLookupInput:
+      type: object
+      properties:
+        id:
+          type: integer
+        phone:
+          type: string
+      required:
+        - id
+        - phone
+
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        phone:
+          type: string
+        quantity:
+          type: integer
+        storeId:
+          type: string
+        storeName:
+          type: string
+        storeBrand:
+          type: string
+        storeAddress:
+          type: ["string", "null"]
+        notes:
+          type: ["string", "null"]
+        paymentMethod:
+          type: string
+        status:
+          type: string
+          enum: [pending, confirmed, shipped, cancelled]
+        trackingNumber:
+          type: ["string", "null"]
+        bookingNote:
+          type: ["string", "null"]
+        notifiedAt:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+      required:
+        - id
+        - name
+        - phone
+        - quantity
+        - storeId
+        - storeName
+        - storeBrand
+        - paymentMethod
+        - status
+        - createdAt
+        - updatedAt
+
+    ShipOrderInput:
+      type: object
+      properties:
+        key:
+          type: string
+        trackingNumber:
+          type: string
+        bookingNote:
+          type: ["string", "null"]
+      required:
+        - key
+        - trackingNumber
+
+    OrderStatusUpdate:
+      type: object
+      properties:
+        key:
+          type: string
+        status:
+          type: string
+          enum: [pending, confirmed, shipped, cancelled]
+      required:
+        - key
+        - status
+
+    ContactInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        message:
+          type: string
+      required:
+        - name
+        - email
+        - message
+
+    Video:
+      type: object
+      properties:
+        id:
+          type: integer
+        youtubeUrl:
+          type: string
+        title:
+          type: string
+        description:
+          type: ["string", "null"]
+        published:
+          type: boolean
+        createdAt:
+          type: string
+      required:
+        - id
+        - youtubeUrl
+        - title
+        - published
+        - createdAt
+
+    VideoInput:
+      type: object
+      properties:
+        key:
+          type: string
+        youtubeUrl:
+          type: string
+        title:
+          type: string
+        description:
+          type: ["string", "null"]
+        published:
+          type: boolean
+      required:
+        - key
+        - youtubeUrl
+        - title
+        - published

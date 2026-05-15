@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "貼心世界"
+version = "1.0.0"
+id = "artifacts/tixinshijie"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21914
+
+[services.development]
+run = "pnpm --filter @workspace/tixinshijie run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tixinshijie", "run", "build" ]
+publicDir = "artifacts/tixinshijie/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21914"
+BASE_PATH = "/"
