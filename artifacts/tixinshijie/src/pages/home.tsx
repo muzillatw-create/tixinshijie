@@ -242,6 +242,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-24 px-4 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold flex items-center justify-center gap-3 text-white mb-6">
+              <span className="text-cyan-400">▶</span> 影音觀看區
+            </h2>
+            <Link href="/videos">
+              <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部影片</Button>
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos?.slice(0, 3).map((video) => {
+              const ytId = video.youtubeUrl.match(/shorts\/([^?&/]+)/)?.[1]
+                ?? video.youtubeUrl.match(/youtu\.be\/([^?&/]+)/)?.[1]
+                ?? video.youtubeUrl.match(/[?&]v=([^?&]+)/)?.[1];
+              const thumb = ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : "";
+              return (
+                <a key={video.id} href={video.youtubeUrl} target="_blank" rel="noopener noreferrer"
+                  className="bg-white/3 border border-white/10 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-colors group block">
+                  <div className="aspect-video w-full bg-black relative">
+                    {thumb && <img src={thumb} alt={video.title} className="absolute inset-0 w-full h-full object-cover" />}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
+                      <div className="h-12 w-12 rounded-full bg-cyan-500/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="h-5 w-5 text-black ml-0.5" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-white mb-1 line-clamp-2 group-hover:text-cyan-400 transition-colors">{video.title}</h3>
+                    {video.description && <p className="text-sm text-gray-500 line-clamp-2">{video.description}</p>}
+                  </div>
+                </a>
+              );
+            })}
+            {(!videos || videos.length === 0) && (
+              <div className="col-span-full text-center py-12 text-gray-500 border border-dashed border-white/20 rounded-xl">
+                目前沒有影音內容
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* How to use */}
       <section id="howto" className="py-24 px-4 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
