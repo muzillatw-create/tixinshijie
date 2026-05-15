@@ -143,7 +143,8 @@ export default function Home() {
               <div className="inline-flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
                 <div className="text-left">
                   <div className="text-xs text-gray-500">環境狀態優化貼片</div>
-                  <div className="text-sm text-white font-medium">NT${PRICE.toLocaleString()} / 盒</div>
+                  <div className="text-xs text-gray-500 line-through">NT$1,688 / 盒</div>
+                  <div className="text-sm text-cyan-400 font-bold">促銷價 NT$1,288 / 盒</div>
                 </div>
                 <div className="flex items-center gap-2 border-l border-white/10 pl-4">
                   <button
