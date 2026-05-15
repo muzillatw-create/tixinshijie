@@ -2,7 +2,7 @@ import { Layout } from "../components/layout";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
-import { Battery, Clock, Infinity as InfinityIcon, Sparkles, Droplets, Wind, Zap, ShoppingCart, ArrowRight, ChevronDown, Star, ShieldCheck, Mail, Phone, Clock as ClockIcon } from "lucide-react";
+import { Battery, Clock, Infinity as InfinityIcon, Sparkles, Droplets, Wind, Zap, ShoppingCart, ArrowRight, ChevronDown, Star, ShieldCheck, Mail, Phone, Clock as ClockIcon, Play } from "lucide-react";
 import { useSendContactMessage, useListVideos, getListVideosQueryKey } from "@workspace/api-client-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -306,8 +306,8 @@ export default function Home() {
       {/* Video Section */}
       <section className="py-24 px-4 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-3xl font-bold flex items-center gap-3 text-white">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold flex items-center justify-center gap-3 text-white mb-6">
               <span className="text-cyan-400">▶</span> 影音觀看區
             </h2>
             <Link href="/videos">
