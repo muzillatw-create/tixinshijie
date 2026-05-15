@@ -2,7 +2,7 @@ import { Layout } from "../components/layout";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
-import { Battery, Clock, Infinity as InfinityIcon, Sparkles, Droplets, Wind, Zap, CheckCircle2, ShieldCheck, Mail, Phone, Clock as ClockIcon } from "lucide-react";
+import { Battery, Clock, Infinity as InfinityIcon, Sparkles, Droplets, Wind, Zap, ShoppingCart, ArrowRight, ChevronDown, Star, ShieldCheck, Mail, Phone, Clock as ClockIcon } from "lucide-react";
 import { useSendContactMessage, useListVideos, getListVideosQueryKey } from "@workspace/api-client-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -11,9 +11,14 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { useToast } from "../hooks/use-toast";
-import productHero from "@assets/product-hero.png";
+import { useCart } from "../lib/cart-context";
+import { useState } from "react";
 import eatingFun from "@assets/eating-fun2.png";
+import productHero from "@assets/product-hero.png";
 import noSkin from "@assets/no-skin.jpg";
+import heroVideo from "@assets/mingzhiguang-video.mp4";
+
+const PRICE = 1688;
 
 const contactSchema = z.object({
   name: z.string().min(1, "請輸入姓名"),
@@ -21,8 +26,46 @@ const contactSchema = z.object({
   message: z.string().min(1, "請輸入訊息"),
 });
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } }
+};
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const features = [
+  { icon: Zap, title: "即效能量補充", desc: "專利的科技貼片在一分鐘內即可感受到明顯的不同。", color: "text-cyan-400", bg: "bg-cyan-400/10", border: "border-cyan-400/20" },
+  { icon: Clock, title: "365天持續作用", desc: "持續 24 小時使用可讓你的新陳代謝穩定。", color: "text-blue-400", bg: "bg-blue-400/10", border: "border-blue-400/20" },
+  { icon: Battery, title: "吃喝玩樂動起來", desc: "應用在各種生活物品上，效果極佳。", color: "text-green-400", bg: "bg-green-400/10", border: "border-green-400/20" },
+  { icon: InfinityIcon, title: "天馬行空的生活", desc: "貼片帶著走，想像過著神仙般的生活。", color: "text-purple-400", bg: "bg-purple-400/10", border: "border-purple-400/20" },
+];
+
+const howToSteps = [
+  { num: "01", title: "貼片撕下", desc: "貼於物品的底部，不要貼在皮膚上面。" },
+  { num: "02", title: "乾燥無水", desc: "要在乾燥的地方貼上貼片，可重複使用。" },
+  { num: "03", title: "感受效果", desc: "有含液體的物質等待一分鐘即可感受到口感的不同。" },
+  { num: "04", title: "持續使用", desc: "每片效能為一年，效果奇佳。" }
+];
+
+const testimonials = [
+  { name: "林小姐", role: "科技公司工程師", text: "女生的化妝品瓶瓶罐罐，貼片貼在底部，感覺皮膚變得很細緻，用後的效果極佳，整個人精神奕奕，是一個不錯的商品。", rating: 5 },
+  { name: "陳先生", role: "馬拉松跑者", text: "跑步的時候喝了有環境狀態優化貼片的飲料水，刹那間察覺到能量在身上，可以很輕鬆地跑完全程。", rating: 5 },
+  { name: "王太太", role: "三個孩子的媽媽", text: "身為家庭主婦，照顧小孩非常費體力，有了這個貼片，感覺思緒會非常清楚，所以也就不會那麼累了。", rating: 5 }
+];
+
+const stats = [
+  { value: "98%", label: "顧客滿意度" },
+  { value: "50,000+", label: "滿意用戶" },
+  { value: "SGS", label: "安全認證" }
+];
+
 export default function Home() {
   const { toast } = useToast();
+  const { addToCart } = useCart();
+  const [qty, setQty] = useState(1);
+
   const contactForm = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: { name: "", email: "", message: "" }
@@ -46,104 +89,137 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background pointer-events-none" />
-        
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
-              >
-                <span className="text-white">重新定義</span>
-                <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00d4ff] to-[#0080ff]">
-                  吃喝玩樂
-                </span>
-              </motion.h1>
-              
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
-              >
-                環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給
-              </motion.p>
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="mt-10 flex flex-col sm:flex-row items-center md:justify-start justify-center gap-4"
-              >
-                <Link href="/order">
-                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-[#0080ff] text-primary-foreground font-bold text-lg px-8 py-6 shadow-[0_0_20px_rgba(0,212,255,0.4)] border-0">
-                    立即訂購
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-white/20 hover:bg-white/5">
-                  了解更多
-                </Button>
-              </motion.div>
-            </div>
+      <section className="relative min-h-screen flex items-center justify-center px-4 pt-16">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/8 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/4 rounded-full blur-3xl" />
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #00ffff 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+        </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl scale-110" />
-                <img
-                  src={productHero}
-                  alt="環境狀態優化貼片"
-                  className="relative z-10 rounded-3xl shadow-2xl max-h-[520px] w-auto object-contain"
-                />
+        <div className="relative text-center max-w-4xl mx-auto w-full">
+          <motion.div initial="hidden" animate="visible" variants={container}>
+
+            <motion.div variants={item}>
+              <span className="inline-block mb-6 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-full px-4 py-1.5 text-sm font-medium">
+                ✦ 重新定義環境狀態優化貼片的思維
+              </span>
+            </motion.div>
+
+            <motion.h1 variants={item} className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              <span className="text-white">重新定義</span>
+              <br />
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                吃喝玩樂
+              </span>
+            </motion.h1>
+
+            <motion.div variants={item} className="mb-6">
+              <video
+                src={heroVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full max-w-2xl mx-auto rounded-2xl shadow-lg"
+              />
+            </motion.div>
+
+            <motion.div variants={item} className="mb-6">
+              <img src={eatingFun} alt="吃喝玩樂 環境狀態優化貼片" className="w-full max-w-2xl mx-auto rounded-2xl" />
+            </motion.div>
+
+            <motion.div variants={item} className="mb-6">
+              <img src={productHero} alt="命の光 環境狀態優化貼片" className="w-full max-w-2xl mx-auto rounded-2xl" />
+            </motion.div>
+
+            <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+              環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給。
+            </motion.p>
+
+            <motion.div variants={item} className="mb-8">
+              <div className="inline-flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
+                <div className="text-left">
+                  <div className="text-xs text-gray-500">環境狀態優化貼片</div>
+                  <div className="text-sm text-white font-medium">NT${PRICE.toLocaleString()} / 盒</div>
+                </div>
+                <div className="flex items-center gap-2 border-l border-white/10 pl-4">
+                  <button
+                    onClick={() => setQty(q => Math.max(1, q - 1))}
+                    className="w-8 h-8 rounded-full bg-white/10 hover:bg-cyan-500/20 flex items-center justify-center transition-colors text-white"
+                  >−</button>
+                  <span className="w-6 text-center font-bold text-white">{qty}</span>
+                  <button
+                    onClick={() => setQty(q => q + 1)}
+                    className="w-8 h-8 rounded-full bg-white/10 hover:bg-cyan-500/20 flex items-center justify-center transition-colors text-white"
+                  >+</button>
+                </div>
+                <button
+                  onClick={() => { addToCart(qty); toast({ title: "已加入購物車", description: `已加入 ${qty} 盒` }); }}
+                  className="bg-white/10 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/30 text-white text-sm font-medium px-4 py-2 rounded-xl transition-colors flex items-center gap-2"
+                >
+                  <ShoppingCart className="w-4 h-4" />加入購物車
+                </button>
               </div>
             </motion.div>
+
+            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link href="/order">
+                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
+                  立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Button variant="outline" size="lg" className="border-white/10 text-gray-300 hover:text-white hover:bg-white/5 px-8 py-4 text-lg h-auto">
+                了解更多 <ChevronDown className="ml-2 w-5 h-5" />
+              </Button>
+            </motion.div>
+
+            <motion.div variants={item} className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+              {stats.map(({ value, label }) => (
+                <div key={label} className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{value}</div>
+                  <div className="text-xs text-gray-500">{label}</div>
+                </div>
+              ))}
+            </motion.div>
+
+          </motion.div>
+        </div>
+      </section>
+
+      {/* No-skin Disclaimer Section */}
+      <section className="px-4 pb-8">
+        <div className="max-w-3xl mx-auto">
+          <img src={noSkin} alt="本環境狀態優化貼片不適合直接貼在人體上是無效的" className="w-full rounded-2xl shadow-lg" />
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
+              <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
+                <span className="text-red-400 text-sm font-semibold">{t}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Disclaimer */}
-      <div className="bg-destructive/10 border-y border-destructive/20 py-5 px-4">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
-          <img src={noSkin} alt="請勿直接貼於皮膚" className="h-16 w-auto rounded-lg shrink-0" />
-          <p className="text-destructive font-medium text-sm md:text-base text-center sm:text-left">
-            本環境狀態優化貼片不適合直接貼在人體上是無效的 · 本產品非醫療器材 · 不具醫療效果 · 不可替代醫療行為 · 不可直接貼人體
-          </p>
-        </div>
-      </div>
-
       {/* Features */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">產品特色</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Zap, title: "即效能量補充", desc: "專利的科技貼片在一分鐘內即可感受到明顯的不同。" },
-              { icon: Clock, title: "365天持續作用", desc: "持續 24 小時使用可讓你的新陳代謝穩定。" },
-              { icon: Battery, title: "吃喝玩樂動起來", desc: "應用在各種生活物品上，效果極佳。" },
-              { icon: InfinityIcon, title: "天馬行空的生活", desc: "貼片帶著走，想像過著神仙般的生活。" },
-            ].map((f, i) => (
-              <motion.div 
+      <section id="features" className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">產品特色</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((f, i) => (
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card/50 backdrop-blur border border-card-border p-8 rounded-2xl flex flex-col items-center text-center hover:border-primary/50 transition-colors group"
+                className={`bg-card/50 border ${f.border} p-6 rounded-2xl flex flex-col items-center text-center hover:border-opacity-80 transition-colors group`}
               >
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <f.icon className="h-8 w-8 text-primary" />
+                <div className={`h-14 w-14 rounded-full ${f.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+                  <f.icon className={`h-7 w-7 ${f.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{f.title}</h3>
-                <p className="text-muted-foreground">{f.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{f.title}</h3>
+                <p className="text-gray-400 text-sm">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -151,64 +227,44 @@ export default function Home() {
       </section>
 
       {/* How to use */}
-      <section className="py-24 relative border-t border-white/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">使用方法</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                { num: "01", icon: Sparkles, title: "貼片撕下", desc: "貼於物品的底部，不要貼在皮膚上面。" },
-                { num: "02", icon: Wind, title: "乾燥無水", desc: "要在乾燥的地方貼上貼片，可重複使用。" },
-                { num: "03", icon: Droplets, title: "感受效果", desc: "有含液體的物質等待一分鐘即可感受到口感的不同。" },
-                { num: "04", icon: ClockIcon, title: "持續使用", desc: "每片效能為一年，效果奇佳。" }
-              ].map((step, i) => (
-                <div key={i} className="relative p-6 bg-card border border-card-border rounded-xl">
-                  <div className="text-4xl font-black text-white/5 absolute top-4 right-4">{step.num}</div>
-                  <step.icon className="h-8 w-8 text-primary mb-4" />
-                  <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
-                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+      <section id="howto" className="py-24 px-4 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">使用方法</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {howToSteps.map((step, i) => (
+              <div key={i} className="relative p-6 bg-card border border-white/10 rounded-xl">
+                <div className="text-4xl font-black text-white/5 absolute top-4 right-4">{step.num}</div>
+                <div className="h-10 w-10 rounded-full bg-cyan-500/10 flex items-center justify-center mb-4">
+                  <span className="text-cyan-400 font-bold text-sm">{step.num}</span>
                 </div>
-              ))}
-            </div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 rounded-3xl bg-primary/10 blur-2xl scale-105" />
-                <img
-                  src={eatingFun}
-                  alt="吃喝玩樂生活應用"
-                  className="relative z-10 rounded-3xl shadow-2xl max-h-[420px] w-auto object-cover"
-                />
+                <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
+                <p className="text-sm text-gray-400">{step.desc}</p>
               </div>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-card/30 border-t border-white/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">用戶評價</h2>
+      <section id="testimonials" className="py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">用戶評價</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "林小姐", role: "科技公司工程師", text: "女生的化妝品瓶瓶罐罐，貼片貼在底部，感覺皮膚變得很細緻，用後的效果極佳，整個人精神奕奕，是一個不錯的商品。" },
-              { name: "陳先生", role: "馬拉松跑者", text: "跑步的時候喝了有環境狀態優化貼片的飲料水，刹那間察覺到能量在身上，可以很輕鬆地跑完全程。" },
-              { name: "王太太", role: "三個孩子的媽媽", text: "身為家庭主婦，照顧小孩非常費體力，有了這個貼片，感覺思緒會非常清楚，所以也就不會那麼累了。" }
-            ].map((t, i) => (
-              <div key={i} className="p-8 bg-background border border-white/10 rounded-2xl relative">
-                <div className="text-primary text-4xl font-serif absolute top-4 left-6 opacity-50">"</div>
-                <p className="text-muted-foreground relative z-10 pt-4 mb-6 leading-relaxed text-sm md:text-base">{t.text}</p>
+            {testimonials.map((t, i) => (
+              <div key={i} className="p-8 bg-white/3 border border-white/10 rounded-2xl relative">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: t.rating }).map((_, s) => (
+                    <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">{t.text}</p>
                 <div className="flex items-center gap-3 border-t border-white/10 pt-4">
-                  <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                  <div className="h-10 w-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">
                     {t.name[0]}
                   </div>
                   <div>
                     <div className="font-bold text-white text-sm">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                    <div className="text-xs text-gray-500">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -217,94 +273,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 border-y border-white/5 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-black text-white mb-2">98<span className="text-primary">%</span></div>
-              <div className="text-muted-foreground font-medium">顧客滿意度</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black text-white mb-2">50,000<span className="text-primary">+</span></div>
-              <div className="text-muted-foreground font-medium">滿意用戶</div>
-            </div>
-            <div>
-              <div className="flex justify-center mb-2">
-                <ShieldCheck className="h-12 w-12 text-primary" />
-              </div>
-              <div className="text-xl font-bold text-white mb-1">SGS</div>
-              <div className="text-muted-foreground font-medium">安全認證</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Details CTA */}
-      <section className="py-24 text-center">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">環境狀態優化貼片</h2>
-          <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 mb-8">
-            NT$ 1,688 <span className="text-xl text-muted-foreground font-medium">/ 盒</span>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/80 flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" /> 效能一年
-            </span>
-            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/80 flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" /> 3-5工作天到貨
-            </span>
-            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/80 flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" /> SGS安全認證
-            </span>
-            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/80 flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" /> 30天退換保障
-            </span>
-          </div>
-
-          <Link href="/order">
-            <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-[#0080ff] text-primary-foreground font-bold text-xl px-12 py-8 shadow-[0_0_30px_rgba(0,212,255,0.3)] border-0 rounded-full">
-              前往結帳
-            </Button>
-          </Link>
-        </div>
-      </section>
-
       {/* Video Section */}
-      <section className="py-24 bg-card/30 border-t border-white/5">
-        <div className="container mx-auto px-4">
+      <section className="py-24 px-4 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-3xl font-bold flex items-center gap-3">
-              <span className="text-primary">▶</span> 影音觀看區
+            <h2 className="text-3xl font-bold flex items-center gap-3 text-white">
+              <span className="text-cyan-400">▶</span> 影音觀看區
             </h2>
             <Link href="/videos">
-              <Button variant="outline" className="border-white/20">查看全部</Button>
+              <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部</Button>
             </Link>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {videos?.slice(0, 3).map((video) => (
-              <div key={video.id} className="bg-background border border-white/10 rounded-xl overflow-hidden">
+              <div key={video.id} className="bg-white/3 border border-white/10 rounded-xl overflow-hidden">
                 <div className="aspect-video w-full bg-black">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src={video.youtubeUrl.replace("watch?v=", "embed/")} 
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={video.youtubeUrl.replace("watch?v=", "embed/")}
                     title={video.title}
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-lg text-white mb-2 line-clamp-2">{video.title}</h3>
-                  {video.description && <p className="text-sm text-muted-foreground line-clamp-2">{video.description}</p>}
+                  <h3 className="font-bold text-white mb-1 line-clamp-2">{video.title}</h3>
+                  {video.description && <p className="text-sm text-gray-500 line-clamp-2">{video.description}</p>}
                 </div>
               </div>
             ))}
             {(!videos || videos.length === 0) && (
-              <div className="col-span-full text-center py-12 text-muted-foreground border border-dashed border-white/20 rounded-xl">
+              <div className="col-span-full text-center py-12 text-gray-500 border border-dashed border-white/20 rounded-xl">
                 目前沒有影音內容
               </div>
             )}
@@ -313,15 +314,15 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl">
+      <section id="contact" className="py-24 px-4 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-bold mb-8">聯絡我們</h2>
-              <div className="space-y-6 text-muted-foreground">
+              <h2 className="text-3xl font-bold mb-8 text-white">聯絡我們</h2>
+              <div className="space-y-6 text-gray-400">
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-primary" />
+                  <div className="h-12 w-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-cyan-400" />
                   </div>
                   <div>
                     <div className="font-medium text-white">電話</div>
@@ -329,8 +330,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-primary" />
+                  <div className="h-12 w-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-cyan-400" />
                   </div>
                   <div>
                     <div className="font-medium text-white">Email</div>
@@ -338,8 +339,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <ClockIcon className="h-5 w-5 text-primary" />
+                  <div className="h-12 w-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                    <ClockIcon className="h-5 w-5 text-cyan-400" />
                   </div>
                   <div>
                     <div className="font-medium text-white">服務時間</div>
@@ -348,50 +349,32 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
-            <div className="bg-card p-8 rounded-2xl border border-card-border">
+
+            <div className="bg-white/3 p-8 rounded-2xl border border-white/10">
               <Form {...contactForm}>
                 <form onSubmit={contactForm.handleSubmit(onSubmitContact)} className="space-y-4">
-                  <FormField
-                    control={contactForm.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/80">姓名</FormLabel>
-                        <FormControl>
-                          <Input placeholder="王大明" className="bg-background/50 border-white/10" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={contactForm.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/80">電子郵件</FormLabel>
-                        <FormControl>
-                          <Input placeholder="example@email.com" className="bg-background/50 border-white/10" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={contactForm.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/80">訊息內容</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder="請輸入您的問題或建議..." className="bg-background/50 border-white/10 min-h-[120px]" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" className="w-full bg-primary hover:bg-[#0080ff] text-primary-foreground font-bold mt-4" disabled={sendContact.isPending}>
+                  <FormField control={contactForm.control} name="name" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-white/80">姓名</FormLabel>
+                      <FormControl><Input placeholder="王大明" className="bg-white/5 border-white/10" {...field} /></FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <FormField control={contactForm.control} name="email" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-white/80">電子郵件</FormLabel>
+                      <FormControl><Input placeholder="example@email.com" className="bg-white/5 border-white/10" {...field} /></FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <FormField control={contactForm.control} name="message" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-white/80">訊息內容</FormLabel>
+                      <FormControl><Textarea placeholder="請輸入您的問題或建議..." className="bg-white/5 border-white/10 min-h-[120px]" {...field} /></FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <Button type="submit" className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold mt-4" disabled={sendContact.isPending}>
                     {sendContact.isPending ? "發送中..." : "送出訊息"}
                   </Button>
                 </form>
