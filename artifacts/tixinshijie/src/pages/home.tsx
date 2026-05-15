@@ -17,6 +17,8 @@ import eatingFun from "@assets/eating-fun2.png";
 import productHero from "@assets/product-hero.png";
 import noSkin from "@assets/no-skin.jpg";
 import heroVideo from "@assets/mingzhiguang-video.mp4";
+import glowingHandVideo from "@assets/glowing-hand-video.mp4";
+import grokVideo from "@assets/grok_video.mp4";
 
 const PRICE = 1688;
 
@@ -223,6 +225,34 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Glowing hand video */}
+      <section className="py-8 px-4 flex justify-center">
+        <div className="w-full max-w-sm flex justify-center">
+          <video
+            src={glowingHandVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full max-h-[225px] object-contain rounded-2xl"
+          />
+        </div>
+      </section>
+
+      {/* Grok video */}
+      <section className="py-8 px-4 flex justify-center">
+        <div className="w-full max-w-sm">
+          <video
+            src={grokVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full max-h-[225px] object-contain rounded-2xl shadow-[0_0_60px_rgba(34,211,238,0.3)]"
+          />
         </div>
       </section>
 
