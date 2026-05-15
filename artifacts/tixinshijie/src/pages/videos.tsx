@@ -1,7 +1,7 @@
 import { Layout } from "../components/layout";
 import { useListVideos } from "@workspace/api-client-react";
 import { Play, ArrowLeft, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 
@@ -102,6 +102,10 @@ function PlaceholderCard({ index }: { index: number }) {
 
 export default function VideosPage() {
   const { data: videos, isLoading } = useListVideos();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
 
   const realVideos = videos ?? [];
   const placeholderCount = Math.max(0, TOTAL_SLOTS - realVideos.length);
