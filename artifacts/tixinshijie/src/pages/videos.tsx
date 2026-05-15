@@ -31,43 +31,28 @@ function getThumbnail(url: string): string {
 function VideoCard({ video }: {
   video: { id: number; youtubeUrl: string; title: string; description: string | null; createdAt: string }
 }) {
-  const [playing, setPlaying] = useState(false);
-  const embedUrl = getEmbedUrl(video.youtubeUrl);
   const thumbnail = getThumbnail(video.youtubeUrl);
 
   return (
-    <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all group">
-      <div
-        className="aspect-video w-full bg-black relative cursor-pointer"
-        onClick={() => setPlaying(true)}
-      >
-        {playing && embedUrl ? (
-          <iframe
-            width="100%"
-            height="100%"
-            src={embedUrl}
-            title={video.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
+    <a
+      href={video.youtubeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-[#0d0d1a] border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all group block"
+    >
+      <div className="aspect-video w-full bg-black relative">
+        {thumbnail && (
+          <img
+            src={thumbnail}
+            alt={video.title}
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        ) : (
-          <>
-            {thumbnail && (
-              <img
-                src={thumbnail}
-                alt={video.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            )}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-              <div className="h-14 w-14 rounded-full bg-cyan-500/90 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.5)] group-hover:scale-110 transition-transform">
-                <Play className="h-6 w-6 text-black ml-1" />
-              </div>
-            </div>
-          </>
         )}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+          <div className="h-14 w-14 rounded-full bg-cyan-500/90 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.5)] group-hover:scale-110 transition-transform">
+            <Play className="h-6 w-6 text-black ml-1" />
+          </div>
+        </div>
       </div>
       <div className="p-4">
         <h3 className="font-bold text-white mb-1 line-clamp-2 group-hover:text-cyan-400 transition-colors text-sm">
@@ -80,7 +65,7 @@ function VideoCard({ video }: {
           {new Date(video.createdAt).toLocaleDateString('zh-TW')}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
