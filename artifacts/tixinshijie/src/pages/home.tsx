@@ -11,6 +11,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { useToast } from "../hooks/use-toast";
+import productHero from "@assets/product-hero.png";
+import eatingFun from "@assets/eating-fun2.png";
+import noSkin from "@assets/no-skin.jpg";
 
 const contactSchema = z.object({
   name: z.string().min(1, "請輸入姓名"),
@@ -43,55 +46,78 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
+      <section className="relative pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background pointer-events-none" />
         
-        <div className="container relative z-10 mx-auto px-4 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
-          >
-            <span className="text-white">重新定義</span>
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00d4ff] to-[#0080ff]">
-              吃喝玩樂
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-          >
-            環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link href="/order">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-[#0080ff] text-primary-foreground font-bold text-lg px-8 py-6 shadow-[0_0_20px_rgba(0,212,255,0.4)] border-0">
-                立即訂購
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-white/20 hover:bg-white/5">
-              了解更多
-            </Button>
-          </motion.div>
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
+              >
+                <span className="text-white">重新定義</span>
+                <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00d4ff] to-[#0080ff]">
+                  吃喝玩樂
+                </span>
+              </motion.h1>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
+              >
+                環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給
+              </motion.p>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="mt-10 flex flex-col sm:flex-row items-center md:justify-start justify-center gap-4"
+              >
+                <Link href="/order">
+                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-[#0080ff] text-primary-foreground font-bold text-lg px-8 py-6 shadow-[0_0_20px_rgba(0,212,255,0.4)] border-0">
+                    立即訂購
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-white/20 hover:bg-white/5">
+                  了解更多
+                </Button>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl scale-110" />
+                <img
+                  src={productHero}
+                  alt="環境狀態優化貼片"
+                  className="relative z-10 rounded-3xl shadow-2xl max-h-[520px] w-auto object-contain"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Disclaimer */}
-      <div className="bg-destructive/10 border-y border-destructive/20 py-4 px-4 text-center">
-        <p className="text-destructive font-medium text-sm md:text-base max-w-4xl mx-auto">
-          本環境狀態優化貼片不適合直接貼在人體上是無效的 · 本產品非醫療器材 · 不具醫療效果 · 不可替代醫療行為 · 不可直接貼人體
-        </p>
+      <div className="bg-destructive/10 border-y border-destructive/20 py-5 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
+          <img src={noSkin} alt="請勿直接貼於皮膚" className="h-16 w-auto rounded-lg shrink-0" />
+          <p className="text-destructive font-medium text-sm md:text-base text-center sm:text-left">
+            本環境狀態優化貼片不適合直接貼在人體上是無效的 · 本產品非醫療器材 · 不具醫療效果 · 不可替代醫療行為 · 不可直接貼人體
+          </p>
+        </div>
       </div>
 
       {/* Features */}
@@ -128,20 +154,37 @@ export default function Home() {
       <section className="py-24 relative border-t border-white/5">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">使用方法</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { num: "01", icon: Sparkles, title: "貼片撕下", desc: "貼於物品的底部，不要貼在皮膚上面。" },
-              { num: "02", icon: Wind, title: "乾燥無水", desc: "要在乾燥的地方貼上貼片，可重複使用。" },
-              { num: "03", icon: Droplets, title: "感受效果", desc: "有含液體的物質等待一分鐘即可感受到口感的不同。" },
-              { num: "04", icon: ClockIcon, title: "持續使用", desc: "每片效能為一年，效果奇佳。" }
-            ].map((step, i) => (
-              <div key={i} className="relative p-6 bg-card border border-card-border rounded-xl">
-                <div className="text-4xl font-black text-white/5 absolute top-4 right-4">{step.num}</div>
-                <step.icon className="h-8 w-8 text-primary mb-4" />
-                <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                { num: "01", icon: Sparkles, title: "貼片撕下", desc: "貼於物品的底部，不要貼在皮膚上面。" },
+                { num: "02", icon: Wind, title: "乾燥無水", desc: "要在乾燥的地方貼上貼片，可重複使用。" },
+                { num: "03", icon: Droplets, title: "感受效果", desc: "有含液體的物質等待一分鐘即可感受到口感的不同。" },
+                { num: "04", icon: ClockIcon, title: "持續使用", desc: "每片效能為一年，效果奇佳。" }
+              ].map((step, i) => (
+                <div key={i} className="relative p-6 bg-card border border-card-border rounded-xl">
+                  <div className="text-4xl font-black text-white/5 absolute top-4 right-4">{step.num}</div>
+                  <step.icon className="h-8 w-8 text-primary mb-4" />
+                  <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 rounded-3xl bg-primary/10 blur-2xl scale-105" />
+                <img
+                  src={eatingFun}
+                  alt="吃喝玩樂生活應用"
+                  className="relative z-10 rounded-3xl shadow-2xl max-h-[420px] w-auto object-cover"
+                />
               </div>
-            ))}
+            </motion.div>
           </div>
         </div>
       </section>
