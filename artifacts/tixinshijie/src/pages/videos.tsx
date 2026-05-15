@@ -1,7 +1,9 @@
 import { Layout } from "../components/layout";
 import { useListVideos } from "@workspace/api-client-react";
-import { Play } from "lucide-react";
+import { Play, ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
+import { Button } from "../components/ui/button";
 
 function getYouTubeId(url: string): string | null {
   if (!url) return null;
@@ -81,6 +83,15 @@ export default function VideosPage() {
   return (
     <Layout>
       <div className="max-w-5xl mx-auto px-4 py-20 min-h-[80vh]">
+        <div className="mb-8">
+          <Link href="/">
+            <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              返回首頁
+            </Button>
+          </Link>
+        </div>
+
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-cyan-500/10 text-cyan-400 mb-6">
             <Play className="h-8 w-8 ml-1" />
