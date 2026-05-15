@@ -189,20 +189,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* No-skin Disclaimer Section */}
-      <section className="px-4 pb-8">
-        <div className="max-w-3xl mx-auto">
-          <img src={noSkin} alt="本環境狀態優化貼片不適合直接貼在人體上是無效的" className="w-full rounded-2xl shadow-lg" />
-          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-            {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
-              <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
-                <span className="text-red-400 text-sm font-semibold">{t}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features */}
       <section id="features" className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
@@ -269,6 +255,20 @@ export default function Home() {
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
                 <p className="text-sm text-gray-400">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* No-skin Disclaimer Section */}
+      <section className="px-4 pb-8">
+        <div className="max-w-3xl mx-auto">
+          <img src={noSkin} alt="本環境狀態優化貼片不適合直接貼在人體上是無效的" className="w-full rounded-2xl shadow-lg" />
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
+              <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
+                <span className="text-red-400 text-sm font-semibold">{t}</span>
               </div>
             ))}
           </div>
