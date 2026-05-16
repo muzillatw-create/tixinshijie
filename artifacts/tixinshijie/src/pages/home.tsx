@@ -172,6 +172,11 @@ export default function Home() {
                   立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
+              <a href="https://youtu.be/WGOwMvfe94k" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group">
+                  <Play className="mr-2 w-5 h-5" />貼片使用方式和說明
+                </Button>
+              </a>
               <Button variant="outline" size="lg" className="border-white/10 text-gray-300 hover:text-white hover:bg-white/5 px-8 py-4 text-lg h-auto">
                 了解更多 <ChevronDown className="ml-2 w-5 h-5" />
               </Button>
