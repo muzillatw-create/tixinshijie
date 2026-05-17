@@ -6,3 +6,9 @@ id = "wTpjqLfWLk7s4Ej7C6jkc"
 uri = "file://attached_assets/qrcode-tixinshijie.png"
 type = "image"
 title = "貼心世界 QR Code"
+
+[[outputs]]
+id = "qQ6HgvRwm8amhgXCFoRgy"
+uri = "file://attached_assets/qrcode-tixinshijie-new.png"
+type = "image"
+title = "新 QR Code — 貼心世界"
