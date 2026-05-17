@@ -255,6 +255,40 @@ export default function Home() {
             <h2 className="text-3xl font-bold flex items-center justify-center gap-3 text-white mb-6">
               <span className="text-cyan-400">▶</span> 影音觀看區
             </h2>
+          </div>
+          {videos && videos.length > 0 && (
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+              {videos.slice(0, 6).map((video) => {
+                const id = (() => {
+                  const s = video.youtubeUrl.match(/youtube\.com\/shorts\/([^?&/]+)/);
+                  if (s) return s[1];
+                  const b = video.youtubeUrl.match(/youtu\.be\/([^?&/]+)/);
+                  if (b) return b[1];
+                  const w = video.youtubeUrl.match(/[?&]v=([^?&]+)/);
+                  if (w) return w[1];
+                  return null;
+                })();
+                const thumb = id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : "";
+                return (
+                  <a key={video.id} href={video.youtubeUrl} target="_blank" rel="noopener noreferrer"
+                    className="bg-[#0d0d1a] border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all group block">
+                    <div className="aspect-video w-full bg-black relative">
+                      {thumb && <img src={thumb} alt={video.title} className="absolute inset-0 w-full h-full object-cover" />}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                        <div className="h-12 w-12 rounded-full bg-cyan-500/90 flex items-center justify-center shadow-[0_0_24px_rgba(34,211,238,0.4)] group-hover:scale-110 transition-transform">
+                          <Play className="h-5 w-5 text-black ml-1" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3">
+                      <p className="text-sm font-medium text-white line-clamp-2 group-hover:text-cyan-400 transition-colors">{video.title}</p>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          )}
+          <div className="text-center">
             <Link href="/videos">
               <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部影片</Button>
             </Link>
