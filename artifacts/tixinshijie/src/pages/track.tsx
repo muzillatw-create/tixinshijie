@@ -7,6 +7,7 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { useLookupOrder } from "@workspace/api-client-react";
 import { Search, Package, MapPin, CreditCard, Calendar } from "lucide-react";
+import { useSearch } from "wouter";
 
 const trackSchema = z.object({
   id: z.coerce.number().min(1, "請輸入訂單編號"),
@@ -22,9 +23,13 @@ const statusMap: Record<string, { label: string, color: string }> = {
 };
 
 export default function TrackPage() {
+  const search = useSearch();
+  const params = new URLSearchParams(search);
+  const orderIdFromUrl = params.get("orderId");
+
   const form = useForm<z.infer<typeof trackSchema>>({
     resolver: zodResolver(trackSchema),
-    defaultValues: { id: undefined, phone: "" }
+    defaultValues: { id: orderIdFromUrl ? Number(orderIdFromUrl) : undefined, phone: "" }
   });
 
   const lookup = useLookupOrder();
