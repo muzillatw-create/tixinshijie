@@ -112,7 +112,7 @@ export default function Home() {
               <span className="text-white">重新定義</span>
               <br />
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                吃喝玩樂
+                Honey
               </span>
             </motion.h1>
 
