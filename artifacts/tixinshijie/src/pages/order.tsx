@@ -247,7 +247,7 @@ export default function OrderPage() {
                     <div className="text-sm text-muted-foreground">效能一年 / 專利科技</div>
                   </div>
                   <div className="text-right">
-                    <div className="font-mono">NT$ 1,688</div>
+                    <div className="font-mono">NT$ 1,288</div>
                     <div className="text-sm text-muted-foreground">x {currentQuantity}</div>
                   </div>
                 </div>
