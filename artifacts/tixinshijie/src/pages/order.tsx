@@ -46,8 +46,12 @@ export default function OrderPage() {
   const onSubmit = (data: z.infer<typeof orderSchema>) => {
     createOrder.mutate({ data }, {
       onSuccess: (res) => {
-        setSuccessOrderId(res.id);
         setQuantity(1); // reset cart
+        if (data.paymentMethod === "online") {
+          window.location.href = `/api/payment/form/${res.id}`;
+        } else {
+          setSuccessOrderId(res.id);
+        }
       }
     });
   };
