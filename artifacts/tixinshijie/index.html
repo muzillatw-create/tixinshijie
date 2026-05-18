@@ -20,6 +20,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        var host = window.location.hostname;
+        if (host.endsWith('.tw')) {
+          document.title = '哈尼水晶世界 — 貼心世界';
+          var desc = document.querySelector('meta[name="description"]');
+          if (desc) desc.setAttribute('content', '哈尼水晶世界，貼心世界旗下品牌。環境狀態優化貼片，讓您的生活更美好。');
+          var ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) ogTitle.setAttribute('content', '哈尼水晶世界 — 貼心世界');
+          var ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) ogDesc.setAttribute('content', '哈尼水晶世界，貼心世界旗下品牌。環境狀態優化貼片，讓您的生活更美好。');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
