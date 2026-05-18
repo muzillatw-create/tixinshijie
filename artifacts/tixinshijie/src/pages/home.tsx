@@ -20,7 +20,7 @@ import heroVideo from "@assets/mingzhiguang-video.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/grok_video.mp4";
 
-const PRICE = 1688;
+const PRICE = 1288;
 
 const contactSchema = z.object({
   name: z.string().min(1, "請輸入姓名"),

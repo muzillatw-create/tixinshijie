@@ -62,7 +62,7 @@ router.get("/payment/form/:orderId", async (req, res): Promise<void> => {
   const pad = (n: number) => String(n).padStart(2, "0");
   const tradeDate = `${now.getFullYear()}/${pad(now.getMonth() + 1)}/${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
 
-  const amount = (1688 * order.quantity).toString();
+  const amount = (1288 * order.quantity).toString();
 
   const params: Record<string, string> = {
     MerchantID: MERCHANT_ID,

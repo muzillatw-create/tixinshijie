@@ -78,7 +78,7 @@ export default function OrderPage() {
     );
   }
 
-  const pricePerItem = 1688;
+  const pricePerItem = 1288;
   const currentQuantity = form.watch("quantity") || 1;
   const totalPrice = pricePerItem * currentQuantity;
 
