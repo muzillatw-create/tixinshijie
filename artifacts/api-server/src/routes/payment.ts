@@ -58,16 +58,9 @@ router.get("/payment/form/:orderId", async (req, res): Promise<void> => {
 
   const baseUrl = getReturnUrl();
   const tradeNo = `TX${Date.now()}`.slice(0, 20);
-  const tradeDate = new Date().toLocaleString("zh-TW", {
-    timeZone: "Asia/Taipei",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  }).replace(/\//g, "/").replace(",", "");
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Taipei" }));
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const tradeDate = `${now.getFullYear()}/${pad(now.getMonth() + 1)}/${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
 
   const amount = (1688 * order.quantity).toString();
 

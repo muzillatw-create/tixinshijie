@@ -15,6 +15,7 @@ const trackSchema = z.object({
 
 const statusMap: Record<string, { label: string, color: string }> = {
   pending: { label: "待確認", color: "text-yellow-500 bg-yellow-500/10 border-yellow-500/20" },
+  paid: { label: "已付款", color: "text-cyan-500 bg-cyan-500/10 border-cyan-500/20" },
   confirmed: { label: "已確認", color: "text-blue-500 bg-blue-500/10 border-blue-500/20" },
   shipped: { label: "已出貨", color: "text-green-500 bg-green-500/10 border-green-500/20" },
   cancelled: { label: "已取消", color: "text-red-500 bg-red-500/10 border-red-500/20" },

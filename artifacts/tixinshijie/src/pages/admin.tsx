@@ -124,6 +124,7 @@ function OrdersTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
             <SelectContent>
               <SelectItem value="all">全部訂單</SelectItem>
               <SelectItem value="pending">待確認</SelectItem>
+              <SelectItem value="paid">已付款</SelectItem>
               <SelectItem value="confirmed">已確認</SelectItem>
               <SelectItem value="shipped">已出貨</SelectItem>
               <SelectItem value="cancelled">已取消</SelectItem>
@@ -162,6 +163,7 @@ function OrdersTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="pending">待確認</SelectItem>
+                      <SelectItem value="paid">已付款</SelectItem>
                       <SelectItem value="confirmed">已確認</SelectItem>
                       <SelectItem value="shipped">已出貨</SelectItem>
                       <SelectItem value="cancelled">已取消</SelectItem>
