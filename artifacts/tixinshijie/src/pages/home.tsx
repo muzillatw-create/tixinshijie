@@ -17,8 +17,8 @@ import newVideo1 from "@assets/grok_video_2026-05-19-22-01-58_1779204090243.mp4"
 import newVideo1b from "@assets/grok_video_2026-05-19-22-49-05_1779204157655.mp4";
 import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
 import newVideo3 from "@assets/grok_video_2026-05-19-22-49-05_1779203629246.mp4";
-import glowingHandVideo from "@assets/grok_video_2026-05-19-22-46-05_1779204242177.mp4";
-import grokVideo from "@assets/grok_video.mp4";
+import glowingHandVideo from "@assets/glowing-hand-video.mp4";
+import grokVideo from "@assets/grok_video_2026-05-19-22-46-05_1779204242177.mp4";
 
 const PRICE = 1288;
 
