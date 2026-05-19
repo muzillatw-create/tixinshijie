@@ -13,7 +13,6 @@ import { Textarea } from "../components/ui/textarea";
 import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
-import newVideo1 from "@assets/grok_video_2026-05-19-22-01-58_1779203629243.mp4";
 import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
 import newVideo3 from "@assets/grok_video_2026-05-19-22-49-05_1779203629246.mp4";
 import heroVideo from "@assets/mingzhiguang-video.mp4";
@@ -138,10 +137,6 @@ export default function Home() {
                 playsInline
                 className="w-full max-w-2xl mx-auto rounded-2xl shadow-lg"
               />
-            </motion.div>
-
-            <motion.div variants={item} className="mb-6">
-              <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
