@@ -16,7 +16,6 @@ import { useState } from "react";
 import newVideo1 from "@assets/grok_video_2026-05-19-22-01-58_1779204090243.mp4";
 import newVideo1b from "@assets/grok_video_2026-05-19-22-49-05_1779204157655.mp4";
 import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
-import newVideo3 from "@assets/grok_video_2026-05-19-22-49-05_1779203629246.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/grok_video_2026-05-19-22-46-05_1779204242177.mp4";
 
@@ -282,7 +281,6 @@ export default function Home() {
       {/* No-skin Disclaimer Section */}
       <section className="px-4 pb-8">
         <div className="max-w-3xl mx-auto">
-          <video src={newVideo3} autoPlay muted loop playsInline className="w-full rounded-2xl shadow-lg" />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
               <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
