@@ -13,9 +13,9 @@ import { Textarea } from "../components/ui/textarea";
 import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
-import eatingFun from "@assets/eating-fun2.png";
-import productHero from "@assets/product-hero.png";
-import noSkin from "@assets/no-skin.jpg";
+import newVideo1 from "@assets/grok_video_2026-05-19-22-01-58_1779203629243.mp4";
+import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
+import newVideo3 from "@assets/grok_video_2026-05-19-22-49-05_1779203629246.mp4";
 import heroVideo from "@assets/mingzhiguang-video.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/grok_video.mp4";
@@ -141,11 +141,11 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
-              <img src={eatingFun} alt="吃喝玩樂 環境狀態優化貼片" className="w-full max-w-2xl mx-auto rounded-2xl" />
+              <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
-              <img src={productHero} alt="命の光 環境狀態優化貼片" className="w-full max-w-2xl mx-auto rounded-2xl" />
+              <video src={newVideo2} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -289,7 +289,7 @@ export default function Home() {
       {/* No-skin Disclaimer Section */}
       <section className="px-4 pb-8">
         <div className="max-w-3xl mx-auto">
-          <img src={noSkin} alt="本環境狀態優化貼片不適合直接貼在人體上是無效的" className="w-full rounded-2xl shadow-lg" />
+          <video src={newVideo3} autoPlay muted loop playsInline className="w-full rounded-2xl shadow-lg" />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
               <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
