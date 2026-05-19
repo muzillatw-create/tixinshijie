@@ -48,11 +48,6 @@ function VideoCard({ video }: {
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-          <div className="h-14 w-14 rounded-full bg-cyan-500/90 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.5)] group-hover:scale-110 transition-transform">
-            <Play className="h-6 w-6 text-black ml-1" />
-          </div>
-        </div>
       </div>
       <div className="p-4">
         <h3 className="font-bold text-white mb-1 line-clamp-2 group-hover:text-cyan-400 transition-colors text-sm">
