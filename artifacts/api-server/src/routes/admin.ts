@@ -155,6 +155,30 @@ router.post("/admin/videos", async (req, res): Promise<void> => {
   res.status(201).json(formatVideo(video));
 });
 
+router.patch("/admin/videos/:videoId", async (req, res): Promise<void> => {
+  const id = parseInt(req.params.videoId as string, 10);
+  const key = req.query.key;
+  if (key !== ADMIN_KEY) {
+    res.status(403).json({ error: "Unauthorized" });
+    return;
+  }
+  const { title } = req.body as { title?: string };
+  if (!title) {
+    res.status(400).json({ error: "title required" });
+    return;
+  }
+  const [video] = await db
+    .update(videosTable)
+    .set({ title })
+    .where(eq(videosTable.id, id))
+    .returning();
+  if (!video) {
+    res.status(404).json({ error: "Video not found" });
+    return;
+  }
+  res.json(formatVideo(video));
+});
+
 router.delete("/admin/videos/:videoId", async (req, res): Promise<void> => {
   const rawId = Array.isArray(req.params.videoId) ? req.params.videoId[0] : req.params.videoId;
   const params = AdminDeleteVideoParams.safeParse({ videoId: parseInt(rawId, 10) });
