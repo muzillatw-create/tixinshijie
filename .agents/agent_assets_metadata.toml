@@ -1,3 +1,8 @@
 uploads = []
 generated = []
-outputs = []
+
+[[outputs]]
+id = "0aPMetG4Rb0DcBOhQfd7S"
+uri = "file://attached_assets/facebook-qrcode.png"
+type = "image"
+title = "Facebook QR Code — facebook.com/xinan5788"
