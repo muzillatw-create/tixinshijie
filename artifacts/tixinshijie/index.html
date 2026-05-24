@@ -25,15 +25,10 @@
       (function() {
         var host = window.location.hostname;
         if (host.endsWith('.tw')) {
-          document.title = '哈妮水晶世界 — 貼心世界';
-          var desc = document.querySelector('meta[name="description"]');
-          if (desc) desc.setAttribute('content', '哈妮水晶世界，貼心世界旗下品牌。環境狀態優化貼片，讓您的生活更美好。');
-          var ogTitle = document.querySelector('meta[property="og:title"]');
-          if (ogTitle) ogTitle.setAttribute('content', '哈妮水晶世界 — 貼心世界');
-          var ogDesc = document.querySelector('meta[property="og:description"]');
-          if (ogDesc) ogDesc.setAttribute('content', '哈妮水晶世界，貼心世界旗下品牌。環境狀態優化貼片，讓您的生活更美好。');
+          var robots = document.querySelector('meta[name="robots"]');
+          if (robots) robots.setAttribute('content', 'noindex, nofollow');
           var canonical = document.querySelector('link[rel="canonical"]');
-          if (canonical) canonical.setAttribute('href', 'https://xn--rhqt44buwpwnv.tw/');
+          if (canonical) canonical.setAttribute('href', 'https://xn--rhqt44buwpwnv.com/');
         }
       })();
     </script>
