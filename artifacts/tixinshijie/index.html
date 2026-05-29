@@ -24,7 +24,8 @@
     <script>
       (function() {
         var host = window.location.hostname;
-        if (host.endsWith('.tw')) {
+        var isNonCanonical = host.endsWith('.tw') || host.endsWith('.replit.app') || host.endsWith('.replit.dev');
+        if (isNonCanonical) {
           var robots = document.querySelector('meta[name="robots"]');
           if (robots) robots.setAttribute('content', 'noindex, nofollow');
           var canonical = document.querySelector('link[rel="canonical"]');
