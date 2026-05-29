@@ -6,3 +6,9 @@ id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"
 type = "image"
 title = "Facebook QR Code（含 F 圖示）"
+
+[[outputs]]
+id = "yuXKmZXFnpB7s8dUBsOa1"
+uri = "file://artifacts/tixinshijie/public/tixinshijie-qrcode.png"
+type = "image"
+title = "貼心世界.com QR Code"
