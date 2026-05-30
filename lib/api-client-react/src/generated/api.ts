@@ -24,6 +24,7 @@ import type {
   ContactInput,
   ErrorResponse,
   HealthStatus,
+  ListVideosParams,
   Order,
   OrderInput,
   OrderLookupInput,
@@ -337,20 +338,27 @@ export const useSendContactMessage = <TError = ErrorType<ErrorResponse>,
       return useMutation(getSendContactMessageMutationOptions(options));
     }
 
-export const getListVideosUrl = () => {
+export const getListVideosUrl = (params?: ListVideosParams,) => {
+  const normalizedParams = new URLSearchParams();
 
+  Object.entries(params || {}).forEach(([key, value]) => {
 
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? 'null' : value.toString())
+    }
+  });
 
+  const stringifiedParams = normalizedParams.toString();
 
-  return `/api/videos`
+  return stringifiedParams.length > 0 ? `/api/videos?${stringifiedParams}` : `/api/videos`
 }
 
 /**
  * @summary List published videos
  */
-export const listVideos = async ( options?: RequestInit): Promise<Video[]> => {
+export const listVideos = async (params?: ListVideosParams, options?: RequestInit): Promise<Video[]> => {
 
-  return customFetch<Video[]>(getListVideosUrl(),
+  return customFetch<Video[]>(getListVideosUrl(params),
   {
     ...options,
     method: 'GET'
@@ -363,23 +371,23 @@ export const listVideos = async ( options?: RequestInit): Promise<Video[]> => {
 
 
 
-export const getListVideosQueryKey = () => {
+export const getListVideosQueryKey = (params?: ListVideosParams,) => {
     return [
-    `/api/videos`
+    `/api/videos`, ...(params ? [params] : [])
     ] as const;
     }
 
 
-export const getListVideosQueryOptions = <TData = Awaited<ReturnType<typeof listVideos>>, TError = ErrorType<unknown>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listVideos>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+export const getListVideosQueryOptions = <TData = Awaited<ReturnType<typeof listVideos>>, TError = ErrorType<unknown>>(params?: ListVideosParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listVideos>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
 ) => {
 
 const {query: queryOptions, request: requestOptions} = options ?? {};
 
-  const queryKey =  queryOptions?.queryKey ?? getListVideosQueryKey();
+  const queryKey =  queryOptions?.queryKey ?? getListVideosQueryKey(params);
 
 
 
-    const queryFn: QueryFunction<Awaited<ReturnType<typeof listVideos>>> = ({ signal }) => listVideos({ signal, ...requestOptions });
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listVideos>>> = ({ signal }) => listVideos(params, { signal, ...requestOptions });
 
 
 
@@ -397,11 +405,11 @@ export type ListVideosQueryError = ErrorType<unknown>
  */
 
 export function useListVideos<TData = Awaited<ReturnType<typeof listVideos>>, TError = ErrorType<unknown>>(
-  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listVideos>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+ params?: ListVideosParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listVideos>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
 
  ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
 
-  const queryOptions = getListVideosQueryOptions(options)
+  const queryOptions = getListVideosQueryOptions(params,options)
 
   const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
 

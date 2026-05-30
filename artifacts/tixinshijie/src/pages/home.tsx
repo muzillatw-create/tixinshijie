@@ -2,7 +2,7 @@ import { Layout } from "../components/layout";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
-import { Battery, Clock, Infinity as InfinityIcon, Sparkles, Droplets, Wind, Zap, ShoppingCart, ArrowRight, ChevronDown, Star, ShieldCheck, Mail, Phone, Clock as ClockIcon, Play } from "lucide-react";
+import { Battery, Clock, Infinity as InfinityIcon, Zap, ShoppingCart, ArrowRight, ChevronDown, Star, Mail, Phone, Clock as ClockIcon } from "lucide-react";
 import { useSendContactMessage, useListVideos, getListVideosQueryKey } from "@workspace/api-client-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -121,11 +121,11 @@ export default function Home() {
                   立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <a href="https://youtu.be/WGOwMvfe94k" target="_blank" rel="noopener noreferrer">
+              <Link href="/purple-videos">
                 <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group">
-                  <Play className="mr-2 w-5 h-5" />貼片使用方式和說明
+                  貼片使用方式和說明
                 </Button>
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div variants={item} className="mb-6">

@@ -78,12 +78,17 @@ export const SendContactMessageResponse = zod.object({
 /**
  * @summary List published videos
  */
+export const ListVideosQueryParams = zod.object({
+  "category": zod.coerce.string().optional()
+})
+
 export const ListVideosResponseItem = zod.object({
   "id": zod.number(),
   "youtubeUrl": zod.string(),
   "title": zod.string(),
   "description": zod.string().nullish(),
   "published": zod.boolean(),
+  "category": zod.string(),
   "createdAt": zod.string()
 })
 export const ListVideosResponse = zod.array(ListVideosResponseItem)
@@ -191,7 +196,8 @@ export const AdminAddVideoBody = zod.object({
   "youtubeUrl": zod.string(),
   "title": zod.string(),
   "description": zod.string().nullish(),
-  "published": zod.boolean()
+  "published": zod.boolean(),
+  "category": zod.string().optional()
 })
 
 

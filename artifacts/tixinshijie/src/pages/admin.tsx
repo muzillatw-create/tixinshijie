@@ -187,13 +187,15 @@ function OrdersTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
 }
 
 function VideosTab({ adminKey, queryClient }: { adminKey: string, queryClient: any }) {
-  const { data: videos, isLoading } = useListVideos();
+  const [categoryFilter, setCategoryFilter] = useState<string>("general");
+  const { data: videos, isLoading } = useListVideos({ category: categoryFilter });
   const addVideo = useAdminAddVideo();
   const deleteVideo = useAdminDeleteVideo();
 
   const [newTitle, setNewTitle] = useState("");
   const [newUrl, setNewUrl] = useState("");
   const [newDesc, setNewDesc] = useState("");
+  const [newCategory, setNewCategory] = useState("general");
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -205,7 +207,8 @@ function VideosTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
         title: newTitle,
         youtubeUrl: newUrl,
         description: newDesc,
-        published: true
+        published: true,
+        category: newCategory,
       }
     }, {
       onSuccess: () => {
@@ -219,7 +222,7 @@ function VideosTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
 
   const handleDelete = (id: number) => {
     if (!confirm("確定要刪除此影片嗎？")) return;
-    deleteVideo.mutate({ videoId: id }, { // Note: Assuming the API expects key in body or query? Ah, the hook `adminDeleteVideo` doesn't take body. Wait, the spec says "body includes key in path via { videoId }", actually usually admin routes need key. Let me check the hook types.
+    deleteVideo.mutate({ videoId: id }, {
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: getListVideosQueryKey() });
       }
@@ -232,6 +235,18 @@ function VideosTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
         <div className="bg-card p-6 rounded-xl border border-white/10 sticky top-24">
           <h3 className="font-bold text-lg mb-4">新增影片</h3>
           <form onSubmit={handleAdd} className="space-y-4">
+            <div>
+              <label className="text-sm text-muted-foreground mb-1 block">分類</label>
+              <Select value={newCategory} onValueChange={setNewCategory}>
+                <SelectTrigger className="bg-background">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="general">一般影音觀看區</SelectItem>
+                  <SelectItem value="purple">貼片使用方式和說明（紫色）</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <div>
               <label className="text-sm text-muted-foreground mb-1 block">標題</label>
               <Input value={newTitle} onChange={e => setNewTitle(e.target.value)} required className="bg-background" />
@@ -252,21 +267,38 @@ function VideosTab({ adminKey, queryClient }: { adminKey: string, queryClient: a
       </div>
 
       <div className="lg:col-span-2 space-y-4">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-sm text-muted-foreground">顯示分類：</span>
+          <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+            <SelectTrigger className="w-52 bg-card">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="general">一般影音觀看區</SelectItem>
+              <SelectItem value="purple">貼片使用方式和說明（紫色）</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
         {isLoading ? (
           <div>載入中...</div>
         ) : videos?.map(v => (
           <div key={v.id} className="bg-card p-4 rounded-xl border border-white/10 flex gap-4 items-start">
             <div className="w-40 aspect-video bg-black rounded overflow-hidden shrink-0">
-               <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src={v.youtubeUrl.replace("watch?v=", "embed/")} 
+               <iframe
+                  width="100%"
+                  height="100%"
+                  src={v.youtubeUrl.replace("watch?v=", "embed/")}
                   title={v.title}
-                  frameBorder="0" 
+                  frameBorder="0"
                 />
             </div>
             <div className="flex-1">
-              <h4 className="font-bold text-lg">{v.title}</h4>
+              <div className="flex items-center gap-2 mb-1">
+                <h4 className="font-bold text-lg">{v.title}</h4>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${v.category === 'purple' ? 'bg-purple-500/20 text-purple-400' : 'bg-cyan-500/20 text-cyan-400'}`}>
+                  {v.category === 'purple' ? '紫色' : '一般'}
+                </span>
+              </div>
               <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{v.description}</p>
             </div>
             <Button variant="destructive" size="sm" onClick={() => handleDelete(v.id)}>刪除</Button>

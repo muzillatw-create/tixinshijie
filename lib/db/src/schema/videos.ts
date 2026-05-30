@@ -8,6 +8,7 @@ export const videosTable = pgTable("videos", {
   title: text("title").notNull(),
   description: text("description"),
   published: boolean("published").notNull().default(true),
+  category: text("category").notNull().default("general"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 

@@ -149,6 +149,7 @@ router.post("/admin/videos", async (req, res): Promise<void> => {
       title: parsed.data.title,
       description: parsed.data.description ?? null,
       published: parsed.data.published,
+      category: parsed.data.category ?? "general",
     })
     .returning();
 

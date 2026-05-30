@@ -13,4 +13,5 @@ export interface VideoInput {
   /** @nullable */
   description?: string | null;
   published: boolean;
+  category?: string;
 }

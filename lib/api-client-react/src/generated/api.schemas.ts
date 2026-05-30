@@ -113,6 +113,7 @@ export interface Video {
   /** @nullable */
   description?: string | null;
   published: boolean;
+  category: string;
   createdAt: string;
 }
 
@@ -123,7 +124,12 @@ export interface VideoInput {
   /** @nullable */
   description?: string | null;
   published: boolean;
+  category?: string;
 }
+
+export type ListVideosParams = {
+category?: string;
+};
 
 export type AdminListOrdersParams = {
 status?: string;

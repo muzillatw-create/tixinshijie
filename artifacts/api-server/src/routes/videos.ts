@@ -1,5 +1,5 @@
 import { Router, type IRouter } from "express";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { db, videosTable } from "@workspace/db";
 
 const router: IRouter = Router();
@@ -12,11 +12,20 @@ function formatVideo(video: typeof videosTable.$inferSelect) {
   };
 }
 
-router.get("/videos", async (_req, res): Promise<void> => {
+router.get("/videos", async (req, res): Promise<void> => {
+  const category = typeof req.query.category === "string" ? req.query.category : null;
+
+  const conditions = [eq(videosTable.published, true)];
+  if (category) {
+    conditions.push(eq(videosTable.category, category));
+  } else {
+    conditions.push(eq(videosTable.category, "general"));
+  }
+
   const videos = await db
     .select()
     .from(videosTable)
-    .where(eq(videosTable.published, true))
+    .where(and(...conditions))
     .orderBy(videosTable.createdAt);
 
   res.json(videos.map(formatVideo));

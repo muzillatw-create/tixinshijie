@@ -13,5 +13,6 @@ export interface Video {
   /** @nullable */
   description?: string | null;
   published: boolean;
+  category: string;
   createdAt: string;
 }

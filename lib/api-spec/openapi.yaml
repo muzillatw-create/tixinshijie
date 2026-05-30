@@ -119,6 +119,12 @@ paths:
       operationId: listVideos
       tags: [videos]
       summary: List published videos
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
       responses:
         "200":
           description: List of videos
@@ -462,6 +468,8 @@ components:
           type: ["string", "null"]
         published:
           type: boolean
+        category:
+          type: string
         createdAt:
           type: string
       required:
@@ -469,6 +477,7 @@ components:
         - youtubeUrl
         - title
         - published
+        - category
         - createdAt
 
     VideoInput:
@@ -484,6 +493,8 @@ components:
           type: ["string", "null"]
         published:
           type: boolean
+        category:
+          type: string
       required:
         - key
         - youtubeUrl

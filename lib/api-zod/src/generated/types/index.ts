@@ -10,6 +10,7 @@ export * from './adminListOrdersParams';
 export * from './contactInput';
 export * from './errorResponse';
 export * from './healthStatus';
+export * from './listVideosParams';
 export * from './order';
 export * from './orderInput';
 export * from './orderInputPaymentMethod';
