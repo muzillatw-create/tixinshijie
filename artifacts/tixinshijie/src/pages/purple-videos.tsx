@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 
-const TOTAL_SLOTS = 19;
+const TOTAL_SLOTS = 50;
 
 function getYouTubeId(url: string): string | null {
   if (!url) return null;
