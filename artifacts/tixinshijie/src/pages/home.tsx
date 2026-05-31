@@ -121,16 +121,15 @@ export default function Home() {
                   立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/purple-videos">
-                <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group">
-                  貼片使用方式和說明
-                </Button>
-              </Link>
+              <div className="bg-purple-600/20 border border-purple-500/40 rounded-2xl px-6 py-4 flex flex-col items-center gap-3">
+                <Link href="/purple-videos">
+                  <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group">
+                    貼片使用方式和說明
+                  </Button>
+                </Link>
+                <p className="text-sm text-purple-200">貼片適合貼在包裝盒外部</p>
+              </div>
             </motion.div>
-
-            <motion.p variants={item} className="text-sm text-purple-300/80 mb-2">
-              貼片適合貼在包裝盒外部
-            </motion.p>
 
             <motion.div variants={item} className="mb-6">
               <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
