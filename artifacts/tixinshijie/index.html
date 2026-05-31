@@ -8,6 +8,7 @@
     <meta name="keywords" content="貼心世界,環境狀態優化貼片,命の光,貼片,水貼片,飲水,提升狀態,wellness patch,state optimizer" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://xn--rhqt44buwpwnv.com/" />
+    <link rel="alternate" hreflang="zh-TW" href="https://xn--rhqt44buwpwnv.com/" />
     <meta name="author" content="貼心世界" />
     <meta property="og:title" content="貼心世界 — 環境狀態優化貼片 官方網站" />
     <meta property="og:description" content="環境狀態優化貼片（命の光）。不改變物品，而是調整它的使用狀態。讓您的吃喝玩樂重新定義。" />
@@ -24,13 +25,13 @@
     <script>
       (function() {
         var host = window.location.hostname;
-        var isNonCanonical = host.endsWith('.tw') || host.endsWith('.replit.app') || host.endsWith('.replit.dev');
-        if (isNonCanonical) {
+        var isCanonical = (host === 'xn--rhqt44buwpwnv.com' || host === 'xn--rhqt44buwpwnv.com.');
+        if (!isCanonical) {
           var robots = document.querySelector('meta[name="robots"]');
           if (robots) robots.setAttribute('content', 'noindex, nofollow');
-          var canonical = document.querySelector('link[rel="canonical"]');
-          if (canonical) canonical.setAttribute('href', 'https://xn--rhqt44buwpwnv.com/');
         }
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', 'https://xn--rhqt44buwpwnv.com' + window.location.pathname);
       })();
     </script>
   </head>
