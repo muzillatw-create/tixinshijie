@@ -115,6 +115,16 @@ export default function PurpleVideosPage() {
           </div>
         </div>
 
+        <div className="mb-10 bg-purple-500/5 border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto">
+          <h2 className="text-sm font-semibold text-purple-400 uppercase tracking-widest mb-3">使用說明</h2>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-start gap-2">
+              <span className="text-purple-400 mt-0.5">•</span>
+              <span>貼片適合貼在包裝盒外部</span>
+            </li>
+          </ul>
+        </div>
+
         {isLoading ? (
           <div className="text-center py-20 text-gray-500">載入中...</div>
         ) : (
