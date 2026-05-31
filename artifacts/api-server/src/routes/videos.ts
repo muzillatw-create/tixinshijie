@@ -1,5 +1,5 @@
 import { Router, type IRouter } from "express";
-import { and, eq } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import { db, videosTable } from "@workspace/db";
 
 const router: IRouter = Router();
@@ -26,7 +26,7 @@ router.get("/videos", async (req, res): Promise<void> => {
     .select()
     .from(videosTable)
     .where(and(...conditions))
-    .orderBy(videosTable.createdAt);
+    .orderBy(asc(videosTable.id));
 
   res.json(videos.map(formatVideo));
 });
