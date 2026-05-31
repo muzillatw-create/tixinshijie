@@ -128,6 +128,10 @@ export default function Home() {
               </Link>
             </motion.div>
 
+            <motion.p variants={item} className="text-sm text-purple-300/80 mb-2">
+              貼片適合貼在包裝盒外部
+            </motion.p>
+
             <motion.div variants={item} className="mb-6">
               <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
