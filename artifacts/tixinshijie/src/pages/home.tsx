@@ -115,12 +115,15 @@ export default function Home() {
               </span>
             </motion.h1>
 
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <motion.div variants={item} className="flex justify-center mb-4">
               <Link href="/order">
                 <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
                   立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
+            </motion.div>
+
+            <motion.div variants={item} className="flex justify-center mb-8">
               <Link href="/purple-videos">
                 <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group flex flex-col items-center gap-1">
                   <span>貼片使用方式和說明</span>
