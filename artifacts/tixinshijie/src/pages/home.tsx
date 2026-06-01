@@ -127,7 +127,7 @@ export default function Home() {
               <Link href="/purple-videos">
                 <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group flex flex-col items-center gap-1">
                   <span>貼片使用方式和說明</span>
-                  <span className="text-xs font-normal text-purple-200 text-center w-full">貼片適合貼在包裝盒外部</span>
+                  <span className="text-sm font-semibold text-purple-100 text-center w-full">貼片適合貼在包裝盒外部</span>
                 </Button>
               </Link>
             </motion.div>
