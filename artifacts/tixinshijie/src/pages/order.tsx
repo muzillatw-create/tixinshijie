@@ -78,7 +78,7 @@ export default function OrderPage() {
     );
   }
 
-  const pricePerItem = 1288;
+  const pricePerItem = 880;
   const currentQuantity = form.watch("quantity") || 1;
   const totalPrice = pricePerItem * currentQuantity;
 
@@ -247,7 +247,7 @@ export default function OrderPage() {
                     <div className="text-sm text-muted-foreground">效能一年 / 專利科技</div>
                   </div>
                   <div className="text-right">
-                    <div className="font-mono">NT$ 1,288</div>
+                    <div className="font-mono">NT$ 880</div>
                     <div className="text-sm text-muted-foreground">x {currentQuantity}</div>
                   </div>
                 </div>

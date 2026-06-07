@@ -19,7 +19,7 @@ import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4"
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 
-const PRICE = 1288;
+const PRICE = 880;
 
 const contactSchema = z.object({
   name: z.string().min(1, "請輸入姓名"),
@@ -152,8 +152,8 @@ export default function Home() {
               <div className="inline-flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
                 <div className="text-left">
                   <div className="text-xs text-gray-500">環境狀態優化貼片</div>
-                  <div className="text-xs text-gray-500 line-through">NT$1,688 / 盒</div>
-                  <div className="text-sm text-cyan-400 font-bold">促銷價 NT$1,288 / 盒</div>
+                  <div className="text-xs text-gray-500 line-through">NT$1,288 / 盒</div>
+                  <div className="text-sm text-cyan-400 font-bold">促銷價 NT$880 / 盒</div>
                 </div>
                 <div className="flex items-center gap-2 border-l border-white/10 pl-4">
                   <button
