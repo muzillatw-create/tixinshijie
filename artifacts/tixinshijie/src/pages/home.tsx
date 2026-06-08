@@ -147,6 +147,23 @@ export default function Home() {
               <video src={newVideo2} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
+            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="text-xl font-bold text-cyan-400">吃</div>
+                  <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="text-xl font-bold text-blue-400">喝</div>
+                  <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="text-xl font-bold text-purple-400">玩樂</div>
+                  <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+                </div>
+              </div>
+            </motion.div>
+
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給。
             </motion.p>
@@ -218,29 +235,6 @@ export default function Home() {
                 <p className="text-gray-400 text-sm">{f.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 吃喝玩樂 Videos */}
-      <section className="py-16 px-4 border-t border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">吃喝玩樂</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center gap-4">
-              <div className="text-2xl font-bold text-cyan-400">吃</div>
-              <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="text-2xl font-bold text-blue-400">喝</div>
-              <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="text-2xl font-bold text-purple-400">玩樂</div>
-              <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-            </div>
           </div>
         </div>
       </section>
