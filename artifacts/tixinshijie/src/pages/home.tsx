@@ -18,6 +18,9 @@ import newVideo1b from "@assets/20260607_092143042_1780921526780.mp4";
 import newVideo2 from "@assets/20260604_182244753_1780921663472.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
+import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
+import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
+import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
 
 const PRICE = 880;
 
@@ -215,6 +218,29 @@ export default function Home() {
                 <p className="text-gray-400 text-sm">{f.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 吃喝玩樂 Videos */}
+      <section className="py-16 px-4 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">吃喝玩樂</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center gap-4">
+              <div className="text-2xl font-bold text-cyan-400">吃</div>
+              <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <div className="text-2xl font-bold text-blue-400">喝</div>
+              <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <div className="text-2xl font-bold text-purple-400">玩樂</div>
+              <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+            </div>
           </div>
         </div>
       </section>
