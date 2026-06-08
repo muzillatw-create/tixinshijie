@@ -15,7 +15,7 @@ import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/20260608_184241164_1780921126050.mp4";
 import newVideo1b from "@assets/20260607_092143042_1780921526780.mp4";
-import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
+import newVideo2 from "@assets/20260604_182244753_1780921663472.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 
