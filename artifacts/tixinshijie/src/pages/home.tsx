@@ -13,7 +13,7 @@ import { Textarea } from "../components/ui/textarea";
 import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
-import newVideo1 from "@assets/grok_video_2026-05-19-22-01-58_1779204090243.mp4";
+import newVideo1 from "@assets/20260608_184241164_1780921126050.mp4";
 import newVideo1b from "@assets/grok_video_2026-05-19-22-49-05_1779204157655.mp4";
 import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
