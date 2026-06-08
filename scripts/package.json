@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
+    "github-push": "node ./src/github-push.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@replit/connectors-sdk": "^0.4.1"
   },
   "devDependencies": {
     "@types/node": "catalog:",
