@@ -14,7 +14,7 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/20260608_184241164_1780921126050.mp4";
-import newVideo1b from "@assets/grok_video_2026-05-19-22-49-05_1779204157655.mp4";
+import newVideo1b from "@assets/20260607_091651667_1780921236521.mp4";
 import newVideo2 from "@assets/grok_video_2026-05-19-22-03-22_1779203629245.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
