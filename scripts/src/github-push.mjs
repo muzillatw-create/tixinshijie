@@ -126,7 +126,7 @@ async function main() {
   const commit = await ghApi(`/repos/${OWNER}/${REPO}/git/commits`, {
     method: "POST",
     body: JSON.stringify({
-      message: "backup: 貼心世界 project — full source backup from Replit",
+      message: `backup: 貼心世界 — auto-backup ${new Date().toISOString()}`,
       tree: tree.sha,
       parents: [baseCommitSha],
       author: { name: "Replit Agent", email: "noreply@replit.com", date: new Date().toISOString() },
