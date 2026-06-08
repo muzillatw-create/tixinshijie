@@ -143,25 +143,23 @@ export default function Home() {
               <video src={newVideo1b} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
+            <motion.div variants={item} className="mb-2 w-full max-w-2xl mx-auto">
+              <div className="text-xl font-bold text-cyan-400 text-center mb-2">吃</div>
+              <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+            </motion.div>
+
             <motion.div variants={item} className="mb-6">
               <video src={newVideo2} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="text-xl font-bold text-cyan-400">吃</div>
-                  <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="text-xl font-bold text-blue-400">喝</div>
-                  <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="text-xl font-bold text-purple-400">玩樂</div>
-                  <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
-                </div>
-              </div>
+              <div className="text-xl font-bold text-blue-400 text-center mb-2">喝</div>
+              <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+            </motion.div>
+
+            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+              <div className="text-xl font-bold text-purple-400 text-center mb-2">玩樂</div>
+              <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
             </motion.div>
 
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
