@@ -1,0 +1,1 @@
+- [Expo workflow port health check](expo-port-health.md) — Replit health checker can't detect new workflow ports in this env; only pre-existing API server (8080) passes. Workaround: use configureWorkflow without waitForPort.
