@@ -144,22 +144,22 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-xl font-bold text-cyan-400 text-center mb-2">吃</div>
+              <div className="text-3xl font-bold text-cyan-400 text-center mb-2">吃</div>
               <video src={newVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-xl font-bold text-blue-400 text-center mb-2">喝</div>
+              <div className="text-3xl font-bold text-blue-400 text-center mb-2">喝</div>
               <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-xl font-bold text-green-400 text-center mb-2">玩</div>
+              <div className="text-3xl font-bold text-green-400 text-center mb-2">玩</div>
               <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-xl font-bold text-purple-400 text-center mb-2">樂</div>
+              <div className="text-3xl font-bold text-purple-400 text-center mb-2">樂</div>
               <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
             </motion.div>
 
