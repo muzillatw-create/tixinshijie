@@ -16,6 +16,7 @@ import { useState } from "react";
 import newVideo1 from "@assets/20260608_184241164_1780921126050.mp4";
 import newVideo1b from "@assets/20260607_092143042_1780921526780.mp4";
 import bentouVideo from "@assets/20260604_182244753_1780921663472.mp4";
+import chiheWanleImg from "@assets/file_0000000015247206971c1837dca4431f_1781269760310.png";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
@@ -145,7 +146,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
-              <video src={newVideo2} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
+              <img src={chiheWanleImg} className="w-full max-w-2xl mx-auto rounded-2xl" alt="吃喝玩樂" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
