@@ -4,6 +4,15 @@ import { useCart } from "../lib/cart-context";
 import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
 
+const stars = Array.from({ length: 120 }, (_, i) => ({
+  id: i,
+  top: Math.random() * 100,
+  left: Math.random() * 100,
+  size: Math.random() * 2 + 0.5,
+  delay: Math.random() * 5,
+  duration: Math.random() * 3 + 2,
+}));
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const { quantity } = useCart();
   const [location] = useLocation();
@@ -22,6 +31,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col dark text-foreground overflow-x-hidden bg-[#07070f]">
+      <style>{`
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.1; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.3); }
+        }
+      `}</style>
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {stars.map(s => (
+          <div
+            key={s.id}
+            style={{
+              position: "absolute",
+              top: `${s.top}%`,
+              left: `${s.left}%`,
+              width: `${s.size}px`,
+              height: `${s.size}px`,
+              borderRadius: "50%",
+              backgroundColor: "white",
+              animation: `twinkle ${s.duration}s ${s.delay}s ease-in-out infinite`,
+            }}
+          />
+        ))}
+      </div>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#07070f]/95 border-b border-white/5 backdrop-blur-md" : "bg-transparent"}`}>
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group shrink-0">
