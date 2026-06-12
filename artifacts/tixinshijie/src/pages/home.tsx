@@ -15,7 +15,6 @@ import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/20260608_184241164_1780921126050.mp4";
 import newVideo1b from "@assets/20260607_092143042_1780921526780.mp4";
-import newVideo2 from "@assets/20260612_193525418_1781267601916.mp4";
 import bentouVideo from "@assets/20260604_182244753_1780921663472.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
@@ -23,6 +22,7 @@ import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
 import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
 import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
 
+const newVideo2 = "/video3.mp4";
 const PRICE = 880;
 
 const contactSchema = z.object({
