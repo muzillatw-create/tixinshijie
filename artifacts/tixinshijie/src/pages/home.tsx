@@ -14,7 +14,7 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/v4_1781524751579.mp4";
-import newVideo1b from "@assets/20260607_092143042_1780921526780.mp4";
+import newVideo1b from "@assets/v2_1781524824305.mp4";
 import bentouVideo from "@assets/20260604_182244753_1780921663472.mp4";
 import video3 from "@assets/My_Project_0_1781272087309.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
