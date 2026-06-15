@@ -15,7 +15,7 @@ import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/v4_1781524751579.mp4";
 import newVideo1b from "@assets/v2_1781524824305.mp4";
-import bentouVideo from "@assets/20260604_182244753_1780921663472.mp4";
+import bentouVideo from "@assets/v1_1781524879891.mp4";
 import video3 from "@assets/My_Project_0_1781272087309.mp4";
 import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
