@@ -21,7 +21,7 @@ import glowingHandVideo from "@assets/glowing-hand-video.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
 import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
-import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
+import funVideo from "@assets/v45_1781616222136.mp4";
 
 const newVideo2 = "/video3.mp4";
 const PRICE = 880;
