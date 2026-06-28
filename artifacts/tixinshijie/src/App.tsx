@@ -10,6 +10,7 @@ import OrderPage from "./pages/order";
 import TrackPage from "./pages/track";
 import VideosPage from "./pages/videos";
 import PurpleVideosPage from "./pages/purple-videos";
+import HappinessPage from "./pages/happiness";
 import AdminPage from "./pages/admin";
 
 const queryClient = new QueryClient({
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/track" component={TrackPage} />
       <Route path="/videos" component={VideosPage} />
       <Route path="/purple-videos" component={PurpleVideosPage} />
+      <Route path="/happiness" component={HappinessPage} />
       <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
