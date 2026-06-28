@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
 
-const TOTAL_SLOTS = 50;
+const TOTAL_SLOTS = 6;
 
 function getYouTubeId(url: string): string | null {
   if (!url) return null;
@@ -77,7 +77,7 @@ function PlaceholderCard({ index }: { index: number }) {
 }
 
 export default function HappinessPage() {
-  const { data: videos, isLoading } = useListVideos({ category: "general" });
+  const { data: videos, isLoading } = useListVideos({ category: "happiness" });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
