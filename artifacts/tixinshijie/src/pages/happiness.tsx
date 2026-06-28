@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
 
-const TOTAL_SLOTS = 6;
+const TOTAL_SLOTS = 50;
 
 function getYouTubeId(url: string): string | null {
   if (!url) return null;
@@ -115,7 +115,7 @@ export default function HappinessPage() {
         {isLoading ? (
           <div className="text-center py-20 text-gray-500">載入中...</div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
             {realVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
