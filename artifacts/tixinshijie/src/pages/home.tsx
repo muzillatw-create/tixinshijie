@@ -24,7 +24,7 @@ import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
 import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
 import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
-import bannerHappinessHero from "@assets/file_00000000e7f47206b27395d3fb649af2_1782653127815.png";
+import bannerHappinessHero from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
 import bannerPrice from "@assets/file_000000003d14720ba72f228e258177ae_1782650063062.png";
 
 const newVideo2 = "/video3.mp4";
