@@ -123,14 +123,6 @@ export default function Home() {
               </span>
             </motion.h1>
 
-            <motion.div variants={item} className="flex justify-center mb-4">
-              <Link href="/order">
-                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
-                  立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
-
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2">
                 <Link href="/happiness" className="flex items-center justify-center">
@@ -143,6 +135,23 @@ export default function Home() {
                   <img src={bannerPrice} alt="每天不到NT$2.5" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
               </div>
+            </motion.div>
+
+            <motion.div variants={item} className="mb-4 text-center">
+              <h2 className="text-2xl font-bold flex items-center justify-center gap-3 text-white mb-4">
+                <span className="text-cyan-400">▶</span> 影音觀看區
+              </h2>
+              <Link href="/videos">
+                <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部影片</Button>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={item} className="flex justify-center mb-4">
+              <Link href="/order">
+                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
+                  立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
@@ -280,21 +289,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-24 px-4 border-t border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold flex items-center justify-center gap-3 text-white mb-6">
-              <span className="text-cyan-400">▶</span> 影音觀看區
-            </h2>
-          </div>
-          <div className="text-center">
-            <Link href="/videos">
-              <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部影片</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* How to use */}
       <section id="howto" className="py-24 px-4 border-t border-white/5">
