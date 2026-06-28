@@ -4,7 +4,7 @@ import { Clock, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
+import bannerHappiness from "@assets/file_00000000e7f47206b27395d3fb649af2_1782653127815.png";
 
 const TOTAL_SLOTS = 50;
 
@@ -98,13 +98,9 @@ export default function HappinessPage() {
           </Link>
         </div>
 
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <img src={bannerHappiness} alt="幸福時光" className="w-32 h-32 object-contain" />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">幸福時光</h1>
-          <p className="text-gray-400 max-w-xl mx-auto">吃喝玩樂，幸福每一天。</p>
-          <div className="mt-4 inline-flex items-center gap-2 text-sm text-gray-500">
+        <div className="mb-10">
+          <img src={bannerHappiness} alt="幸福時光" className="w-full max-w-3xl mx-auto rounded-2xl object-cover block" />
+          <div className="mt-4 text-center inline-flex items-center gap-2 text-sm text-gray-500 w-full justify-center">
             <span className="h-2 w-2 rounded-full bg-cyan-500 inline-block" />
             {realVideos.length} 支影片上架中
             <span className="mx-1">·</span>
