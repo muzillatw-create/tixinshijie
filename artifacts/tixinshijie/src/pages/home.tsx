@@ -24,6 +24,7 @@ import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
 import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
 import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
+import bannerHappinessHero from "@assets/file_00000000e7f47206b27395d3fb649af2_1782653127815.png";
 import bannerPrice from "@assets/file_000000003d14720ba72f228e258177ae_1782650063062.png";
 
 const newVideo2 = "/video3.mp4";
@@ -115,13 +116,9 @@ export default function Home() {
               </span>
             </motion.div>
 
-            <motion.h1 variants={item} className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-              <span className="text-white">重新定義</span>
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                吃喝玩樂
-              </span>
-            </motion.h1>
+            <motion.div variants={item} className="mb-6">
+              <img src={bannerHappinessHero} alt="幸福時光 吃喝玩樂" className="w-full max-w-lg mx-auto rounded-2xl object-cover" />
+            </motion.div>
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2">
