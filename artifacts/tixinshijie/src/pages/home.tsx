@@ -133,8 +133,8 @@ export default function Home() {
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2">
-                <Link href="/videos">
-                  <img src={bannerHappiness} alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                <Link href="/videos" className="flex items-center justify-center">
+                  <img src={bannerHappiness} alt="幸福時光" className="w-4/5 mx-auto rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
                 <Link href="/purple-videos">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
