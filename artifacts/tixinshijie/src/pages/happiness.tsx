@@ -4,7 +4,7 @@ import { Clock, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import bannerHappiness from "@assets/file_00000000e7f47206b27395d3fb649af2_1782653127815.png";
+import bannerHappiness from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
 
 const TOTAL_SLOTS = 50;
 
