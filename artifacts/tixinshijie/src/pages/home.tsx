@@ -22,6 +22,9 @@ import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
 import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
 import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
+import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
+import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
+import bannerPrice from "@assets/file_000000003d14720ba72f228e258177ae_1782650063062.png";
 
 const newVideo2 = "/video3.mp4";
 const PRICE = 880;
@@ -128,13 +131,18 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div variants={item} className="flex justify-center mb-8">
-              <Link href="/purple-videos">
-                <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 text-lg h-auto group flex flex-col items-center gap-1">
-                  <span>貼片使用方式和說明</span>
-                  <span className="text-sm font-semibold text-purple-100 text-center w-full">貼片適合貼在包裝盒外部</span>
-                </Button>
-              </Link>
+            <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-2">
+                <Link href="/videos">
+                  <img src={bannerHappiness} alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                </Link>
+                <Link href="/purple-videos">
+                  <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                </Link>
+                <Link href="/order">
+                  <img src={bannerPrice} alt="每天不到NT$2.5" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                </Link>
+              </div>
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
