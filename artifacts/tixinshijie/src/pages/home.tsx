@@ -22,6 +22,7 @@ import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
 import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
 import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
+import topVideo from "@assets/My_Project_1782823190148.mp4";
 import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
 import bannerHappinessHero from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
@@ -114,6 +115,18 @@ export default function Home() {
               <span className="inline-block mb-6 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-full px-4 py-1.5 text-sm font-medium">
                 ✦ 重新定義環境狀態優化貼片的思維
               </span>
+            </motion.div>
+
+            <motion.div variants={item} className="mb-4">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-lg mx-auto rounded-2xl object-cover"
+              >
+                <source src={topVideo} type="video/mp4" />
+              </video>
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
