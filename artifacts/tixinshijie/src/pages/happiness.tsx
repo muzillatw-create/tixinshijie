@@ -4,7 +4,6 @@ import { Clock, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import bannerHappiness from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
 import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
 
 const TOTAL_SLOTS = 50;
@@ -103,14 +102,11 @@ export default function HappinessPage() {
           <video src={happinessVideo} autoPlay loop muted playsInline className="w-full max-w-3xl mx-auto rounded-2xl block" />
         </div>
 
-        <div className="mb-10">
-          <img src={bannerHappiness} alt="幸福時光" className="w-full max-w-3xl mx-auto rounded-2xl object-cover block" />
-          <div className="mt-4 text-center inline-flex items-center gap-2 text-sm text-gray-500 w-full justify-center">
-            <span className="h-2 w-2 rounded-full bg-cyan-500 inline-block" />
-            {realVideos.length} 支影片上架中
-            <span className="mx-1">·</span>
-            共 {TOTAL_SLOTS} 格
-          </div>
+        <div className="mb-6 text-center inline-flex items-center gap-2 text-sm text-gray-500 w-full justify-center">
+          <span className="h-2 w-2 rounded-full bg-cyan-500 inline-block" />
+          {realVideos.length} 支影片上架中
+          <span className="mx-1">·</span>
+          共 {TOTAL_SLOTS} 格
         </div>
 
         {isLoading ? (
