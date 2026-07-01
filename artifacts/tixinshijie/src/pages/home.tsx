@@ -19,7 +19,6 @@ import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
 import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
-import topVideo from "@assets/My_Project_1782823190148.mp4";
 import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
 import bannerHappinessHero from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
@@ -122,7 +121,7 @@ export default function Home() {
                 playsInline
                 className="w-full max-w-lg mx-auto rounded-2xl object-cover"
               >
-                <source src={topVideo} type="video/mp4" />
+                <source src={happinessVideo} type="video/mp4" />
               </video>
             </motion.div>
 
