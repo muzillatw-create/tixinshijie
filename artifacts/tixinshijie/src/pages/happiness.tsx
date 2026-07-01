@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import bannerHappiness from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
+import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
 
 const TOTAL_SLOTS = 50;
 
@@ -96,6 +97,10 @@ export default function HappinessPage() {
               返回首頁
             </Button>
           </Link>
+        </div>
+
+        <div className="mb-6">
+          <video src={happinessVideo} autoPlay loop muted playsInline className="w-full max-w-3xl mx-auto rounded-2xl block" />
         </div>
 
         <div className="mb-10">
