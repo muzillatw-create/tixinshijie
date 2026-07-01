@@ -4,7 +4,7 @@ import { Clock, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
+import happinessVideo from "@assets/My_Project_0_1782916692785.mp4";
 
 const TOTAL_SLOTS = 50;
 
