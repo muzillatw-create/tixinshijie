@@ -15,8 +15,6 @@ import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介绍貼片六。_1781887748340.mp4";
 import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
-import glowingHandVideo from "@assets/v45_1781616222136.mp4";
-import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
@@ -167,10 +165,6 @@ export default function Home() {
               <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
-            <motion.div variants={item} className="mb-6">
-              <video src={happinessVideo} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
-            </motion.div>
-
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
               <img src={eat1} alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
             </motion.div>
@@ -262,30 +256,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Glowing hand video */}
+      {/* 幸福時光 video */}
       <section className="py-8 px-4 flex justify-center">
-        <div className="w-full max-w-sm flex justify-center">
+        <div className="w-full max-w-2xl flex justify-center">
           <video
-            src={glowingHandVideo}
+            src={happinessVideo}
             autoPlay
             loop
             muted
             playsInline
-            className="w-full max-h-[225px] object-contain rounded-2xl"
-          />
-        </div>
-      </section>
-
-      {/* Grok video */}
-      <section className="py-8 px-4 flex justify-center">
-        <div className="w-full max-w-sm">
-          <video
-            src={grokVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full max-h-[225px] object-contain rounded-2xl shadow-[0_0_60px_rgba(34,211,238,0.3)]"
+            className="w-full rounded-2xl"
           />
         </div>
       </section>
