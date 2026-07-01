@@ -14,9 +14,7 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介绍貼片六。_1781887748340.mp4";
-import newVideo1b from "@assets/v47_1781697436639.mp4";
-import bentouVideo from "@assets/v1_1781524879891.mp4";
-import video3 from "@assets/My_Project_0_1781272087309.mp4";
+import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
 import glowingHandVideo from "@assets/v45_1781616222136.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
@@ -170,11 +168,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
-              <video src={newVideo1b} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
-            </motion.div>
-
-            <motion.div variants={item} className="mb-6">
-              <video src={video3} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
+              <video src={happinessVideo} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
