@@ -14,7 +14,6 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介绍貼片六。_1781887748340.mp4";
-import happinessVideo from "@assets/幸福時光_1782914038286.mp4";
 import topVideo from "@assets/My_Project_1782823190148.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
@@ -255,21 +254,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* 幸福時光 video */}
-      <section className="py-8 px-4 flex justify-center">
-        <div className="w-full max-w-2xl flex justify-center">
-          <video
-            src={happinessVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full rounded-2xl"
-          />
-        </div>
-      </section>
-
 
       {/* How to use */}
       <section id="howto" className="py-24 px-4 border-t border-white/5">
