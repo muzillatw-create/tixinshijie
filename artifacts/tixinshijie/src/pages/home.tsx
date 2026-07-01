@@ -19,9 +19,10 @@ import bentouVideo from "@assets/v1_1781524879891.mp4";
 import video3 from "@assets/My_Project_0_1781272087309.mp4";
 import glowingHandVideo from "@assets/v45_1781616222136.mp4";
 import grokVideo from "@assets/20260606_213237560_1780824092153.mp4";
-import eatVideo from "@assets/20260605_192637056_1780927601813.mp4";
-import drinkVideo from "@assets/20260529_212514214_1780927898007.mp4";
-import funVideo from "@assets/grok_video_2026-05-19-22-16-27_1780928080774.mp4";
+import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
+import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
+import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
+import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
 import topVideo from "@assets/My_Project_1782823190148.mp4";
 import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
 import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
@@ -177,23 +178,19 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-3xl font-bold text-cyan-400 text-center mb-2">吃</div>
-              <video src={bentouVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+              <img src={eat1} alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-3xl font-bold text-blue-400 text-center mb-2">喝</div>
-              <video src={eatVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+              <img src={eat2} alt="幸福時光 品味好時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-3xl font-bold text-green-400 text-center mb-2">玩</div>
-              <video src={drinkVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+              <img src={eat3} alt="幸福時光 玩樂時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <div className="text-3xl font-bold text-purple-400 text-center mb-2">樂</div>
-              <video src={funVideo} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+              <img src={eat4} alt="幸福時光 樂活時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
