@@ -24,7 +24,6 @@ import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_17826
 import bannerHappinessHero from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
 import bannerPrice from "@assets/file_000000003d14720ba72f228e258177ae_1782650063062.png";
 
-const newVideo2 = "/video3.mp4";
 const PRICE = 880;
 
 const contactSchema = z.object({
