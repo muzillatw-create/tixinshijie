@@ -159,10 +159,6 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div variants={item} className="mb-6">
-              <video src={newVideo1} autoPlay muted loop playsInline className="w-full max-w-2xl mx-auto rounded-2xl" />
-            </motion.div>
-
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
               <img src={eat1} alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
             </motion.div>
@@ -270,6 +266,9 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+        <div className="max-w-2xl mx-auto mt-12">
+          <video src={newVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl" />
         </div>
       </section>
 
