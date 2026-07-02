@@ -15,6 +15,8 @@ import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介紹99_1782914922657.mp4";
 import topVideo from "@assets/My_Project_1782823190148.mp4";
+import sideVideo1 from "@assets/My_Project_1_1782999545209.mp4";
+import sideVideo2 from "@assets/My_Project_2_1782999545210.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
@@ -129,16 +131,12 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
-              <div className="grid grid-cols-3 gap-2">
-                <Link href="/happiness" className="flex items-center justify-center">
-                  <img src={bannerHappiness} alt="幸福時光" className="w-4/5 mx-auto rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
-                </Link>
+              <div className="grid grid-cols-3 gap-2 items-center">
+                <video src={sideVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl" />
                 <Link href="/purple-videos">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
-                <Link href="/order">
-                  <img src={bannerPrice} alt="每天不到NT$2.5" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
-                </Link>
+                <video src={sideVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl" />
               </div>
             </motion.div>
 
