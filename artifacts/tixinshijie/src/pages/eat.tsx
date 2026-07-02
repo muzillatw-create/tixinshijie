@@ -1,38 +1,43 @@
 import { Layout } from "../components/layout";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import { ArrowLeft, BookOpen } from "lucide-react";
-import { useEffect } from "react";
+import { ArrowLeft, BookOpen, Calendar } from "lucide-react";
+import { useEffect, useState } from "react";
 import heroImg from "@assets/吃喝玩樂1_1782913834936.jpg";
+import { getArticlesByCategory, type Article } from "../data/articles";
 
-const articles = [
-  {
-    id: 1,
-    title: "牛肉麵裡的幸福——一碗麵的能量密碼",
-    summary: "每一口熱騰騰的牛肉麵，都是對自己最溫柔的犒賞。搭配環境狀態優化貼片，讓每一餐都充滿能量與滿足感。",
-    tag: "美食體驗",
-  },
-  {
-    id: 2,
-    title: "家常小菜的療癒力：與家人共桌的溫度",
-    summary: "一道道家常料理，承載著記憶與情感。放慢腳步，細心品嚐，讓美食成為生活中最療癒的時刻。",
-    tag: "家庭美食",
-  },
-  {
-    id: 3,
-    title: "火鍋季來臨！如何讓每次聚餐都元氣滿滿",
-    summary: "天氣轉涼，火鍋飄香。與朋友圍爐共享，搭配貼片優化環境，讓聚餐氛圍更加舒適自在。",
-    tag: "聚餐攻略",
-  },
-  {
-    id: 4,
-    title: "早餐的儀式感：從第一口開啟美好的一天",
-    summary: "一頓用心準備的早餐，是對新的一天最好的宣言。選擇讓身體舒適的環境，從早晨就開始幸福。",
-    tag: "日常飲食",
-  },
-];
+function ArticleModal({ article, onClose }: { article: Article; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4" onClick={onClose}>
+      <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
+        <img src={article.heroImage} alt={article.title} className="w-full aspect-video object-cover rounded-t-2xl" />
+        <div className="p-6">
+          <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <Calendar className="h-3 w-3" />{article.date}
+          </div>
+          <h2 className="text-xl font-bold text-white mb-4">{article.title}</h2>
+          {article.content.split("\n").map((p, i) => p.trim() && (
+            <p key={i} className="text-gray-400 text-sm leading-relaxed mb-3">{p}</p>
+          ))}
+          {article.images.length > 0 && (
+            <div className="grid grid-cols-2 gap-3 mt-4">
+              {article.images.map((img, i) => (
+                <img key={i} src={img} alt="" className="w-full rounded-xl object-cover aspect-video" />
+              ))}
+            </div>
+          )}
+          <Button onClick={onClose} variant="outline" className="mt-6 border-white/20 text-gray-300 hover:text-white">關閉</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function EatPage() {
+  const [selected, setSelected] = useState<Article | null>(null);
+  // 自動從 articles.ts 讀取「吃」分類文章
+  const eatArticles = getArticlesByCategory("eat");
+
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, []);
 
   return (
@@ -53,21 +58,23 @@ export default function EatPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">🍜 吃</h1>
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            美食，是生活中最簡單的幸福。無論是一碗熱騰騰的牛肉麵、家人圍坐的火鍋，還是街邊的一份小吃，每一口都承載著記憶與情感。我們相信，在舒適的環境中用餐，能讓每一頓飯都更加美味。環境狀態優化貼片陪伴您，從餐桌開始，感受生活的溫度與滿足。
+            美食，是生活中最簡單的幸福。無論是一碗熱騰騰的牛肉麵、家人圍坐的火鍋，還是街邊的一份小吃，每一口都承載著記憶與情感。我們相信，在舒適的環境中用餐，能讓每一頓飯都更加美味。
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">
-          {articles.map((a) => (
+          {eatArticles.map((a) => (
             <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
-              <div className="aspect-video bg-gradient-to-br from-cyan-900/40 to-blue-900/40 flex items-center justify-center">
-                <span className="text-5xl">🍜</span>
+              <div className="aspect-video overflow-hidden">
+                <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-6">
-                <span className="text-xs text-cyan-400 border border-cyan-500/30 rounded-full px-2 py-0.5 mb-3 inline-block">{a.tag}</span>
+                <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                  <Calendar className="h-3 w-3" />{a.date}
+                </div>
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
-                <Button variant="outline" size="sm" className="border-white/20 text-gray-300 hover:text-white gap-2">
+                <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
                   <BookOpen className="h-3 w-3" />閱讀更多
                 </Button>
               </div>
@@ -75,6 +82,7 @@ export default function EatPage() {
           ))}
         </div>
       </div>
+      {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
     </Layout>
   );
 }
