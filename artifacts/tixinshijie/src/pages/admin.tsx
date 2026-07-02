@@ -87,10 +87,17 @@ export default function AdminPage() {
   );
 }
 
+interface SimilarWarning {
+  message: string;
+  similarArticle: { id: number; title: string; similarity: number };
+}
+
 // ─── 文章管理 ───────────────────────────────────────────────
 function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient: any }) {
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [similarWarning, setSimilarWarning] = useState<SimilarWarning | null>(null);
+  const [duplicateTitleError, setDuplicateTitleError] = useState(false);
 
   // 表單狀態
   const [form, setForm] = useState({
@@ -107,24 +114,51 @@ function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient:
     },
   });
 
+  const postArticle = async (data: typeof form, force = false) => {
+    const res = await fetch("/api/admin/articles", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        key: adminKey,
+        ...data,
+        images: data.images.split("\n").map(s => s.trim()).filter(Boolean),
+        force,
+      }),
+    });
+    if (res.status === 409) {
+      const body = await res.json() as { error: string; message: string; similarArticle?: SimilarWarning["similarArticle"] };
+      if (body.error === "DUPLICATE_TITLE") {
+        setDuplicateTitleError(true);
+        throw new Error("DUPLICATE_TITLE");
+      }
+      if (body.error === "SIMILAR_CONTENT" && body.similarArticle) {
+        setSimilarWarning({ message: body.message, similarArticle: body.similarArticle });
+        throw new Error("SIMILAR_CONTENT");
+      }
+    }
+    if (!res.ok) throw new Error(await res.text());
+    return res.json();
+  };
+
   const createMutation = useMutation({
-    mutationFn: async (data: typeof form) => {
-      const res = await fetch("/api/admin/articles", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          key: adminKey,
-          ...data,
-          images: data.images.split("\n").map(s => s.trim()).filter(Boolean),
-        }),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      return res.json();
-    },
+    mutationFn: (data: typeof form) => postArticle(data, false),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-articles"] });
       queryClient.invalidateQueries({ queryKey: ["articles"] });
       setForm({ category: "eat", title: "", date: new Date().toISOString().slice(0, 10), heroImage: "", summary: "", content: "", images: "" });
+      setSimilarWarning(null);
+      setDuplicateTitleError(false);
+    },
+  });
+
+  const forceCreateMutation = useMutation({
+    mutationFn: (data: typeof form) => postArticle(data, true),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["admin-articles"] });
+      queryClient.invalidateQueries({ queryKey: ["articles"] });
+      setForm({ category: "eat", title: "", date: new Date().toISOString().slice(0, 10), heroImage: "", summary: "", content: "", images: "" });
+      setSimilarWarning(null);
+      setDuplicateTitleError(false);
     },
   });
 
@@ -142,6 +176,8 @@ function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient:
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.title || !form.heroImage || !form.summary || !form.content) return;
+    setSimilarWarning(null);
+    setDuplicateTitleError(false);
     createMutation.mutate(form);
   };
 
@@ -149,6 +185,10 @@ function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient:
     if (!confirm("確定要刪除此文章嗎？")) return;
     deleteMutation.mutate(id);
   };
+
+  const isPending = createMutation.isPending || forceCreateMutation.isPending;
+  const isSuccess = createMutation.isSuccess || forceCreateMutation.isSuccess;
+  const isGenericError = (createMutation.isError && createMutation.error?.message !== "DUPLICATE_TITLE" && createMutation.error?.message !== "SIMILAR_CONTENT") || forceCreateMutation.isError;
 
   return (
     <div className="grid lg:grid-cols-5 gap-8">
@@ -171,7 +211,16 @@ function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient:
             </div>
             <div>
               <label className="text-sm text-muted-foreground mb-1 block">標題 *</label>
-              <Input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} required className="bg-background" placeholder="文章標題" />
+              <Input
+                value={form.title}
+                onChange={e => { setForm(f => ({ ...f, title: e.target.value })); setDuplicateTitleError(false); }}
+                required
+                className={`bg-background ${duplicateTitleError ? "border-red-500 focus:ring-red-500" : ""}`}
+                placeholder="文章標題"
+              />
+              {duplicateTitleError && (
+                <p className="text-red-400 text-xs mt-1">⚠️ 文章標題已存在，請使用不同的標題</p>
+              )}
             </div>
             <div>
               <label className="text-sm text-muted-foreground mb-1 block">日期 *</label>
@@ -196,13 +245,45 @@ function ArticlesTab({ adminKey, queryClient }: { adminKey: string; queryClient:
               <label className="text-sm text-muted-foreground mb-1 block">內文圖片網址（每行一個，最多 3 張）</label>
               <textarea value={form.images} onChange={e => setForm(f => ({ ...f, images: e.target.value }))} rows={3} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-ring" placeholder={"https://...\nhttps://...\nhttps://..."} />
             </div>
-            <Button type="submit" className="w-full bg-primary text-primary-foreground" disabled={createMutation.isPending}>
-              {createMutation.isPending ? "發布中..." : "🚀 發布文章"}
-            </Button>
-            {createMutation.isError && (
+
+            {/* 相似內容警告區塊 */}
+            {similarWarning && (
+              <div className="rounded-lg border border-yellow-500/40 bg-yellow-500/10 p-4 space-y-3">
+                <p className="text-yellow-300 text-sm font-medium">⚠️ 偵測到相似文章</p>
+                <p className="text-yellow-200 text-xs">{similarWarning.message}</p>
+                <div className="flex gap-2">
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    className="flex-1 border-yellow-500/40 text-yellow-300 hover:bg-yellow-500/20"
+                    onClick={() => setSimilarWarning(null)}
+                  >
+                    取消，我再修改
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    className="flex-1 bg-yellow-500 text-black hover:bg-yellow-400"
+                    disabled={forceCreateMutation.isPending}
+                    onClick={() => forceCreateMutation.mutate(form)}
+                  >
+                    {forceCreateMutation.isPending ? "發布中..." : "確認，仍要新增"}
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {!similarWarning && (
+              <Button type="submit" className="w-full bg-primary text-primary-foreground" disabled={isPending}>
+                {isPending ? "發布中..." : "🚀 發布文章"}
+              </Button>
+            )}
+
+            {isGenericError && (
               <p className="text-red-400 text-sm">發布失敗，請檢查欄位</p>
             )}
-            {createMutation.isSuccess && (
+            {isSuccess && (
               <p className="text-green-400 text-sm">✓ 文章已成功發布！</p>
             )}
           </form>

@@ -6,6 +6,25 @@ const router: IRouter = Router();
 
 const ADMIN_KEY = process.env.ADMIN_KEY ?? "admin2026";
 
+function computeSimilarity(a: string, b: string): number {
+  const getBigrams = (str: string): Set<string> => {
+    const bigrams = new Set<string>();
+    for (let i = 0; i < str.length - 1; i++) {
+      bigrams.add(str.slice(i, i + 2));
+    }
+    return bigrams;
+  };
+  const bigramsA = getBigrams(a);
+  const bigramsB = getBigrams(b);
+  if (bigramsA.size === 0 && bigramsB.size === 0) return 1;
+  if (bigramsA.size === 0 || bigramsB.size === 0) return 0;
+  let intersection = 0;
+  for (const bg of bigramsA) {
+    if (bigramsB.has(bg)) intersection++;
+  }
+  return (2 * intersection) / (bigramsA.size + bigramsB.size);
+}
+
 function formatArticle(a: typeof articlesTable.$inferSelect) {
   return {
     ...a,
@@ -36,9 +55,9 @@ router.get("/articles", async (req, res): Promise<void> => {
   res.json(rows.map(formatArticle));
 });
 
-// POST /api/admin/articles  body: { key, category, title, date, heroImage, summary, content, images[] }
+// POST /api/admin/articles  body: { key, category, title, date, heroImage, summary, content, images[], force? }
 router.post("/admin/articles", async (req, res): Promise<void> => {
-  const { key, category, title, date, heroImage, summary, content, images, published } = req.body as {
+  const { key, category, title, date, heroImage, summary, content, images, published, force } = req.body as {
     key?: string;
     category?: string;
     title?: string;
@@ -48,6 +67,7 @@ router.post("/admin/articles", async (req, res): Promise<void> => {
     content?: string;
     images?: string[];
     published?: boolean;
+    force?: boolean;
   };
 
   if (key !== ADMIN_KEY) {
@@ -58,6 +78,30 @@ router.post("/admin/articles", async (req, res): Promise<void> => {
   if (!category || !title || !date || !heroImage || !summary || !content) {
     res.status(400).json({ error: "Missing required fields" });
     return;
+  }
+
+  const allArticles = await db.select().from(articlesTable);
+
+  // 1. 完全相同標題 → 直接拒絕（force 也不例外）
+  const titleMatch = allArticles.find(a => a.title === title);
+  if (titleMatch) {
+    res.status(409).json({ error: "DUPLICATE_TITLE", message: "文章標題已存在" });
+    return;
+  }
+
+  // 2. 內容相似度 ≥ 70% → 警告，除非 force=true
+  if (!force) {
+    for (const article of allArticles) {
+      const similarity = computeSimilarity(content, article.content);
+      if (similarity >= 0.7) {
+        res.status(409).json({
+          error: "SIMILAR_CONTENT",
+          message: `此文章與「${article.title}」內容相似度達 ${Math.round(similarity * 100)}%，可能是重複文章`,
+          similarArticle: { id: article.id, title: article.title, similarity: Math.round(similarity * 100) },
+        });
+        return;
+      }
+    }
   }
 
   const [article] = await db
