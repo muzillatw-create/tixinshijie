@@ -3,8 +3,19 @@ import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import { ArrowLeft, BookOpen, Calendar } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import heroImg from "@assets/吃喝玩樂1_1782913834936.jpg";
-import { getArticlesByCategory, type Article } from "../data/articles";
+
+interface Article {
+  id: number;
+  category: string;
+  title: string;
+  date: string;
+  heroImage: string;
+  summary: string;
+  content: string;
+  images: string[];
+}
 
 function ArticleModal({ article, onClose }: { article: Article; onClose: () => void }) {
   return (
@@ -35,10 +46,16 @@ function ArticleModal({ article, onClose }: { article: Article; onClose: () => v
 
 export default function EatPage() {
   const [selected, setSelected] = useState<Article | null>(null);
-  // 自動從 articles.ts 讀取「吃」分類文章
-  const eatArticles = getArticlesByCategory("eat");
-
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, []);
+
+  const { data: articles = [], isLoading } = useQuery<Article[]>({
+    queryKey: ["articles", "eat"],
+    queryFn: async () => {
+      const res = await fetch("/api/articles?category=eat");
+      if (!res.ok) throw new Error("Failed to fetch");
+      return res.json();
+    },
+  });
 
   return (
     <Layout>
@@ -58,29 +75,35 @@ export default function EatPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">🍜 吃</h1>
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            美食，是生活中最簡單的幸福。無論是一碗熱騰騰的牛肉麵、家人圍坐的火鍋，還是街邊的一份小吃，每一口都承載著記憶與情感。我們相信，在舒適的環境中用餐，能讓每一頓飯都更加美味。
+            美食，是生活中最簡單的幸福。無論是一碗熱騰騰的牛肉麵、家人圍坐的火鍋，還是街邊的一份小吃，每一口都承載著記憶與情感。
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
-          {eatArticles.map((a) => (
-            <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
-              <div className="aspect-video overflow-hidden">
-                <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                  <Calendar className="h-3 w-3" />{a.date}
+        {isLoading ? (
+          <div className="text-center text-gray-500 py-12">載入中...</div>
+        ) : articles.length === 0 ? (
+          <div className="text-center text-gray-500 py-12">尚無文章</div>
+        ) : (
+          <div className="grid sm:grid-cols-2 gap-6">
+            {articles.map((a) => (
+              <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
+                <div className="aspect-video overflow-hidden">
+                  <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
-                <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
-                  <BookOpen className="h-3 w-3" />閱讀更多
-                </Button>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                    <Calendar className="h-3 w-3" />{a.date}
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
+                  <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
+                    <BookOpen className="h-3 w-3" />閱讀更多
+                  </Button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
     </Layout>
