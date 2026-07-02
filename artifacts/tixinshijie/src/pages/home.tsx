@@ -179,6 +179,25 @@ export default function Home() {
               <img src={eat4} alt="幸福時光 樂活時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
+              <h2 className="text-xl font-bold text-white text-center mb-4">探索更多幸福生活</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {[
+                  { href: "/eat", emoji: "🍜", label: "吃", color: "from-cyan-900/50 to-blue-900/50 border-cyan-500/30 hover:border-cyan-400" },
+                  { href: "/drink", emoji: "☕", label: "喝", color: "from-amber-900/50 to-orange-900/50 border-amber-500/30 hover:border-amber-400" },
+                  { href: "/play", emoji: "🌏", label: "玩", color: "from-green-900/50 to-teal-900/50 border-green-500/30 hover:border-green-400" },
+                  { href: "/fun", emoji: "🏡", label: "樂", color: "from-purple-900/50 to-pink-900/50 border-purple-500/30 hover:border-purple-400" },
+                ].map(({ href, emoji, label, color }) => (
+                  <Link key={href} href={href}>
+                    <div className={`bg-gradient-to-br ${color} border rounded-2xl p-6 text-center cursor-pointer transition-all hover:scale-105`}>
+                      <div className="text-4xl mb-2">{emoji}</div>
+                      <div className="text-xl font-bold text-white">{label}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給。
             </motion.p>

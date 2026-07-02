@@ -11,6 +11,10 @@ import TrackPage from "./pages/track";
 import VideosPage from "./pages/videos";
 import PurpleVideosPage from "./pages/purple-videos";
 import HappinessPage from "./pages/happiness";
+import EatPage from "./pages/eat";
+import DrinkPage from "./pages/drink";
+import PlayPage from "./pages/play";
+import FunPage from "./pages/fun";
 import AdminPage from "./pages/admin";
 
 const queryClient = new QueryClient({
@@ -31,6 +35,10 @@ function Router() {
       <Route path="/videos" component={VideosPage} />
       <Route path="/purple-videos" component={PurpleVideosPage} />
       <Route path="/happiness" component={HappinessPage} />
+      <Route path="/eat" component={EatPage} />
+      <Route path="/drink" component={DrinkPage} />
+      <Route path="/play" component={PlayPage} />
+      <Route path="/fun" component={FunPage} />
       <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
