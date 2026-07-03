@@ -1,9 +1,9 @@
 import { Layout } from "../components/layout";
-import { ArticleLayout } from "../components/article-layout";
-import type { ArticleData } from "../components/article-layout";
+import { ArticleDark } from "../components/article-dark";
+import type { ArticleDarkData } from "../components/article-dark";
 import heroSrc from "@assets/吃喝玩樂3_1782913834937.jpg";
 
-const data: ArticleData = {
+const data: ArticleDarkData = {
   seoTitle: "玩｜探索世界，留下最美好的回憶｜幸福時光吃喝玩樂",
   metaDesc: "旅行、露營、高爾夫、海邊、登山與親子活動，幸福時光陪你探索世界，把每一次出發變成值得珍藏的生活回憶。",
   category: "玩",
@@ -53,15 +53,7 @@ const data: ArticleData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: [
-    "國內旅遊推薦",
-    "國外自由行",
-    "露營攻略",
-    "高爾夫分享",
-    "海邊景點",
-    "親子旅行",
-    "假日一日遊",
-  ],
+  relatedLinks: ["國內旅遊推薦", "國外自由行", "露營攻略", "高爾夫分享", "海邊景點", "親子旅行", "假日一日遊"],
   faq: [
     {
       q: "幸福時光的「玩」主要分享什麼？",
@@ -81,7 +73,7 @@ const data: ArticleData = {
 export default function PlayPage() {
   return (
     <Layout>
-      <ArticleLayout data={data} />
+      <ArticleDark data={data} />
     </Layout>
   );
 }

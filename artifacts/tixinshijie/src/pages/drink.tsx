@@ -1,9 +1,9 @@
 import { Layout } from "../components/layout";
-import { ArticleLayout } from "../components/article-layout";
-import type { ArticleData } from "../components/article-layout";
+import { ArticleDark } from "../components/article-dark";
+import type { ArticleDarkData } from "../components/article-dark";
 import heroSrc from "@assets/吃喝玩樂2_1782913834937.jpg";
 
-const data: ArticleData = {
+const data: ArticleDarkData = {
   seoTitle: "喝｜品味每一杯飲品，享受生活的每一刻｜幸福時光吃喝玩樂",
   metaDesc: "從咖啡、茶飲、果汁、手搖飲到紅酒與特色飲品，幸福時光陪你品味生活中的每一杯美好，讓喝飲品成為日常的小幸福。",
   category: "喝",
@@ -13,7 +13,7 @@ const data: ArticleData = {
   heroSrc,
   heroAlt: "幸福時光｜飲品文化",
   publishDate: "2026-07-02",
-  intro: "一杯好喝的飲品，可以讓忙碌的一天慢下來，也能讓生活多一份儀式感。有人喜歡早晨的一杯咖啡，迎接新的開始；有人喜歡午後的一壺好茶，享受片刻寧靜；也有人在聚會時舉起酒杯，分享成功與喜悅。每一種飲品，都代表不同的生活方式。",
+  intro: "一杯好喝的飲品，可以讓忙碌的一天慢下來，也能讓生活多一份儀式感。有人喜歡早晨的一杯咖啡，迎接新的開始；有人喜歡午後的一壺好茶，享受片刻寧靜；也有人在聚會時舉起酒杯，分享成功與喜悅。",
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -53,14 +53,7 @@ const data: ArticleData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: [
-    "精品咖啡介紹",
-    "手沖咖啡技巧",
-    "茶葉文化分享",
-    "手搖飲推薦",
-    "果汁與健康飲品",
-    "紅酒與聚會飲品",
-  ],
+  relatedLinks: ["精品咖啡介紹", "手沖咖啡技巧", "茶葉文化分享", "手搖飲推薦", "果汁與健康飲品", "紅酒與聚會飲品"],
   faq: [
     {
       q: "幸福時光的「喝」會介紹哪些內容？",
@@ -80,7 +73,7 @@ const data: ArticleData = {
 export default function DrinkPage() {
   return (
     <Layout>
-      <ArticleLayout data={data} />
+      <ArticleDark data={data} />
     </Layout>
   );
 }

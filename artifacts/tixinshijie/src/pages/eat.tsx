@@ -1,9 +1,9 @@
 import { Layout } from "../components/layout";
-import { ArticleLayout } from "../components/article-layout";
-import type { ArticleData } from "../components/article-layout";
+import { ArticleDark } from "../components/article-dark";
+import type { ArticleDarkData } from "../components/article-dark";
 import heroSrc from "@assets/吃喝玩樂1_1782913834936.jpg";
 
-const data: ArticleData = {
+const data: ArticleDarkData = {
   seoTitle: "吃｜每一口美食，都是幸福時光的開始｜幸福時光吃喝玩樂",
   metaDesc: "從美食、餐廳、夜市小吃到露營烤肉，幸福時光陪你探索生活中的每一口美味，讓吃飯不只是填飽肚子，更是留下美好回憶的開始。",
   category: "吃",
@@ -45,7 +45,7 @@ const data: ArticleData = {
     },
     {
       id: "future-content",
-      h2: "未來「吃」主題將持續豐富的精彩內容",
+      h2: "未來「吃」主題將持續豐富精彩內容",
       content: [
         "未來在「吃」這個主題中，我們會持續整理各種實用內容，包括熱門餐廳推薦、在地美食介紹、夜市攻略、露營烤肉小技巧、家庭聚餐靈感與節慶美食分享，讓每位來到網站的朋友，都能找到值得收藏的美味資訊。",
         "吃喝玩樂的第一站，就從一頓好好吃飯開始。讓每一口美食，都成為生活中值得留下的回憶。",
@@ -53,14 +53,7 @@ const data: ArticleData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: [
-    "牛肉麵推薦",
-    "夜市美食攻略",
-    "火鍋餐廳推薦",
-    "早餐與下午茶推薦",
-    "露營烤肉分享",
-    "家庭料理靈感",
-  ],
+  relatedLinks: ["牛肉麵推薦", "夜市美食攻略", "火鍋餐廳推薦", "早餐與下午茶推薦", "露營烤肉分享", "家庭料理靈感"],
   faq: [
     {
       q: "幸福時光的「吃」主要分享什麼？",
@@ -80,7 +73,7 @@ const data: ArticleData = {
 export default function EatPage() {
   return (
     <Layout>
-      <ArticleLayout data={data} />
+      <ArticleDark data={data} />
     </Layout>
   );
 }

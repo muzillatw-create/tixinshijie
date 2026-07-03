@@ -1,9 +1,9 @@
 import { Layout } from "../components/layout";
-import { ArticleLayout } from "../components/article-layout";
-import type { ArticleData } from "../components/article-layout";
+import { ArticleDark } from "../components/article-dark";
+import type { ArticleDarkData } from "../components/article-dark";
 import heroSrc from "@assets/吃喝玩樂4_1782913834938.jpg";
 
-const data: ArticleData = {
+const data: ArticleDarkData = {
   seoTitle: "樂｜享受生活，創造屬於自己的幸福｜幸福時光吃喝玩樂",
   metaDesc: "從居家生活、電影、音樂、閱讀、親子互動到寵物陪伴，幸福時光陪你在平凡日常中找到快樂，創造屬於自己的美好生活。",
   category: "樂",
@@ -13,7 +13,7 @@ const data: ArticleData = {
   heroSrc,
   heroAlt: "幸福時光｜生活享受",
   publishDate: "2026-07-02",
-  intro: "真正的幸福，不一定來自轟轟烈烈的大事，而是生活中的每一個小確幸。和家人一起看電影、與朋友聊天、閱讀一本好書、欣賞音樂、陪伴毛小孩、靜靜欣賞夕陽，這些看似平凡的時刻，往往最令人難忘。",
+  intro: "真正的幸福，不一定來自轟轟烈烈的大事，而是生活中的每一個小確幸。和家人一起看電影、與朋友聊天、閱讀一本好書、欣賞音樂、陪伴毛小孩，這些看似平凡的時刻，往往最令人難忘。",
   sections: [
     {
       id: "fun-attitude",
@@ -53,15 +53,7 @@ const data: ArticleData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: [
-    "居家生活分享",
-    "電影推薦",
-    "音樂欣賞",
-    "親子活動",
-    "寵物日常",
-    "心靈成長",
-    "放鬆生活提案",
-  ],
+  relatedLinks: ["居家生活分享", "電影推薦", "音樂欣賞", "親子活動", "寵物日常", "心靈成長", "放鬆生活提案"],
   faq: [
     {
       q: "幸福時光的「樂」主要分享什麼？",
@@ -81,7 +73,7 @@ const data: ArticleData = {
 export default function FunPage() {
   return (
     <Layout>
-      <ArticleLayout data={data} />
+      <ArticleDark data={data} />
     </Layout>
   );
 }
