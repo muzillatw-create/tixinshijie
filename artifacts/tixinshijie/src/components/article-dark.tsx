@@ -72,6 +72,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
 
   // SEO
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
     document.title = data.seoTitle;
     const set = (name: string, content: string, prop = false) => {
       const sel = prop ? `meta[property="${name}"]` : `meta[name="${name}"]`;
