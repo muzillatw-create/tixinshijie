@@ -34,7 +34,7 @@ _Describe the high-level user-facing capabilities of this app once they exist._
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- **圖片壓縮**：上傳的圖片若為 PNG 檔，一律用 ImageMagick 壓縮轉成 JPG（目標大小 200–500KB，quality ~80–85）。網站瀏覽不需要極高畫質，載入速度優先。
 
 ## Gotchas
 
