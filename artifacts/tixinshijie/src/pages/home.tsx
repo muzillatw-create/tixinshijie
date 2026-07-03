@@ -162,6 +162,18 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+              <Link href="/happiness" className="block">
+                <img src={bannerHappiness} alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+              </Link>
+            </motion.div>
+
+            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+              <Link href="/order" className="block">
+                <img src={bannerPrice} alt="每天不到2.5元 立即訂購" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+              </Link>
+            </motion.div>
+
+            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
               <img src={eat1} alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
