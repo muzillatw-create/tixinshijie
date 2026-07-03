@@ -1,90 +1,87 @@
 import { Layout } from "../components/layout";
-import { Link } from "wouter";
-import { Button } from "../components/ui/button";
-import { ArrowLeft, BookOpen, Calendar } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import heroImg from "@assets/吃喝玩樂4_1782913834938.jpg";
+import { ArticleLayout } from "../components/article-layout";
+import type { ArticleData } from "../components/article-layout";
+import heroSrc from "@assets/吃喝玩樂4_1782913834938.jpg";
 
-interface Article {
-  id: number; category: string; title: string; date: string;
-  heroImage: string; summary: string; content: string; images: string[];
-}
-
-function ArticleModal({ article, onClose }: { article: Article; onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4" onClick={onClose}>
-      <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
-        <img src={article.heroImage} alt={article.title} className="w-full aspect-video object-cover rounded-t-2xl" />
-        <div className="p-6">
-          <div className="flex items-center gap-2 text-xs text-gray-500 mb-3"><Calendar className="h-3 w-3" />{article.date}</div>
-          <h2 className="text-xl font-bold text-white mb-4">{article.title}</h2>
-          {article.content.split("\n").map((p, i) => p.trim() && <p key={i} className="text-gray-400 text-sm leading-relaxed mb-3">{p}</p>)}
-          {article.images.length > 0 && (
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              {article.images.map((img, i) => <img key={i} src={img} alt="" className="w-full rounded-xl object-cover aspect-video" />)}
-            </div>
-          )}
-          <Button onClick={onClose} variant="outline" className="mt-6 border-white/20 text-gray-300 hover:text-white">關閉</Button>
-        </div>
-      </div>
-    </div>
-  );
-}
+const data: ArticleData = {
+  seoTitle: "樂｜享受生活，創造屬於自己的幸福｜幸福時光吃喝玩樂",
+  metaDesc: "從居家生活、電影、音樂、閱讀、親子互動到寵物陪伴，幸福時光陪你在平凡日常中找到快樂，創造屬於自己的美好生活。",
+  category: "樂",
+  categorySlug: "fun",
+  categoryIcon: "🏡",
+  h1: "享受生活，創造屬於自己的幸福",
+  heroSrc,
+  heroAlt: "幸福時光｜生活享受",
+  publishDate: "2026-07-02",
+  intro: "真正的幸福，不一定來自轟轟烈烈的大事，而是生活中的每一個小確幸。和家人一起看電影、與朋友聊天、閱讀一本好書、欣賞音樂、陪伴毛小孩、靜靜欣賞夕陽，這些看似平凡的時刻，往往最令人難忘。",
+  sections: [
+    {
+      id: "fun-attitude",
+      h2: "樂，是一種生活態度",
+      content: [
+        "當我們願意放慢腳步，感受日常中的小美好，就會發現生活並不只是忙碌與壓力，也可以充滿溫度與微笑。",
+        "幸福不需要遠求，它就藏在每天的早晨陽光裡、藏在一頓溫暖的家常飯裡、藏在朋友傳來的一則貼心訊息裡。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-varieties",
+      h2: "探索生活中多元的快樂方式",
+      content: [
+        "幸福時光希望分享更多居家生活、休閒娛樂、電影、音樂、閱讀、親子互動、寵物生活以及心靈成長等內容，陪伴大家找到屬於自己的生活節奏。",
+        "每個人對快樂的定義不同。有些人喜歡熱鬧聚會，有些人喜歡安靜閱讀，有些人喜歡旅行，有些人只想在家好好休息。只要那一刻讓你感到自在、放鬆與滿足，就是屬於你的幸福時光。",
+      ],
+      h3s: [
+        {
+          heading: "居家生活的小確幸",
+          content: ["把家布置成自己喜歡的樣子，在熟悉的空間裡找到最深的放鬆。一盆植物、一杯熱飲、一首喜歡的歌，就能讓家成為最療癒的避風港。"],
+        },
+        {
+          heading: "電影與音樂帶來的感動",
+          content: ["一部好電影能讓我們哭、讓我們笑、讓我們思考；一首好音樂能在瞬間打開記憶的閘門。這些藝術創作，是生活最美的陪伴。"],
+        },
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "future-fun-content",
+      h2: "未來「樂」主題的溫暖規劃",
+      content: [
+        "未來在「樂」這個主題中，我們會持續整理居家生活靈感、電影與音樂推薦、親子活動、寵物日常、生活儀式感與放鬆小技巧，讓每一天都更有溫度。",
+        "幸福不是等待未來，而是從今天開始，用心感受身邊的一切美好。",
+      ],
+      imageAfter: true,
+    },
+  ],
+  relatedLinks: [
+    "居家生活分享",
+    "電影推薦",
+    "音樂欣賞",
+    "親子活動",
+    "寵物日常",
+    "心靈成長",
+    "放鬆生活提案",
+  ],
+  faq: [
+    {
+      q: "幸福時光的「樂」主要分享什麼？",
+      a: "主要分享居家生活、休閒娛樂、電影、音樂、親子、寵物與心靈成長等內容，讓日常生活更有溫度與意義。",
+    },
+    {
+      q: "「樂」和「玩」有什麼不同？",
+      a: "「玩」偏向外出探索與活動，「樂」偏向日常生活中的放鬆、陪伴與心情愉悅，是生活中更內在的幸福感受。",
+    },
+    {
+      q: "這個主題適合放在首頁嗎？",
+      a: "適合，可以讓網站更有人情味，也能補足吃喝玩樂中最溫暖的生活面向，增加讀者的情感共鳴。",
+    },
+  ],
+};
 
 export default function FunPage() {
-  const [selected, setSelected] = useState<Article | null>(null);
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, []);
-
-  const { data: articles = [], isLoading } = useQuery<Article[]>({
-    queryKey: ["articles", "fun"],
-    queryFn: async () => {
-      const res = await fetch("/api/articles?category=fun");
-      if (!res.ok) throw new Error("Failed");
-      return res.json();
-    },
-  });
-
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-4 py-20 min-h-[80vh]">
-        <div className="mb-8">
-          <Link href="/"><Button variant="outline" className="border-white/20 text-gray-300 hover:text-white gap-2"><ArrowLeft className="h-4 w-4" />返回首頁</Button></Link>
-        </div>
-        <div className="aspect-video w-full max-w-3xl mx-auto rounded-2xl overflow-hidden mb-8">
-          <img src={heroImg} alt="樂" className="w-full h-full object-cover" />
-        </div>
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">🏡 樂</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            生活中的每一刻，都值得用心感受。與家人共度時光、與自己好好相處，讓每一天都充滿幸福與快樂。
-          </p>
-        </div>
-        {isLoading ? (
-          <div className="text-center text-gray-500 py-12">載入中...</div>
-        ) : articles.length === 0 ? (
-          <div className="text-center text-gray-500 py-12">尚無文章</div>
-        ) : (
-          <div className="grid sm:grid-cols-2 gap-6">
-            {articles.map((a) => (
-              <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
-                <div className="aspect-video overflow-hidden">
-                  <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2"><Calendar className="h-3 w-3" />{a.date}</div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
-                  <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
-                    <BookOpen className="h-3 w-3" />閱讀更多
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
+      <ArticleLayout data={data} />
     </Layout>
   );
 }

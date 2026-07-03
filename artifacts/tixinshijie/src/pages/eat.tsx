@@ -1,111 +1,86 @@
 import { Layout } from "../components/layout";
-import { Link } from "wouter";
-import { Button } from "../components/ui/button";
-import { ArrowLeft, BookOpen, Calendar } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import heroImg from "@assets/吃喝玩樂1_1782913834936.jpg";
+import { ArticleLayout } from "../components/article-layout";
+import type { ArticleData } from "../components/article-layout";
+import heroSrc from "@assets/吃喝玩樂1_1782913834936.jpg";
 
-interface Article {
-  id: number;
-  category: string;
-  title: string;
-  date: string;
-  heroImage: string;
-  summary: string;
-  content: string;
-  images: string[];
-}
-
-function ArticleModal({ article, onClose }: { article: Article; onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4" onClick={onClose}>
-      <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
-        <img src={article.heroImage} alt={article.title} className="w-full aspect-video object-cover rounded-t-2xl" />
-        <div className="p-6">
-          <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
-            <Calendar className="h-3 w-3" />{article.date}
-          </div>
-          <h2 className="text-xl font-bold text-white mb-4">{article.title}</h2>
-          {article.content.split("\n").map((p, i) => p.trim() && (
-            <p key={i} className="text-gray-400 text-sm leading-relaxed mb-3">{p}</p>
-          ))}
-          {article.images.length > 0 && (
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              {article.images.map((img, i) => (
-                <img key={i} src={img} alt="" className="w-full rounded-xl object-cover aspect-video" />
-              ))}
-            </div>
-          )}
-          <Button onClick={onClose} variant="outline" className="mt-6 border-white/20 text-gray-300 hover:text-white">關閉</Button>
-        </div>
-      </div>
-    </div>
-  );
-}
+const data: ArticleData = {
+  seoTitle: "吃｜每一口美食，都是幸福時光的開始｜幸福時光吃喝玩樂",
+  metaDesc: "從美食、餐廳、夜市小吃到露營烤肉，幸福時光陪你探索生活中的每一口美味，讓吃飯不只是填飽肚子，更是留下美好回憶的開始。",
+  category: "吃",
+  categorySlug: "eat",
+  categoryIcon: "🍜",
+  h1: "每一口美食，都是幸福時光的開始",
+  heroSrc,
+  heroAlt: "幸福時光｜美食探索",
+  publishDate: "2026-07-02",
+  intro: "美食，不只是填飽肚子，更是一種生活的享受。無論是一碗熱騰騰的牛肉麵、一桌與家人共享的晚餐，還是一場朋友相聚的燒烤，每一道料理都承載著不同的故事，也留下屬於自己的幸福回憶。",
+  sections: [
+    {
+      id: "memory-and-food",
+      h2: "吃，是生活中最容易感受到幸福的時刻",
+      content: [
+        "很多人最難忘的回憶，都與美食有關。可能是童年的家常菜，也可能是旅行途中偶然發現的小吃，甚至是露營時大家圍坐在一起分享料理的歡樂時光。",
+        "食物連結著記憶，也連結著人與人之間的情感。每一次用餐，都是一次與自己和他人的相遇，那份溫暖的滋味，往往比食物本身更令人難忘。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "explore-food",
+      h2: "探索更多美食，分享生活中的每一口美好",
+      content: [
+        "幸福時光希望陪伴大家探索更多美食，分享餐廳推薦、夜市美食、地方特色料理、家庭料理、露營烤肉、美食旅遊等內容，讓每一次用餐都成為生活中最值得珍藏的一刻。",
+        "我們相信，美食可以拉近人與人的距離，也能讓平凡的一天變得更加溫暖。無論今天吃的是簡單便當，還是精緻料理，只要與喜歡的人一起分享，就是最美好的幸福時光。",
+      ],
+      h3s: [
+        {
+          heading: "餐廳推薦與在地美食",
+          content: ["從台北到高雄，各地都有令人驚艷的在地美食，等待著你去發現。一碗道地的滷肉飯、一份現炸的蚵仔煎，都是屬於台灣的幸福滋味。"],
+        },
+        {
+          heading: "夜市小吃攻略",
+          content: ["夜市是台灣最具特色的飲食文化場域，琳琅滿目的小吃攤位，每一個都是在地人的驕傲，也是旅人最難忘的美食記憶。"],
+        },
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "future-content",
+      h2: "未來「吃」主題將持續豐富的精彩內容",
+      content: [
+        "未來在「吃」這個主題中，我們會持續整理各種實用內容，包括熱門餐廳推薦、在地美食介紹、夜市攻略、露營烤肉小技巧、家庭聚餐靈感與節慶美食分享，讓每位來到網站的朋友，都能找到值得收藏的美味資訊。",
+        "吃喝玩樂的第一站，就從一頓好好吃飯開始。讓每一口美食，都成為生活中值得留下的回憶。",
+      ],
+      imageAfter: true,
+    },
+  ],
+  relatedLinks: [
+    "牛肉麵推薦",
+    "夜市美食攻略",
+    "火鍋餐廳推薦",
+    "早餐與下午茶推薦",
+    "露營烤肉分享",
+    "家庭料理靈感",
+  ],
+  faq: [
+    {
+      q: "幸福時光的「吃」主要分享什麼？",
+      a: "主要分享美食、餐廳、夜市小吃、家庭料理、露營烤肉與美食旅遊等生活內容，讓每次用餐都成為值得珍藏的幸福時光。",
+    },
+    {
+      q: "文章會介紹特定餐廳嗎？",
+      a: "未來可以依照地區慢慢整理，例如台北美食、台中美食、高雄美食、夜市美食與特色小吃，讓大家找到適合的用餐地點。",
+    },
+    {
+      q: "這個主題適合放在網站首頁嗎？",
+      a: "適合。美食是最容易吸引讀者停留的主題，也很適合搭配圖片與延伸文章，能增加網站整體的豐富度與吸引力。",
+    },
+  ],
+};
 
 export default function EatPage() {
-  const [selected, setSelected] = useState<Article | null>(null);
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, []);
-
-  const { data: articles = [], isLoading } = useQuery<Article[]>({
-    queryKey: ["articles", "eat"],
-    queryFn: async () => {
-      const res = await fetch("/api/articles?category=eat");
-      if (!res.ok) throw new Error("Failed to fetch");
-      return res.json();
-    },
-  });
-
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-4 py-20 min-h-[80vh]">
-        <div className="mb-8">
-          <Link href="/">
-            <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white gap-2">
-              <ArrowLeft className="h-4 w-4" />返回首頁
-            </Button>
-          </Link>
-        </div>
-
-        <div className="aspect-video w-full max-w-3xl mx-auto rounded-2xl overflow-hidden mb-8">
-          <img src={heroImg} alt="吃" className="w-full h-full object-cover" />
-        </div>
-
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">🍜 吃</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            美食，是生活中最簡單的幸福。無論是一碗熱騰騰的牛肉麵、家人圍坐的火鍋，還是街邊的一份小吃，每一口都承載著記憶與情感。
-          </p>
-        </div>
-
-        {isLoading ? (
-          <div className="text-center text-gray-500 py-12">載入中...</div>
-        ) : articles.length === 0 ? (
-          <div className="text-center text-gray-500 py-12">尚無文章</div>
-        ) : (
-          <div className="grid sm:grid-cols-2 gap-6">
-            {articles.map((a) => (
-              <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
-                <div className="aspect-video overflow-hidden">
-                  <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                    <Calendar className="h-3 w-3" />{a.date}
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
-                  <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
-                    <BookOpen className="h-3 w-3" />閱讀更多
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
+      <ArticleLayout data={data} />
     </Layout>
   );
 }

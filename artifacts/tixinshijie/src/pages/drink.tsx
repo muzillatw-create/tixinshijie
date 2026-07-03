@@ -1,90 +1,86 @@
 import { Layout } from "../components/layout";
-import { Link } from "wouter";
-import { Button } from "../components/ui/button";
-import { ArrowLeft, BookOpen, Calendar } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import heroImg from "@assets/吃喝玩樂2_1782913834937.jpg";
+import { ArticleLayout } from "../components/article-layout";
+import type { ArticleData } from "../components/article-layout";
+import heroSrc from "@assets/吃喝玩樂2_1782913834937.jpg";
 
-interface Article {
-  id: number; category: string; title: string; date: string;
-  heroImage: string; summary: string; content: string; images: string[];
-}
-
-function ArticleModal({ article, onClose }: { article: Article; onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4" onClick={onClose}>
-      <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
-        <img src={article.heroImage} alt={article.title} className="w-full aspect-video object-cover rounded-t-2xl" />
-        <div className="p-6">
-          <div className="flex items-center gap-2 text-xs text-gray-500 mb-3"><Calendar className="h-3 w-3" />{article.date}</div>
-          <h2 className="text-xl font-bold text-white mb-4">{article.title}</h2>
-          {article.content.split("\n").map((p, i) => p.trim() && <p key={i} className="text-gray-400 text-sm leading-relaxed mb-3">{p}</p>)}
-          {article.images.length > 0 && (
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              {article.images.map((img, i) => <img key={i} src={img} alt="" className="w-full rounded-xl object-cover aspect-video" />)}
-            </div>
-          )}
-          <Button onClick={onClose} variant="outline" className="mt-6 border-white/20 text-gray-300 hover:text-white">關閉</Button>
-        </div>
-      </div>
-    </div>
-  );
-}
+const data: ArticleData = {
+  seoTitle: "喝｜品味每一杯飲品，享受生活的每一刻｜幸福時光吃喝玩樂",
+  metaDesc: "從咖啡、茶飲、果汁、手搖飲到紅酒與特色飲品，幸福時光陪你品味生活中的每一杯美好，讓喝飲品成為日常的小幸福。",
+  category: "喝",
+  categorySlug: "drink",
+  categoryIcon: "☕",
+  h1: "品味每一杯飲品，享受生活的每一刻",
+  heroSrc,
+  heroAlt: "幸福時光｜飲品文化",
+  publishDate: "2026-07-02",
+  intro: "一杯好喝的飲品，可以讓忙碌的一天慢下來，也能讓生活多一份儀式感。有人喜歡早晨的一杯咖啡，迎接新的開始；有人喜歡午後的一壺好茶，享受片刻寧靜；也有人在聚會時舉起酒杯，分享成功與喜悅。每一種飲品，都代表不同的生活方式。",
+  sections: [
+    {
+      id: "drink-as-lifestyle",
+      h2: "喝，不只是解渴，更是一種生活品味",
+      content: [
+        "當我們願意放慢腳步，用心感受一杯飲品的溫度、香氣與味道，就會發現生活其實藏著很多細緻的幸福。",
+        "一杯手沖咖啡的香氣、一壺龍井茶的清香、一杯夏日果汁的酸甜，這些感官的觸動，都在悄悄豐富著我們的生活底蘊。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-varieties",
+      h2: "各種飲品的文化與魅力",
+      content: [
+        "幸福時光將分享各種咖啡、茶飲、果汁、手搖飲、紅酒、威士忌以及特色飲品資訊，介紹不同地區的飲食文化，也分享飲品搭配、美味推薦與生活小知識。",
+        "不論是在家泡一壺茶，還是在咖啡館度過午後時光，或是在旅行途中喝到一杯令人驚喜的飲品，這些片刻都能成為生活中美好的記憶。",
+      ],
+      h3s: [
+        {
+          heading: "咖啡文化的深度探索",
+          content: ["從義式濃縮到手沖單品，咖啡的世界博大精深。每一種烘焙度、每一個產區，都帶來截然不同的風味體驗，值得細細品味。"],
+        },
+        {
+          heading: "茶葉文化的千年傳承",
+          content: ["台灣茶舉世聞名，從高山烏龍到東方美人，每一款茶都有其獨特的製作工藝與文化背景，是最具代表性的生活美學之一。"],
+        },
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "future-drink-content",
+      h2: "未來「喝」主題的豐富規劃",
+      content: [
+        "未來在「喝」這個主題中，我們會持續整理咖啡知識、茶葉文化、手搖飲推薦、果汁分享、飲品搭配、聚會飲品與生活儀式感內容，讓每一次舉杯，都成為幸福時光的一部分。",
+        "每一杯飲品，都是生活中最美好的停頓。願你在忙碌之餘，也能好好享受屬於自己的那一杯。",
+      ],
+      imageAfter: true,
+    },
+  ],
+  relatedLinks: [
+    "精品咖啡介紹",
+    "手沖咖啡技巧",
+    "茶葉文化分享",
+    "手搖飲推薦",
+    "果汁與健康飲品",
+    "紅酒與聚會飲品",
+  ],
+  faq: [
+    {
+      q: "幸福時光的「喝」會介紹哪些內容？",
+      a: "會分享咖啡、茶飲、果汁、手搖飲、紅酒、威士忌與特色飲品等生活內容，帶大家深入了解飲品文化。",
+    },
+    {
+      q: "文章適合搭配什麼圖片？",
+      a: "可以搭配咖啡杯、茶具、果汁、戶外飲品、朋友聚會與陽光生活感圖片，讓文章更有溫度與視覺吸引力。",
+    },
+    {
+      q: "「喝」的文章可以怎麼延伸？",
+      a: "可以延伸成咖啡專題、茶葉專題、手搖飲推薦、飲品搭配與聚會飲品攻略，建立豐富的飲品知識庫。",
+    },
+  ],
+};
 
 export default function DrinkPage() {
-  const [selected, setSelected] = useState<Article | null>(null);
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, []);
-
-  const { data: articles = [], isLoading } = useQuery<Article[]>({
-    queryKey: ["articles", "drink"],
-    queryFn: async () => {
-      const res = await fetch("/api/articles?category=drink");
-      if (!res.ok) throw new Error("Failed");
-      return res.json();
-    },
-  });
-
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-4 py-20 min-h-[80vh]">
-        <div className="mb-8">
-          <Link href="/"><Button variant="outline" className="border-white/20 text-gray-300 hover:text-white gap-2"><ArrowLeft className="h-4 w-4" />返回首頁</Button></Link>
-        </div>
-        <div className="aspect-video w-full max-w-3xl mx-auto rounded-2xl overflow-hidden mb-8">
-          <img src={heroImg} alt="喝" className="w-full h-full object-cover" />
-        </div>
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">☕ 喝</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            想喝的每一口，都是對自己最好的照顧。從清晨的一杯咖啡到午後的一壺好茶，每一種飲品都有它獨特的魔力。
-          </p>
-        </div>
-        {isLoading ? (
-          <div className="text-center text-gray-500 py-12">載入中...</div>
-        ) : articles.length === 0 ? (
-          <div className="text-center text-gray-500 py-12">尚無文章</div>
-        ) : (
-          <div className="grid sm:grid-cols-2 gap-6">
-            {articles.map((a) => (
-              <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-colors group">
-                <div className="aspect-video overflow-hidden">
-                  <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2"><Calendar className="h-3 w-3" />{a.date}</div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{a.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{a.summary}</p>
-                  <Button variant="outline" size="sm" onClick={() => setSelected(a)} className="border-white/20 text-gray-300 hover:text-white gap-2">
-                    <BookOpen className="h-3 w-3" />閱讀更多
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
+      <ArticleLayout data={data} />
     </Layout>
   );
 }
