@@ -132,13 +132,13 @@ export default function Home() {
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2 items-center">
-                <Link href="/purple-videos" className="block">
+                <Link href="/happiness" className="block">
                   <video src={sideVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
                 <Link href="/purple-videos">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
-                <Link href="/purple-videos" className="block">
+                <Link href="/order" className="block">
                   <video src={sideVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
               </div>
@@ -158,18 +158,6 @@ export default function Home() {
                 <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
                   立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
-            </motion.div>
-
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <Link href="/happiness" className="block">
-                <img src={bannerHappiness} alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
-              </Link>
-            </motion.div>
-
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <Link href="/order" className="block">
-                <img src={bannerPrice} alt="每天不到2.5元 立即訂購" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
               </Link>
             </motion.div>
 
