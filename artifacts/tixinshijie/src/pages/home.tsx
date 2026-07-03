@@ -23,7 +23,7 @@ import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
 import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
 import bannerPurple from "@assets/bannerPurple.jpg";
 import bannerHappiness from "@assets/bannerHappiness.jpg";
-import bannerHappinessHero from "@assets/bannerHappinessHero.jpg";
+import bannerHappinessHero from "@assets/bannerHappiness2.jpg";
 import bannerPrice from "@assets/bannerPrice.jpg";
 
 const PRICE = 880;
