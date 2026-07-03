@@ -149,7 +149,7 @@ export default function Home() {
                 <span className="text-cyan-400">▶</span> 影音觀看區
               </h2>
               <Link href="/videos">
-                <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white">查看全部影片</Button>
+                <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white cursor-pointer">查看全部影片</Button>
               </Link>
             </motion.div>
 
