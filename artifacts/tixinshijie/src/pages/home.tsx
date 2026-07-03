@@ -21,10 +21,10 @@ import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
 import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
-import bannerPurple from "@assets/file_00000000bca871f899b258bc6dd2df63_1782650063059.png";
-import bannerHappiness from "@assets/file_00000000d8ec720badcd1efbab3db622_1782650063060.png";
-import bannerHappinessHero from "@assets/file_000000004b607209a451854b99a6b587_1782656449153.png";
-import bannerPrice from "@assets/file_000000003d14720ba72f228e258177ae_1782650063062.png";
+import bannerPurple from "@assets/bannerPurple.jpg";
+import bannerHappiness from "@assets/bannerHappiness.jpg";
+import bannerHappinessHero from "@assets/bannerHappinessHero.jpg";
+import bannerPrice from "@assets/bannerPrice.jpg";
 
 const PRICE = 880;
 
