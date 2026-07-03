@@ -8,7 +8,7 @@ import { Button } from "../components/ui/button";
 import { Textarea } from "../components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { useCreateOrder } from "@workspace/api-client-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckCircle2, ShoppingBag } from "lucide-react";
 import { useCart } from "../lib/cart-context";
 
@@ -26,6 +26,10 @@ const orderSchema = z.object({
 export default function OrderPage() {
   const { quantity, setQuantity } = useCart();
   const [successOrderId, setSuccessOrderId] = useState<number | null>(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
   
   const form = useForm<z.infer<typeof orderSchema>>({
     resolver: zodResolver(orderSchema),
