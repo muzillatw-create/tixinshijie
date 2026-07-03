@@ -132,11 +132,15 @@ export default function Home() {
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2 items-center">
-                <video src={sideVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+                <Link href="/purple-videos" className="block">
+                  <video src={sideVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                </Link>
                 <Link href="/purple-videos">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
-                <video src={sideVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl" />
+                <Link href="/purple-videos" className="block">
+                  <video src={sideVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                </Link>
               </div>
             </motion.div>
 
