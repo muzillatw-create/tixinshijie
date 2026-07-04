@@ -18,7 +18,7 @@ import topVideo from "@assets/My_Project_1782823190148.mp4";
 import sideVideo1 from "@assets/My_Project_1_1782999545209.mp4";
 import sideVideo2 from "@assets/My_Project_2_1782999545210.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
-import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
+import eat2 from "@assets/home-paragliding.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
 import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
 import bannerPurple from "@assets/bannerPurple.jpg";
