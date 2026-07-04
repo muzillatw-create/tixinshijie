@@ -14,6 +14,7 @@ const data: ArticleDarkData = {
   heroAlt: "幸福時光｜飲品文化",
   publishDate: "2026-07-02",
   intro: "一杯好喝的飲品，可以讓忙碌的一天慢下來，也能讓生活多一份儀式感。有人喜歡早晨的一杯咖啡，迎接新的開始；有人喜歡午後的一壺好茶，享受片刻寧靜；也有人在聚會時舉起酒杯，分享成功與喜悅。",
+  inlineImages: ["/images/eat-coffee.jpg", "/images/drink-oolong.jpg", "/images/eat-couple-drink.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
