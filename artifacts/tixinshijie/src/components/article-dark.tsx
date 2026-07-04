@@ -142,8 +142,8 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
       </nav>
 
       {/* Hero Image */}
-      <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-xl shadow-black/40">
-        <img src={data.heroSrc} alt={data.heroAlt} className="w-full h-full object-cover" loading="lazy" />
+      <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-xl shadow-black/40 relative">
+        <img src={data.heroSrc} alt={data.heroAlt} className="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
       </div>
 
       {/* Category Badge + H1 */}
@@ -184,7 +184,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
 
       <div className="lg:grid lg:grid-cols-[1fr_240px] gap-10 items-start">
         {/* ── Main Article ── */}
-        <article>
+        <article className="min-w-0">
           {/* Intro */}
           <p className="text-gray-300 text-lg leading-relaxed mb-10 border-l-2 border-cyan-500 pl-4">
             {data.intro}
@@ -215,8 +215,8 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                   const imgUrl = data.inlineImages?.[currentImgIdx];
                   return imgUrl
                     ? (
-                      <div className="w-full aspect-video overflow-hidden rounded-2xl my-6 shadow-lg">
-                        <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      <div className="w-full aspect-video overflow-hidden rounded-2xl my-6 shadow-lg relative">
+                        <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
                       </div>
                     )
                     : <ImagePlaceholder index={currentImgIdx} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} />;
@@ -241,8 +241,8 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
               <div className="grid sm:grid-cols-2 gap-5">
                 {dbArticles.map(a => (
                   <div key={a.id} className="min-w-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
-                    <div className="w-full aspect-video overflow-hidden">
-                      <img src={a.heroImage || undefined} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                    <div className="w-full aspect-video overflow-hidden relative">
+                      <img src={a.heroImage || undefined} alt={a.title} className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
                     <div className="p-4">
                       <p className="text-xs text-gray-500 mb-1 flex items-center gap-1"><Calendar className="h-3 w-3" />{a.date}</p>
