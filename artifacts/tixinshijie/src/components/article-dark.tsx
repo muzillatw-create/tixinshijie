@@ -214,7 +214,11 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                 {showImg && (() => {
                   const imgUrl = data.inlineImages?.[currentImgIdx];
                   return imgUrl
-                    ? <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="w-full aspect-video object-cover rounded-2xl my-6 shadow-lg" loading="lazy" />
+                    ? (
+                      <div className="w-full aspect-video overflow-hidden rounded-2xl my-6 shadow-lg">
+                        <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    )
                     : <ImagePlaceholder index={currentImgIdx} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} />;
                 })()}
               </section>
