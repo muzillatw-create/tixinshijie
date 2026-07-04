@@ -75,7 +75,7 @@ router.post("/admin/articles", async (req, res): Promise<void> => {
     return;
   }
 
-  if (!category || !title || !date || !heroImage || !summary || !content) {
+  if (!category || !title || !date || heroImage === undefined || heroImage === null || !summary || !content) {
     res.status(400).json({ error: "Missing required fields" });
     return;
   }
