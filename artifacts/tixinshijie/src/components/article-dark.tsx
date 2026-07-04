@@ -142,7 +142,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
       </nav>
 
       {/* Hero Image */}
-      <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-xl shadow-black/40 relative">
+      <div className="w-full relative h-0 pb-[56.25%] rounded-2xl overflow-hidden mb-8 shadow-xl shadow-black/40">
         <img src={data.heroSrc} alt={data.heroAlt} className="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
       </div>
 
@@ -215,7 +215,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                   const imgUrl = data.inlineImages?.[currentImgIdx];
                   return imgUrl
                     ? (
-                      <div className="w-full aspect-video overflow-hidden rounded-2xl my-6 shadow-lg relative">
+                      <div className="w-full relative h-0 pb-[56.25%] overflow-hidden rounded-2xl my-6 shadow-lg">
                         <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
                       </div>
                     )
@@ -241,7 +241,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
               <div className="grid sm:grid-cols-2 gap-5 overflow-hidden">
                 {dbArticles.map(a => (
                   <div key={a.id} className="min-w-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
-                    <div className="w-full aspect-video overflow-hidden relative">
+                    <div className="w-full relative h-0 pb-[56.25%] overflow-hidden">
                       <img src={a.heroImage || undefined} alt={a.title} className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
                     <div className="p-4">
