@@ -26,6 +26,7 @@ export interface ArticleDarkData {
   publishDate: string;
   intro: string;
   sections: ArticleSection[];
+  inlineImages?: string[];
   relatedLinks: string[];
   faq: FaqItem[];
 }
@@ -210,7 +211,12 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                     ))}
                   </div>
                 ))}
-                {showImg && <ImagePlaceholder index={currentImgIdx} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} />}
+                {showImg && (() => {
+                  const imgUrl = data.inlineImages?.[currentImgIdx];
+                  return imgUrl
+                    ? <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="w-full aspect-video object-cover rounded-2xl my-6 shadow-lg" loading="lazy" />
+                    : <ImagePlaceholder index={currentImgIdx} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} />;
+                })()}
               </section>
             );
           })}

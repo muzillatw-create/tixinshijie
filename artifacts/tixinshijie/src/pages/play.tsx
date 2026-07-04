@@ -14,6 +14,7 @@ const data: ArticleDarkData = {
   heroAlt: "幸福時光｜旅遊探索",
   publishDate: "2026-07-02",
   intro: "旅行，是認識世界，也是認識自己的方式。不一定要遠赴國外，一趟近郊旅行、一場露營、一場高爾夫、一趟海邊散步、一段自行車旅程，都能讓生活充滿新的驚喜。",
+  inlineImages: ["", "/images/play-picnic.jpg", ""],
   sections: [
     {
       id: "play-recharge",
