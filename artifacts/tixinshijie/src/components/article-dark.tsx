@@ -131,7 +131,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
   let imgIdx = 0;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-20">
+    <div className="max-w-5xl mx-auto px-4 py-20 overflow-x-hidden">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-cyan-400 transition-colors flex items-center gap-1">
@@ -184,7 +184,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
 
       <div className="lg:grid lg:grid-cols-[1fr_240px] gap-10 items-start">
         {/* ── Main Article ── */}
-        <article className="min-w-0">
+        <article className="min-w-0 overflow-hidden [&_img]:max-w-full [&_img]:block">
           {/* Intro */}
           <p className="text-gray-300 text-lg leading-relaxed mb-10 border-l-2 border-cyan-500 pl-4">
             {data.intro}
@@ -195,7 +195,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
             const showImg = section.imageAfter;
             const currentImgIdx = showImg ? imgIdx++ : -1;
             return (
-              <section key={section.id} id={section.id} className="mb-10 scroll-mt-24">
+              <section key={section.id} id={section.id} className="mb-10 scroll-mt-24 overflow-hidden">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
                   <span className="w-1 h-6 rounded-full bg-cyan-500 shrink-0" />
                   {section.h2}
@@ -238,7 +238,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
               <h2 className="text-xl font-bold text-white mb-5 flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-cyan-400" />更多精彩文章
               </h2>
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid sm:grid-cols-2 gap-5 overflow-hidden">
                 {dbArticles.map(a => (
                   <div key={a.id} className="min-w-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
                     <div className="w-full aspect-video overflow-hidden relative">
