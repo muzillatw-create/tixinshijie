@@ -26,7 +26,7 @@ export interface ArticleDarkData {
   publishDate: string;
   intro: string;
   sections: ArticleSection[];
-  inlineImages?: string[];
+  inlineImages?: (string | null)[];
   relatedLinks: string[];
   faq: FaqItem[];
 }
@@ -240,9 +240,9 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
               </h2>
               <div className="grid sm:grid-cols-2 gap-5">
                 {dbArticles.map(a => (
-                  <div key={a.id} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
-                    <div className="aspect-video overflow-hidden">
-                      <img src={a.heroImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  <div key={a.id} className="min-w-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
+                    <div className="w-full aspect-video overflow-hidden">
+                      <img src={a.heroImage || undefined} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
                     <div className="p-4">
                       <p className="text-xs text-gray-500 mb-1 flex items-center gap-1"><Calendar className="h-3 w-3" />{a.date}</p>
