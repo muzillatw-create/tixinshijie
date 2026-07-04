@@ -1,1 +1,2 @@
 - [Expo workflow port health check](expo-port-health.md) — Replit health checker can't detect new workflow ports in this env; only pre-existing API server (8080) passes. Workaround: use configureWorkflow without waitForPort.
+- [Production vs dev database](prod-dev-db.md) — Dev and production databases are separate. New DB records added in dev won't appear on prod. Use admin API on prod URL to sync.
