@@ -143,7 +143,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
 
       {/* Hero Image */}
       <div className="rounded-2xl overflow-hidden mb-8 shadow-xl shadow-black/40">
-        <img src={data.heroSrc} alt={data.heroAlt} className="block w-full max-h-[380px] object-cover object-center" loading="lazy" />
+        <img src={data.heroSrc} alt={data.heroAlt} className="block w-full h-auto" loading="lazy" />
       </div>
 
       {/* Category Badge + H1 */}
@@ -216,7 +216,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                   return imgUrl
                     ? (
                       <div className="overflow-hidden rounded-2xl my-6 shadow-lg">
-                        <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="block w-full max-h-[260px] object-cover object-center" loading="lazy" />
+                        <img src={imgUrl} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} className="block w-full h-auto" loading="lazy" />
                       </div>
                     )
                     : <ImagePlaceholder index={currentImgIdx} alt={`${data.category}精彩圖片 ${currentImgIdx + 1}`} />;
@@ -242,7 +242,7 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
                 {dbArticles.map(a => (
                   <div key={a.id} className="min-w-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all hover:-translate-y-0.5 group">
                     <div className="overflow-hidden">
-                      <img src={a.heroImage || undefined} alt={a.title} className="block w-full max-h-[160px] object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                      <img src={a.heroImage || undefined} alt={a.title} className="block w-full h-auto group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
                     <div className="p-4">
                       <p className="text-xs text-gray-500 mb-1 flex items-center gap-1"><Calendar className="h-3 w-3" />{a.date}</p>
