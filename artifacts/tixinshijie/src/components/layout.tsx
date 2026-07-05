@@ -77,6 +77,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Link href="/" className="hover:text-white transition-colors">聯絡我們</Link>
               </>
             )}
+            <Link href="/about" className="hover:text-white transition-colors text-cyan-400 hover:text-cyan-300">品牌故事</Link>
           </nav>
 
           <div className="flex items-center gap-4">

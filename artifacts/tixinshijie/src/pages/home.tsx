@@ -196,6 +196,25 @@ export default function Home() {
               </div>
             </motion.div>
 
+            {/* Brand story card */}
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
+              <Link href="/about">
+                <div className="relative overflow-hidden border border-cyan-500/20 rounded-2xl p-6 bg-gradient-to-br from-[#041530]/80 to-[#07070f]/80 hover:border-cyan-500/50 transition-all cursor-pointer group">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl flex-shrink-0">✨</div>
+                    <div className="text-left">
+                      <div className="text-xs text-cyan-400 font-medium mb-1 uppercase tracking-widest">關於我們</div>
+                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">品牌故事</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                        從服飾到貼片，我們只想做一件事——讓生活更便利、更有質感。了解貼心世界的初心與理念。
+                      </p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
             <motion.p variants={item} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               環境狀態優化貼片採用專利的奈米傳導技術 讓您在 1 分鐘內感受到穩定的能量補給。
             </motion.p>
