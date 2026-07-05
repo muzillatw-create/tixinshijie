@@ -407,10 +407,13 @@ export default function Home() {
       </section>
 
       {/* Sticky bottom buy bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#07070f]/95 backdrop-blur-md border-t border-cyan-500/30 px-4 py-3 flex items-center justify-between gap-3 sm:hidden">
-        <div className="text-left">
-          <div className="text-xs text-gray-400 line-through">NT$1,288</div>
-          <div className="text-base font-bold text-cyan-400">促銷 NT$880 / 盒</div>
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-[#020d1f] via-[#041530] to-[#020d1f] backdrop-blur-md border-t border-cyan-500/50 px-4 py-3 flex items-center justify-between gap-3 sm:hidden shadow-[0_-4px_24px_rgba(6,182,212,0.2)]">
+        <div className="flex items-center gap-2">
+          <span className="animate-pulse bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">限時促銷</span>
+          <div className="text-left">
+            <div className="text-xs text-gray-400 line-through">NT$1,288</div>
+            <div className="text-base font-bold text-cyan-300">NT$880 / 盒</div>
+          </div>
         </div>
         <Link href="/order" className="flex-shrink-0">
           <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-6 py-3 text-base h-auto animate-pulse-slow cursor-pointer">
