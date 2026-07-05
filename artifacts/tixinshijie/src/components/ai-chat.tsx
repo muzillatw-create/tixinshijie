@@ -92,7 +92,7 @@ export function AiChat() {
     <>
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-bold shadow-lg shadow-cyan-500/40 transition-all hover:scale-105 active:scale-95"
+        className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-bold shadow-lg shadow-cyan-500/40 transition-all hover:scale-105 active:scale-95"
         style={{ borderRadius: open ? "9999px" : "9999px", padding: open ? "0.625rem" : "0.625rem 1rem 0.625rem 0.75rem" }}
         aria-label="開啟 AI 客服"
       >
