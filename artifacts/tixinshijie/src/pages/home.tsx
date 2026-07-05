@@ -155,7 +155,7 @@ export default function Home() {
 
             <motion.div variants={item} className="flex justify-center mb-4">
               <Link href="/order">
-                <Button size="lg" className="relative bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-5 text-xl h-auto group shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:shadow-[0_0_45px_rgba(6,182,212,0.8)] transition-all duration-300 animate-pulse-slow">
+                <Button size="lg" className="relative bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-5 text-xl h-auto group shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:shadow-[0_0_45px_rgba(6,182,212,0.8)] transition-all duration-300 animate-pulse-slow cursor-pointer">
                   立即訂購 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -220,7 +220,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={() => { addToCart(qty); toast({ title: "已加入購物車", description: `已加入 ${qty} 盒` }); }}
-                  className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-5 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.5)]"
+                  className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-5 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.5)] cursor-pointer"
                 >
                   <ShoppingCart className="w-4 h-4" />加入購物車
                 </button>
@@ -413,7 +413,7 @@ export default function Home() {
           <div className="text-base font-bold text-cyan-400">促銷 NT$880 / 盒</div>
         </div>
         <Link href="/order" className="flex-shrink-0">
-          <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-6 py-3 text-base h-auto animate-pulse-slow">
+          <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-6 py-3 text-base h-auto animate-pulse-slow cursor-pointer">
             立即訂購 <ArrowRight className="ml-1 w-4 h-4" />
           </Button>
         </Link>
