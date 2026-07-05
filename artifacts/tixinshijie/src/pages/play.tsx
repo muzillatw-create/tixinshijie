@@ -14,7 +14,7 @@ const data: ArticleDarkData = {
   heroAlt: "幸福時光｜旅遊探索",
   publishDate: "2026-07-02",
   intro: "旅行，是認識世界，也是認識自己的方式。不一定要遠赴國外，一趟近郊旅行、一場露營、一場高爾夫、一趟海邊散步、一段自行車旅程，都能讓生活充滿新的驚喜。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -50,6 +50,24 @@ const data: ArticleDarkData = {
       content: [
         "未來在「玩」這個主題中，我們會持續整理旅遊景點、露營攻略、親子出遊、高爾夫分享、戶外活動、假日行程與自由行建議，讓大家在忙碌生活中，也能找到屬於自己的放鬆方式。",
         "出發，不一定要很遠；重要的是願意走出去，讓生活多一點陽光、多一點笑容，也多一點值得留下的美好回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-golf",
+      h2: "高爾夫｜增加距離，突破自我",
+      content: [
+        "揮桿的瞬間，所有壓力都隨著球飛向遠方。高爾夫不只是一項運動，更是一種專注與放鬆的生活方式。",
+        "每一次練習都是進步的積累，每一桿都是挑戰自己的機會。讓幸福時光陪你在球場上，創造屬於自己的精彩。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-helmet",
+      h2: "安全防護｜盡情玩，也要平安回家",
+      content: [
+        "無論是騎車、登山還是各種戶外活動，安全裝備是享受冒險的第一步。做好防護，才能讓每一次出發都更安心、更盡興。",
+        "幸福時光提醒你：玩得開心的同時，也要照顧好自己，平安回家才是最重要的事。",
       ],
       imageAfter: true,
     },
