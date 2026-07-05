@@ -155,8 +155,8 @@ export default function Home() {
 
             <motion.div variants={item} className="flex justify-center mb-4">
               <Link href="/order">
-                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 text-lg h-auto group">
-                  立即訂購 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" className="relative bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-5 text-xl h-auto group shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:shadow-[0_0_45px_rgba(6,182,212,0.8)] transition-all duration-300 animate-pulse-slow">
+                  立即訂購 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </motion.div>
@@ -220,7 +220,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={() => { addToCart(qty); toast({ title: "已加入購物車", description: `已加入 ${qty} 盒` }); }}
-                  className="bg-white/10 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/30 text-white text-sm font-medium px-4 py-2 rounded-xl transition-colors flex items-center gap-2"
+                  className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-5 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.5)]"
                 >
                   <ShoppingCart className="w-4 h-4" />加入購物車
                 </button>
@@ -405,6 +405,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sticky bottom buy bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#07070f]/95 backdrop-blur-md border-t border-cyan-500/30 px-4 py-3 flex items-center justify-between gap-3 sm:hidden">
+        <div className="text-left">
+          <div className="text-xs text-gray-400 line-through">NT$1,288</div>
+          <div className="text-base font-bold text-cyan-400">促銷 NT$880 / 盒</div>
+        </div>
+        <Link href="/order" className="flex-shrink-0">
+          <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-6 py-3 text-base h-auto animate-pulse-slow">
+            立即訂購 <ArrowRight className="ml-1 w-4 h-4" />
+          </Button>
+        </Link>
+      </div>
 
     </Layout>
   );
