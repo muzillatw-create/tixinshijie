@@ -93,7 +93,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               )}
             </Link>
             <Link href="/order">
-              <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold shadow-none border-0 text-sm px-4 h-9">
+              <Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold shadow-none border-0 text-sm px-4 h-9 cursor-pointer">
                 立即訂購
               </Button>
             </Link>
