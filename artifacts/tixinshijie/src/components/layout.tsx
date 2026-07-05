@@ -108,8 +108,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-white/5 bg-[#07070f] py-12 mt-20">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <Zap className="h-7 w-7 text-cyan-400 mx-auto mb-6 opacity-40" fill="currentColor" />
-          <div className="flex justify-center gap-6 text-gray-500 text-sm mb-8">
+          <div className="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-8">
             <Link href="/" className="hover:text-white transition-colors">產品特色</Link>
+            <Link href="/about" className="hover:text-white transition-colors">品牌故事</Link>
             <Link href="/track" className="hover:text-white transition-colors">查詢訂單</Link>
             <Link href="/videos" className="hover:text-white transition-colors">影音觀看區</Link>
             <a href="#" className="hover:text-white transition-colors">隱私政策</a>

@@ -16,6 +16,7 @@ import DrinkPage from "./pages/drink";
 import PlayPage from "./pages/play";
 import FunPage from "./pages/fun";
 import AdminPage from "./pages/admin";
+import AboutPage from "./pages/about";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/play" component={PlayPage} />
       <Route path="/fun" component={FunPage} />
       <Route path="/admin" component={AdminPage} />
+      <Route path="/about" component={AboutPage} />
       <Route component={NotFound} />
     </Switch>
   );
