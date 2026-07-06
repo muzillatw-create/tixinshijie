@@ -44,7 +44,7 @@ const item = {
 };
 
 const features = [
-  { icon: Zap, title: "即效能量補充", desc: "專利的科技貼片在一分鐘內即可感受到明顯的不同。", color: "text-cyan-400", bg: "bg-cyan-400/10", border: "border-cyan-400/20" },
+  { icon: Zap, title: "即效能量補充", desc: "採用專利科技設計，使用方式簡單便利，可輕鬆應用於日常生活與各種環境。許多使用者表示，在使用後短時間內即可感受到環境氛圍與使用體驗有所不同。無論是工作、休閒、旅行或居家時光，都能陪伴您迎接每一天，讓生活多一份安心與舒適。", color: "text-cyan-400", bg: "bg-cyan-400/10", border: "border-cyan-400/20" },
   { icon: Clock, title: "365天持續作用", desc: "持續 24 小時使用可讓你的新陳代謝穩定。", color: "text-blue-400", bg: "bg-blue-400/10", border: "border-blue-400/20" },
   { icon: Battery, title: "吃喝玩樂動起來", desc: "應用在各種生活物品上，效果極佳。", color: "text-green-400", bg: "bg-green-400/10", border: "border-green-400/20" },
   { icon: InfinityIcon, title: "天馬行空的生活", desc: "貼片帶著走，想像過著神仙般的生活。", color: "text-purple-400", bg: "bg-purple-400/10", border: "border-purple-400/20" },
