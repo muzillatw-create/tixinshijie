@@ -91,7 +91,15 @@ const data: ArticleDarkData = {
       imageAfter: false,
     },
   ],
-  relatedLinks: ["國內旅遊推薦", "國外自由行", "露營攻略", "高爾夫分享", "海邊景點", "親子旅行", "假日一日遊"],
+  relatedLinks: [
+    { label: "國內旅遊推薦", url: "https://travel.liontravel.com/category/zh-tw/taiwan/index" },
+    { label: "國外自由行", url: "https://trip.eztravel.com.tw/" },
+    { label: "露營攻略", url: "https://www.funtime.com.tw/blog/funtime/camping-spots-in-taiwan" },
+    { label: "高爾夫分享", url: "https://www.taiwan.net.tw/m1.aspx?sNo=0030361" },
+    { label: "海邊景點", url: "https://www.taiwan.net.tw" },
+    { label: "親子旅行", url: "https://tw.trip.com/guide/destination/%E8%A6%AA%E5%AD%90%E6%97%85%E9%81%8A.html" },
+    { label: "假日一日遊", url: "https://blog.asiayo.com" },
+  ],
   faq: [
     {
       q: "幸福時光的「玩」主要分享什麼？",
