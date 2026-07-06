@@ -27,7 +27,7 @@ export interface ArticleDarkData {
   intro: string;
   sections: ArticleSection[];
   inlineImages?: (string | null)[];
-  relatedLinks: string[];
+  relatedLinks: (string | { label: string; url: string })[];
   faq: FaqItem[];
 }
 
@@ -259,11 +259,21 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
           <section className="mb-10">
             <h2 className="text-xl font-bold text-white mb-4">🔗 延伸閱讀</h2>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 grid sm:grid-cols-2 gap-2">
-              {data.relatedLinks.map((link, i) => (
-                <div key={i} className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer text-sm py-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />{link}
-                </div>
-              ))}
+              {data.relatedLinks.map((link, i) => {
+                const label = typeof link === "string" ? link : link.label;
+                const url = typeof link === "string" ? null : link.url;
+                return url ? (
+                  <a key={i} href={url} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer text-sm py-1 underline-offset-2 hover:underline">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />{label}
+                    <span className="text-xs opacity-60">↗</span>
+                  </a>
+                ) : (
+                  <div key={i} className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer text-sm py-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />{label}
+                  </div>
+                );
+              })}
             </div>
           </section>
 
