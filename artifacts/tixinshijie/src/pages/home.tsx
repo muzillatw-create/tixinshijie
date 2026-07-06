@@ -115,15 +115,11 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-4">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="/images/happiness-banner.jpg"
+                alt="幸福時光 吃喝玩樂 美好生活"
                 className="w-full max-w-lg mx-auto rounded-2xl object-cover"
-              >
-                <source src={topVideo} type="video/mp4" />
-              </video>
+              />
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
