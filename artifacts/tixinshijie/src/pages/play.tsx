@@ -14,7 +14,7 @@ const data: ArticleDarkData = {
   heroAlt: "幸福時光｜旅遊探索",
   publishDate: "2026-07-02",
   intro: "旅行，是認識世界，也是認識自己的方式。不一定要遠赴國外，一趟近郊旅行、一場露營、一場高爾夫、一趟海邊散步、一段自行車旅程，都能讓生活充滿新的驚喜。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -68,6 +68,15 @@ const data: ArticleDarkData = {
       content: [
         "無論是騎車、登山還是各種戶外活動，安全裝備是享受冒險的第一步。做好防護，才能讓每一次出發都更安心、更盡興。",
         "幸福時光提醒你：玩得開心的同時，也要照顧好自己，平安回家才是最重要的事。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-moments",
+      h2: "把日常暫停，用風景療癒自己",
+      content: [
+        "把日常暫停，出門走走看看世界，用美食和風景療癒自己，享受當下的每一刻，這就是我最喜歡的時光！",
+        "旅行不一定要走很遠，一個轉角的老街、一杯午後的鬆餅、一本窗邊的好書——生活裡藏著無數個值得珍惜的小瞬間。",
       ],
       imageAfter: true,
     },
