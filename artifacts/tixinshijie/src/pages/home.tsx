@@ -14,9 +14,6 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介紹99_compressed.mp4";
-import topVideo from "@assets/My_Project_1782823190148.mp4";
-import sideVideo1 from "@assets/My_Project_1_1782999545209.mp4";
-import sideVideo2 from "@assets/My_Project_2_1782999545210.mp4";
 import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
 import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
 import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
@@ -129,13 +126,13 @@ export default function Home() {
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
               <div className="grid grid-cols-3 gap-2 items-center">
                 <Link href="/happiness" className="block">
-                  <video src={sideVideo1} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                  <img src="/images/side-video1-thumb.jpg" alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
                 <Link href="/purple-videos">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
                 <Link href="/order" className="block">
-                  <video src={sideVideo2} autoPlay muted loop playsInline className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                  <img src="/images/side-video2-thumb.jpg" alt="立即訂購" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
                 </Link>
               </div>
             </motion.div>
@@ -311,7 +308,7 @@ export default function Home() {
       {/* No-skin Disclaimer Section */}
       <section className="px-4 pb-8">
         <div className="max-w-3xl mx-auto">
-          <video src="/disclaimer-video.mp4" autoPlay muted loop playsInline className="w-full rounded-2xl shadow-lg mb-4" />
+          <img src="/images/disclaimer-thumb.jpg" alt="貼片使用警語" className="w-full rounded-2xl shadow-lg mb-4" />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {["本產品非醫療器材","不具醫療效果","不可替代醫療行為","不可直接貼人體"].map(t => (
               <div key={t} className="bg-red-950/50 border border-red-700/40 rounded-xl px-3 py-2">
