@@ -64,7 +64,15 @@ const data: ArticleDarkData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: ["居家生活分享", "電影推薦", "音樂欣賞", "親子活動", "寵物日常", "心靈成長", "放鬆生活提案"],
+  relatedLinks: [
+    { label: "居家生活分享", url: "https://www.cw.com.tw/topic/life" },
+    { label: "電影推薦", url: "https://www.atmovies.com.tw/movie/" },
+    { label: "音樂欣賞", url: "https://www.kkbox.com" },
+    { label: "親子活動", url: "https://tw.trip.com/guide/destination/%E8%A6%AA%E5%AD%90%E6%97%85%E9%81%8A.html" },
+    { label: "寵物日常", url: "https://wepet.tw" },
+    { label: "心靈成長", url: "https://www.wazaiii.com/articles?id=lifestyle-spiritual-development-class" },
+    { label: "放鬆生活提案", url: "https://blog.charmingyoga.com.tw/667/" },
+  ],
   faq: [
     {
       q: "幸福時光的「樂」主要分享什麼？",

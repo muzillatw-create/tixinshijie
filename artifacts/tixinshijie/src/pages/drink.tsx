@@ -54,7 +54,14 @@ const data: ArticleDarkData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: ["精品咖啡介紹", "手沖咖啡技巧", "茶葉文化分享", "手搖飲推薦", "果汁與健康飲品", "紅酒與聚會飲品"],
+  relatedLinks: [
+    { label: "精品咖啡介紹", url: "https://www.zhanlu.com.tw" },
+    { label: "手沖咖啡技巧", url: "https://www.zhanlu.com.tw/%E6%89%8B%E6%B2%96%E5%92%96%E5%95%A1-2/" },
+    { label: "茶葉文化分享", url: "https://www.taiwan.net.tw" },
+    { label: "手搖飲推薦", url: "https://www.skyful-group.com/en/blog/boba-tea-beverage-shop" },
+    { label: "果汁與健康飲品", url: "https://icook.tw" },
+    { label: "紅酒與聚會飲品", url: "https://www.vivino.com/TW/zh" },
+  ],
   faq: [
     {
       q: "幸福時光的「喝」會介紹哪些內容？",

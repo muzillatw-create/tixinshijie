@@ -54,7 +54,14 @@ const data: ArticleDarkData = {
       imageAfter: true,
     },
   ],
-  relatedLinks: ["牛肉麵推薦", "夜市美食攻略", "火鍋餐廳推薦", "早餐與下午茶推薦", "露營烤肉分享", "家庭料理靈感"],
+  relatedLinks: [
+    { label: "牛肉麵推薦", url: "https://guide.michelin.com/tw/zh_TW/best-of/must-eat-beef-noodles-taiwan-recommendations" },
+    { label: "夜市美食攻略", url: "https://www.taiwan.net.tw" },
+    { label: "火鍋餐廳推薦", url: "https://ifoodie.tw" },
+    { label: "早餐與下午茶推薦", url: "https://www.klook.com/zh-TW/blog/" },
+    { label: "露營烤肉分享", url: "https://blog.asiayo.com" },
+    { label: "家庭料理靈感", url: "https://icook.tw" },
+  ],
   faq: [
     {
       q: "幸福時光的「吃」主要分享什麼？",
