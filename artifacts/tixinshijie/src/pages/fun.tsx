@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜生活享受",
   publishDate: "2026-07-02",
-  intro: "真正的幸福，不一定來自轟轟烈烈的大事，而是生活中的每一個小確幸。和家人一起看電影、與朋友聊天、閱讀一本好書、欣賞音樂、陪伴毛小孩，這些看似平凡的時刻，往往最令人難忘。",
+  intro: "快樂來自生活中的每一個瞬間，與家人相聚、朋友歡笑、音樂陪伴、閱讀放鬆，都能帶來滿滿幸福感。珍惜每一天的美好時光，讓快樂成為生活的一部分，創造屬於自己的幸福人生。",
   seriesImage: "/images/fun-series.jpg",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg"],
   sections: [

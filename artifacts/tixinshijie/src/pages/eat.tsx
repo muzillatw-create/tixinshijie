@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜美食探索",
   publishDate: "2026-07-02",
-  intro: "美食，不只是填飽肚子，更是一種生活的享受。無論是一碗熱騰騰的牛肉麵、一桌與家人共享的晚餐，還是一場朋友相聚的燒烤，每一道料理都承載著不同的故事，也留下屬於自己的幸福回憶。",
+  intro: "美食不只是填飽肚子，更是一種生活的享受。從熱騰騰的家常料理到各地特色美食，每一道佳餚都值得細細品味。帶著愉快的心情探索不同風味，讓每一餐都成為幸福時光，留下最美好的回憶。",
   seriesImage: "/images/eat-series.jpg",
   inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-fruit.jpg", "/images/eat-hotpot.jpg"],
   sections: [
