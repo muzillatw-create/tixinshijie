@@ -26,6 +26,7 @@ export interface ArticleDarkData {
   publishDate: string;
   intro: string;
   sections: ArticleSection[];
+  seriesImage?: string;
   inlineImages?: (string | null)[];
   relatedLinks: (string | { label: string; url: string })[];
   faq: FaqItem[];
@@ -186,9 +187,16 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
         {/* ── Main Article ── */}
         <article className="min-w-0 overflow-hidden [&_img]:max-w-full [&_img]:block">
           {/* Intro */}
-          <p className="text-gray-300 text-lg leading-relaxed mb-10 border-l-2 border-cyan-500 pl-4">
+          <p className="text-gray-300 text-lg leading-relaxed mb-8 border-l-2 border-cyan-500 pl-4">
             {data.intro}
           </p>
+
+          {/* Series Image */}
+          {data.seriesImage && (
+            <div className="overflow-hidden rounded-2xl mb-10 shadow-lg">
+              <img src={data.seriesImage} alt={`${data.category}系列精彩圖片`} className="block w-full h-auto" loading="lazy" />
+            </div>
+          )}
 
           {/* Sections */}
           {data.sections.map((section) => {
