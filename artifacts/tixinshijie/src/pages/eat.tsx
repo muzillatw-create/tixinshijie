@@ -18,7 +18,7 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/eat-series2.jpg",
   seriesImage2Title: "吃｜品味每一口幸福",
   seriesImage2Text: "美食不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的牛肉麵、香酥炸雞，還是精緻甜點，每一道料理都承載著溫暖與回憶。幸福時光陪你探索更多美食，讓每一餐都成為值得珍藏的美好時刻。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-fruit.jpg", "/images/eat-hotpot.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-hotpot.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -46,7 +46,6 @@ const data: ArticleDarkData = {
           content: ["夜市是台灣最具特色的飲食文化場域，琳琅滿目的小吃攤位，每一個都是在地人的驕傲，也是旅人最難忘的美食記憶。"],
         },
       ],
-      imageAfter: true,
     },
     {
       id: "future-content",
