@@ -18,7 +18,7 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/play-series2.jpg",
   seriesImage2Title: "玩｜探索世界的精彩",
   seriesImage2Text: "旅行讓視野更開闊，冒險讓人生更精彩。無論是露營、高爾夫、划獨木舟，還是海邊水上活動，每一次出發都是新的回憶。帶著愉快的心情，一起探索世界，留下屬於自己的精彩故事。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -55,7 +55,6 @@ const data: ArticleDarkData = {
         "未來在「玩」這個主題中，我們會持續整理旅遊景點、露營攻略、親子出遊、高爾夫分享、戶外活動、假日行程與自由行建議，讓大家在忙碌生活中，也能找到屬於自己的放鬆方式。",
         "出發，不一定要很遠；重要的是願意走出去，讓生活多一點陽光、多一點笑容，也多一點值得留下的美好回憶。",
       ],
-      imageAfter: true,
     },
     {
       id: "play-golf",
@@ -64,7 +63,6 @@ const data: ArticleDarkData = {
         "揮桿的瞬間，所有壓力都隨著球飛向遠方。高爾夫不只是一項運動，更是一種專注與放鬆的生活方式。",
         "每一次練習都是進步的積累，每一桿都是挑戰自己的機會。讓幸福時光陪你在球場上，創造屬於自己的精彩。",
       ],
-      imageAfter: true,
     },
     {
       id: "play-helmet",
