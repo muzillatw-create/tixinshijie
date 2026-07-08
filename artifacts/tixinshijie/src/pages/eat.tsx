@@ -18,7 +18,7 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/eat-series2.jpg",
   seriesImage2Title: "吃｜品味每一口幸福",
   seriesImage2Text: "美食不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的牛肉麵、香酥炸雞，還是精緻甜點，每一道料理都承載著溫暖與回憶。幸福時光陪你探索更多美食，讓每一餐都成為值得珍藏的美好時刻。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-hotpot.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -54,7 +54,6 @@ const data: ArticleDarkData = {
         "未來在「吃」這個主題中，我們會持續整理各種實用內容，包括熱門餐廳推薦、在地美食介紹、夜市攻略、露營烤肉小技巧、家庭聚餐靈感與節慶美食分享，讓每位來到網站的朋友，都能找到值得收藏的美味資訊。",
         "吃喝玩樂的第一站，就從一頓好好吃飯開始。讓每一口美食，都成為生活中值得留下的回憶。",
       ],
-      imageAfter: true,
     },
   ],
   relatedLinks: [
