@@ -16,6 +16,8 @@ const data: ArticleDarkData = {
   intro: "旅行讓人開闊視野，戶外活動讓人釋放壓力。不論是騎單車、露營、衝浪、登山，還是體驗各地風景，都能創造屬於自己的精彩故事。勇敢探索世界，讓每一次出發都成為珍貴的回憶。",
   seriesImage: "/images/play-series.jpg",
   seriesImage2: "/images/play-series2.jpg",
+  seriesImage2Title: "玩｜探索世界的精彩",
+  seriesImage2Text: "旅行讓視野更開闊，冒險讓人生更精彩。無論是露營、高爾夫、划獨木舟，還是海邊水上活動，每一次出發都是新的回憶。帶著愉快的心情，一起探索世界，留下屬於自己的精彩故事。",
   inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-travel.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
   sections: [
     {

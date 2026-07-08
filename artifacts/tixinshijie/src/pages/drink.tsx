@@ -16,6 +16,8 @@ const data: ArticleDarkData = {
   intro: "一杯好茶、一杯咖啡，或是一杯沁涼飲品，都能為生活增添美好節奏。無論清晨、午後或夜晚，都值得放慢腳步，好好享受飲品帶來的放鬆與愉悅，讓每天都充滿活力與好心情。",
   seriesImage: "/images/drink-series.jpg",
   seriesImage2: "/images/drink-series2.jpg",
+  seriesImage2Title: "喝｜享受每一口甘甜",
+  seriesImage2Text: "一杯好茶、一杯香醇咖啡，或是一杯沁涼果汁，都能為生活增添不同的風味。放慢腳步，感受飲品帶來的香氣與溫度，讓忙碌的生活多一份悠閒與放鬆，品味屬於自己的幸福時光。",
   inlineImages: ["/images/eat-coffee.jpg", "/images/drink-oolong.jpg", "/images/eat-couple-drink.jpg"],
   sections: [
     {

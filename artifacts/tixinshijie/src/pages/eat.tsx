@@ -16,6 +16,8 @@ const data: ArticleDarkData = {
   intro: "美食不只是填飽肚子，更是一種生活的享受。從熱騰騰的家常料理到各地特色美食，每一道佳餚都值得細細品味。帶著愉快的心情探索不同風味，讓每一餐都成為幸福時光，留下最美好的回憶。",
   seriesImage: "/images/eat-series.jpg",
   seriesImage2: "/images/eat-series2.jpg",
+  seriesImage2Title: "吃｜品味每一口幸福",
+  seriesImage2Text: "美食不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的牛肉麵、香酥炸雞，還是精緻甜點，每一道料理都承載著溫暖與回憶。幸福時光陪你探索更多美食，讓每一餐都成為值得珍藏的美好時刻。",
   inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-fruit.jpg", "/images/eat-hotpot.jpg"],
   sections: [
     {

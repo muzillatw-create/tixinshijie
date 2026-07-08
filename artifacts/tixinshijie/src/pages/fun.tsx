@@ -16,6 +16,8 @@ const data: ArticleDarkData = {
   intro: "快樂來自生活中的每一個瞬間，與家人相聚、朋友歡笑、音樂陪伴、閱讀放鬆，都能帶來滿滿幸福感。珍惜每一天的美好時光，讓快樂成為生活的一部分，創造屬於自己的幸福人生。",
   seriesImage: "/images/fun-series.jpg",
   seriesImage2: "/images/fun-series2.jpg",
+  seriesImage2Title: "樂｜把快樂留在每一天",
+  seriesImage2Text: "幸福其實很簡單，一場野餐、一杯咖啡、一段與家人朋友相聚的時光，都能帶來滿滿的感動。珍惜每一個微笑、每一次陪伴，讓生活充滿溫暖與喜悅，因為每一天，都值得留下最美好的回憶。",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg"],
   sections: [
     {

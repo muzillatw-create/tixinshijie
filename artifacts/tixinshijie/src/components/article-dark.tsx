@@ -28,6 +28,8 @@ export interface ArticleDarkData {
   sections: ArticleSection[];
   seriesImage?: string;
   seriesImage2?: string;
+  seriesImage2Title?: string;
+  seriesImage2Text?: string;
   inlineImages?: (string | null)[];
   relatedLinks: (string | { label: string; url: string })[];
   faq: FaqItem[];
@@ -235,8 +237,20 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
           })}
 
           {data.seriesImage2 && (
-            <div className="overflow-hidden rounded-2xl my-8 shadow-lg">
-              <img src={data.seriesImage2} alt={`${data.category}精彩系列圖`} className="block w-full h-auto" loading="lazy" />
+            <div className="my-8">
+              {(data.seriesImage2Title || data.seriesImage2Text) && (
+                <div className="mb-4">
+                  {data.seriesImage2Title && (
+                    <h3 className="text-xl font-bold text-cyan-400 mb-2">{data.seriesImage2Title}</h3>
+                  )}
+                  {data.seriesImage2Text && (
+                    <p className="text-gray-400 leading-relaxed">{data.seriesImage2Text}</p>
+                  )}
+                </div>
+              )}
+              <div className="overflow-hidden rounded-2xl shadow-lg">
+                <img src={data.seriesImage2} alt={`${data.category}精彩系列圖`} className="block w-full h-auto" loading="lazy" />
+              </div>
             </div>
           )}
 
