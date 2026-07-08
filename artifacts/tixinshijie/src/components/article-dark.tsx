@@ -27,6 +27,7 @@ export interface ArticleDarkData {
   intro: string;
   sections: ArticleSection[];
   seriesImage?: string;
+  seriesImage2?: string;
   inlineImages?: (string | null)[];
   relatedLinks: (string | { label: string; url: string })[];
   faq: FaqItem[];
@@ -232,6 +233,12 @@ export function ArticleDark({ data }: { data: ArticleDarkData }) {
               </section>
             );
           })}
+
+          {data.seriesImage2 && (
+            <div className="overflow-hidden rounded-2xl my-8 shadow-lg">
+              <img src={data.seriesImage2} alt={`${data.category}精彩系列圖`} className="block w-full h-auto" loading="lazy" />
+            </div>
+          )}
 
           {/* Brand Strip */}
           <div className="my-10 rounded-2xl bg-gradient-to-r from-cyan-900/30 to-blue-900/20 border border-cyan-500/20 p-6 text-center">

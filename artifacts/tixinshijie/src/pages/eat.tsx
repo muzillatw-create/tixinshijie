@@ -15,6 +15,7 @@ const data: ArticleDarkData = {
   publishDate: "2026-07-02",
   intro: "美食不只是填飽肚子，更是一種生活的享受。從熱騰騰的家常料理到各地特色美食，每一道佳餚都值得細細品味。帶著愉快的心情探索不同風味，讓每一餐都成為幸福時光，留下最美好的回憶。",
   seriesImage: "/images/eat-series.jpg",
+  seriesImage2: "/images/eat-series2.jpg",
   inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-fruit.jpg", "/images/eat-hotpot.jpg"],
   sections: [
     {

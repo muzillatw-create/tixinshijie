@@ -15,6 +15,7 @@ const data: ArticleDarkData = {
   publishDate: "2026-07-02",
   intro: "快樂來自生活中的每一個瞬間，與家人相聚、朋友歡笑、音樂陪伴、閱讀放鬆，都能帶來滿滿幸福感。珍惜每一天的美好時光，讓快樂成為生活的一部分，創造屬於自己的幸福人生。",
   seriesImage: "/images/fun-series.jpg",
+  seriesImage2: "/images/fun-series2.jpg",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg"],
   sections: [
     {
