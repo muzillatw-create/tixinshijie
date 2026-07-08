@@ -15,7 +15,6 @@ const data: ArticleDarkData = {
   publishDate: "2026-07-02",
   intro: "一杯好茶、一杯咖啡，或是一杯沁涼飲品，都能為生活增添美好節奏。無論清晨、午後或夜晚，都值得放慢腳步，好好享受飲品帶來的放鬆與愉悅，讓每天都充滿活力與好心情。",
   seriesImage: "/images/drink-series.jpg",
-  inlineImages: ["/images/eat-couple-drink.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -50,7 +49,6 @@ const data: ArticleDarkData = {
         "未來在「喝」這個主題中，我們會持續整理咖啡知識、茶葉文化、手搖飲推薦、果汁分享、飲品搭配、聚會飲品與生活儀式感內容，讓每一次舉杯，都成為幸福時光的一部分。",
         "每一杯飲品，都是生活中最美好的停頓。願你在忙碌之餘，也能好好享受屬於自己的那一杯。",
       ],
-      imageAfter: true,
     },
   ],
   relatedLinks: [
