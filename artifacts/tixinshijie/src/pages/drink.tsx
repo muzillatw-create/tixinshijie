@@ -15,7 +15,7 @@ const data: ArticleDarkData = {
   publishDate: "2026-07-02",
   intro: "一杯好茶、一杯咖啡，或是一杯沁涼飲品，都能為生活增添美好節奏。無論清晨、午後或夜晚，都值得放慢腳步，好好享受飲品帶來的放鬆與愉悅，讓每天都充滿活力與好心情。",
   seriesImage: "/images/drink-series.jpg",
-  inlineImages: ["/images/eat-coffee.jpg", "/images/drink-oolong.jpg", "/images/eat-couple-drink.jpg"],
+  inlineImages: ["/images/eat-couple-drink.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -24,7 +24,6 @@ const data: ArticleDarkData = {
         "當我們願意放慢腳步，用心感受一杯飲品的溫度、香氣與味道，就會發現生活其實藏著很多細緻的幸福。",
         "一杯手沖咖啡的香氣、一壺龍井茶的清香、一杯夏日果汁的酸甜，這些感官的觸動，都在悄悄豐富著我們的生活底蘊。",
       ],
-      imageAfter: true,
     },
     {
       id: "drink-varieties",
@@ -43,7 +42,6 @@ const data: ArticleDarkData = {
           content: ["台灣茶舉世聞名，從高山烏龍到東方美人，每一款茶都有其獨特的製作工藝與文化背景，是最具代表性的生活美學之一。"],
         },
       ],
-      imageAfter: true,
     },
     {
       id: "future-drink-content",
