@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
+    "sync-videos": "tsx ./src/sync-videos.ts",
     "github-push": "node ./src/github-push.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
