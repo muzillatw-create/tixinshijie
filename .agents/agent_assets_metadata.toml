@@ -66,6 +66,12 @@ uri = "file://attached_assets/generated_images/fun_gathering.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "fpd6UVeRRJbEAfx7xoux3"
+uri = "file://attached_assets/generated_images/play_golf_v2.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"
