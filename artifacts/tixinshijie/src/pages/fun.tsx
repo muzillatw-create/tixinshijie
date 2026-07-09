@@ -18,6 +18,9 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/fun-series2.jpg",
   seriesImage2Title: "樂｜把快樂留在每一天",
   seriesImage2Text: "幸福其實很簡單，一場野餐、一杯咖啡、一段與家人朋友相聚的時光，都能帶來滿滿的感動。珍惜每一個微笑、每一次陪伴，讓生活充滿溫暖與喜悅，因為每一天，都值得留下最美好的回憶。",
+  seriesImage3: "/images/fun-series3.jpg",
+  seriesImage3Title: "樂系列",
+  seriesImage3Text: "享受每一刻，讓生活充滿快樂！閱讀的悠閒午後、與家人一起看電影的歡笑、煙火下的美好瞬間，都是屬於自己的幸福時光。",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg"],
   sections: [
     {

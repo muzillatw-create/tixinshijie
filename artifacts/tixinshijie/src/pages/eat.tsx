@@ -18,6 +18,9 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/eat-series2.jpg",
   seriesImage2Title: "吃｜品味每一口幸福",
   seriesImage2Text: "美食不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的牛肉麵、香酥炸雞，還是精緻甜點，每一道料理都承載著溫暖與回憶。幸福時光陪你探索更多美食，讓每一餐都成為值得珍藏的美好時刻。",
+  seriesImage3: "/images/eat-series3.jpg",
+  seriesImage3Title: "吃系列｜一章",
+  seriesImage3Text: "吃，是生活的儀式感，也是幸福最簡單的模樣。早餐時光開啟活力一天，美食相伴分享快樂時光，深夜食光治癒一天的疲憊——每一餐，都是屬於自己的小幸福。",
   inlineImages: ["/images/eat-beefnoodle.jpg"],
   sections: [
     {

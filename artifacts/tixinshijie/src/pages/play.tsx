@@ -18,6 +18,9 @@ const data: ArticleDarkData = {
   seriesImage2: "/images/play-series2.jpg",
   seriesImage2Title: "玩｜探索世界的精彩",
   seriesImage2Text: "旅行讓視野更開闊，冒險讓人生更精彩。無論是露營、高爾夫、划獨木舟，還是海邊水上活動，每一次出發都是新的回憶。帶著愉快的心情，一起探索世界，留下屬於自己的精彩故事。",
+  seriesImage3: "/images/play-series3.jpg",
+  seriesImage3Title: "玩系列",
+  seriesImage3Text: "探索世界，創造美好回憶！無論是星空下的營火夜談、遊樂園的雲霄飛車歡笑，還是水上活動的刺激冒險，每一次出發都值得盡情享受。",
   inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
   sections: [
     {
