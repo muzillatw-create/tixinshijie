@@ -58,6 +58,13 @@ const data: ArticleDarkData = {
         "吃喝玩樂的第一站，就從一頓好好吃飯開始。讓每一口美食，都成為生活中值得留下的回憶。",
       ],
     },
+    {
+      id: "food-simple-happiness",
+      h2: "🍜 美食，是每天最簡單的幸福",
+      content: [
+        "一頓用心準備的美食，不只是填飽肚子，更能讓生活充滿溫暖。放慢腳步，好好享受每一口食物的香氣與味道，把平凡的一天變成值得珍藏的幸福時光。因為，美食不只是味覺的享受，更是生活最真實的感動。",
+      ],
+    },
   ],
   relatedLinks: [
     { label: "牛肉麵推薦", url: "https://guide.michelin.com/tw/zh_TW/best-of/must-eat-beef-noodles-taiwan-recommendations" },

@@ -70,6 +70,13 @@ const data: ArticleDarkData = {
       ],
       imageAfter: true,
     },
+    {
+      id: "fun-share-joy",
+      h2: "🎉 把快樂分享給每一個人",
+      content: [
+        "快樂，其實很簡單。一場聚會、一首喜歡的音樂、一部感動的電影，或是與家人朋友一起度過的時光，都能讓心裡充滿幸福。珍惜每一個微笑、每一次相聚，因為每一天，都值得留下最美好的回憶。",
+      ],
+    },
   ],
   relatedLinks: [
     { label: "居家生活分享", url: "https://www.cw.com.tw/topic/life" },

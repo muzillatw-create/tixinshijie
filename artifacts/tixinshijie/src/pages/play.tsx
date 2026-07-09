@@ -95,6 +95,13 @@ const data: ArticleDarkData = {
       ],
       imageAfter: false,
     },
+    {
+      id: "play-see-the-world",
+      h2: "🌿 走出去，看見世界的美好",
+      content: [
+        "旅行不一定要很遠，重要的是願意踏出第一步。無論是山林、海邊、露營，還是城市漫遊，每一次探索都會留下珍貴的回憶。讓自己擁抱大自然，收藏每一段快樂時光，讓人生充滿更多精彩故事。",
+      ],
+    },
   ],
   relatedLinks: [
     { label: "國內旅遊推薦", url: "https://travel.liontravel.com/category/zh-tw/taiwan/index" },
