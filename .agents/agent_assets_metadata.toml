@@ -6,6 +6,66 @@ uri = "file://artifacts/tixinshijie-mobile/assets/images/icon.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "w3LYKjqOPQCy42ICtJ9jU"
+uri = "file://attached_assets/generated_images/eat_nightmarket.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "lUvsUD-hOpaqQM8VoQFJV"
+uri = "file://attached_assets/generated_images/eat_family_meal.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "HsWwku4L2s5ISJtYlNjIa"
+uri = "file://attached_assets/generated_images/eat_breakfast.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "D7ktQusRcC7iipIqMLi6g"
+uri = "file://attached_assets/generated_images/drink_tea.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "RN8g-S8-U_HbWBCS7V11Z"
+uri = "file://attached_assets/generated_images/drink_coffee_culture.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Y-g9jcFzZyCJ-4rvpaGfA"
+uri = "file://attached_assets/generated_images/drink_wine_gathering.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "NjsHxQUcKe1KGoHKPll7k"
+uri = "file://attached_assets/generated_images/drink_morning.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "X1g9RhbEKhTpwsyGmSens"
+uri = "file://attached_assets/generated_images/play_golf.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "XpmVNHVA8QrYOueUG9H_e"
+uri = "file://attached_assets/generated_images/play_nature_explore.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "txVTTzau6-ZWM2uMBDM3v"
+uri = "file://attached_assets/generated_images/fun_gathering.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"

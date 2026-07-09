@@ -21,7 +21,7 @@ const data: ArticleDarkData = {
   seriesImage3: "/images/eat-series3.jpg",
   seriesImage3Title: "吃系列｜一章",
   seriesImage3Text: "吃，是生活的儀式感，也是幸福最簡單的模樣。早餐時光開啟活力一天，美食相伴分享快樂時光，深夜食光治癒一天的疲憊——每一餐，都是屬於自己的小幸福。",
-  inlineImages: ["/images/eat-beefnoodle.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -49,6 +49,7 @@ const data: ArticleDarkData = {
           content: ["夜市是台灣最具特色的飲食文化場域，琳琅滿目的小吃攤位，每一個都是在地人的驕傲，也是旅人最難忘的美食記憶。"],
         },
       ],
+      imageAfter: true,
     },
     {
       id: "future-content",
@@ -57,6 +58,7 @@ const data: ArticleDarkData = {
         "未來在「吃」這個主題中，我們會持續整理各種實用內容，包括熱門餐廳推薦、在地美食介紹、夜市攻略、露營烤肉小技巧、家庭聚餐靈感與節慶美食分享，讓每位來到網站的朋友，都能找到值得收藏的美味資訊。",
         "吃喝玩樂的第一站，就從一頓好好吃飯開始。讓每一口美食，都成為生活中值得留下的回憶。",
       ],
+      imageAfter: true,
     },
     {
       id: "food-simple-happiness",
@@ -64,6 +66,7 @@ const data: ArticleDarkData = {
       content: [
         "一頓用心準備的美食，不只是填飽肚子，更能讓生活充滿溫暖。放慢腳步，好好享受每一口食物的香氣與味道，把平凡的一天變成值得珍藏的幸福時光。因為，美食不只是味覺的享受，更是生活最真實的感動。",
       ],
+      imageAfter: true,
     },
   ],
   relatedLinks: [

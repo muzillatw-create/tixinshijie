@@ -21,7 +21,7 @@ const data: ArticleDarkData = {
   seriesImage3: "/images/play-series3.jpg",
   seriesImage3Title: "玩系列",
   seriesImage3Text: "探索世界，創造美好回憶！無論是星空下的營火夜談、遊樂園的雲霄飛車歡笑，還是水上活動的刺激冒險，每一次出發都值得盡情享受。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -66,6 +66,7 @@ const data: ArticleDarkData = {
         "揮桿的瞬間，所有壓力都隨著球飛向遠方。高爾夫不只是一項運動，更是一種專注與放鬆的生活方式。",
         "每一次練習都是進步的積累，每一桿都是挑戰自己的機會。讓幸福時光陪你在球場上，創造屬於自己的精彩。",
       ],
+      imageAfter: true,
     },
     {
       id: "play-helmet",
@@ -101,6 +102,7 @@ const data: ArticleDarkData = {
       content: [
         "旅行不一定要很遠，重要的是願意踏出第一步。無論是山林、海邊、露營，還是城市漫遊，每一次探索都會留下珍貴的回憶。讓自己擁抱大自然，收藏每一段快樂時光，讓人生充滿更多精彩故事。",
       ],
+      imageAfter: true,
     },
   ],
   relatedLinks: [

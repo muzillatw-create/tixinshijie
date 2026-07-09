@@ -21,7 +21,7 @@ const data: ArticleDarkData = {
   seriesImage3: "/images/fun-series3.jpg",
   seriesImage3Title: "樂系列",
   seriesImage3Text: "享受每一刻，讓生活充滿快樂！閱讀的悠閒午後、與家人一起看電影的歡笑、煙火下的美好瞬間，都是屬於自己的幸福時光。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -76,6 +76,7 @@ const data: ArticleDarkData = {
       content: [
         "快樂，其實很簡單。一場聚會、一首喜歡的音樂、一部感動的電影，或是與家人朋友一起度過的時光，都能讓心裡充滿幸福。珍惜每一個微笑、每一次相聚，因為每一天，都值得留下最美好的回憶。",
       ],
+      imageAfter: true,
     },
   ],
   relatedLinks: [

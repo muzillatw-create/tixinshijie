@@ -18,6 +18,7 @@ const data: ArticleDarkData = {
   seriesImage3: "/images/drink-series3.jpg",
   seriesImage3Title: "喝系列",
   seriesImage3Text: "好喝的每一刻，都是生活的幸福時光！一杯好水開啟美好一天，香濃咖啡提神又療癒，歡樂時光來一杯放鬆一下——喝，是生活裡最溫柔的儀式。",
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -26,6 +27,7 @@ const data: ArticleDarkData = {
         "當我們願意放慢腳步，用心感受一杯飲品的溫度、香氣與味道，就會發現生活其實藏著很多細緻的幸福。",
         "一杯手沖咖啡的香氣、一壺龍井茶的清香、一杯夏日果汁的酸甜，這些感官的觸動，都在悄悄豐富著我們的生活底蘊。",
       ],
+      imageAfter: true,
     },
     {
       id: "drink-varieties",
@@ -44,6 +46,7 @@ const data: ArticleDarkData = {
           content: ["台灣茶舉世聞名，從高山烏龍到東方美人，每一款茶都有其獨特的製作工藝與文化背景，是最具代表性的生活美學之一。"],
         },
       ],
+      imageAfter: true,
     },
     {
       id: "future-drink-content",
@@ -52,6 +55,7 @@ const data: ArticleDarkData = {
         "未來在「喝」這個主題中，我們會持續整理咖啡知識、茶葉文化、手搖飲推薦、果汁分享、飲品搭配、聚會飲品與生活儀式感內容，讓每一次舉杯，都成為幸福時光的一部分。",
         "每一杯飲品，都是生活中最美好的停頓。願你在忙碌之餘，也能好好享受屬於自己的那一杯。",
       ],
+      imageAfter: true,
     },
     {
       id: "drink-fresh-start",
@@ -59,6 +63,7 @@ const data: ArticleDarkData = {
       content: [
         "清晨的一杯咖啡、午後的一壺熱茶，或是一杯沁涼的果汁，都能為生活增添美好的節奏。每一口飲品，都像是在提醒自己放鬆片刻，享受當下。幸福，其實就藏在每一次舉杯之間。",
       ],
+      imageAfter: true,
     },
   ],
   relatedLinks: [
