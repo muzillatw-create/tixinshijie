@@ -4,7 +4,8 @@ import { Clock, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
-import happinessHero from "@assets/happinessHero.jpg";
+
+const happinessHero = "/images/happiness-hero-new.jpg";
 
 const TOTAL_SLOTS = 50;
 
