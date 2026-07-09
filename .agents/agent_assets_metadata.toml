@@ -78,6 +78,18 @@ uri = "file://attached_assets/generated_images/fun_movie_v2.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "tLQDtMXmPYZ0vwxVch82e"
+uri = "file://attached_assets/generated_images/fun_attitude_v2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "IMxU7lAClhUjSxjFgo-Wn"
+uri = "file://attached_assets/generated_images/fun_varieties_v2.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"
