@@ -22,8 +22,8 @@ const data: ArticleDarkData = {
   seriesImage3Title: "玩系列",
   seriesImage3Text: "探索世界，創造美好回憶！無論是星空下的營火夜談、遊樂園的雲霄飛車歡笑，還是水上活動的刺激冒險，每一次出發都值得盡情享受。",
   seriesImage4: "/images/play-series4.jpg",
-  seriesImage4Title: "玩｜勇敢探索的每一刻",
-  seriesImage4Text: "登高望遠的感動、揮桿瞬間的專注、營火旁的溫暖、潛入海底的驚奇——每一次冒險，都讓生活更精彩豐富。",
+  seriesImage4Title: "玩｜走出去，遇見更精彩的世界",
+  seriesImage4Text: "旅行，不只是抵達目的地，而是在每一次出發中，收藏屬於自己的回憶。無論是露營、登山、海邊散步，還是與家人好友一起探索未知，都能讓生活充滿驚喜。勇敢出發，把每一天都活成值得珍藏的故事。",
   inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg"],
   sections: [
     {

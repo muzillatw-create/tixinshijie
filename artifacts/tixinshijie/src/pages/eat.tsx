@@ -22,8 +22,8 @@ const data: ArticleDarkData = {
   seriesImage3Title: "吃系列｜一章",
   seriesImage3Text: "吃，是生活的儀式感，也是幸福最簡單的模樣。早餐時光開啟活力一天，美食相伴分享快樂時光，深夜食光治癒一天的疲憊——每一餐，都是屬於自己的小幸福。",
   seriesImage4: "/images/eat-series4.jpg",
-  seriesImage4Title: "吃｜香脆可口的幸福滋味",
-  seriesImage4Text: "多種食材、豐富口感，科學搭配的營養組合，讓每一口都吃得安心又滿足。獨立包裝方便攜帶，隨時隨地都能享受美味時光。",
+  seriesImage4Title: "吃｜每一口，都是幸福的開始",
+  seriesImage4Text: "忙碌了一整天，最期待的就是坐下來，好好享受一頓美食。真正讓人難忘的，不只是食物本身，而是與家人、朋友一起分享的笑容。放慢腳步，細細品味每一道料理，讓生活多一點溫暖、多一點幸福。幸福時光，從每一口美味開始。",
   inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg"],
   sections: [
     {

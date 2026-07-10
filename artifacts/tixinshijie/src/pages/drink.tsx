@@ -19,8 +19,8 @@ const data: ArticleDarkData = {
   seriesImage3Title: "喝系列",
   seriesImage3Text: "好喝的每一刻，都是生活的幸福時光！一杯好水開啟美好一天，香濃咖啡提神又療癒，歡樂時光來一杯放鬆一下——喝，是生活裡最溫柔的儀式。",
   seriesImage4: "/images/drink-series4.jpg",
-  seriesImage4Title: "喝｜品味生活的每一杯",
-  seriesImage4Text: "一杯熱茶的悠然、一口咖啡的香醇、一杯冰飲的清爽、一杯紅酒的優雅——每一種飲品，都是屬於自己的幸福儀式。",
+  seriesImage4Title: "喝｜一杯飲品，療癒一天的心情",
+  seriesImage4Text: "清晨的一杯咖啡，午後的一壺好茶，傍晚的一杯果汁，每一種飲品都有屬於自己的故事。生活不需要太匆忙，給自己幾分鐘，好好享受這片刻的寧靜。當心情放鬆了，每一天都會變得更加美好。",
   inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg"],
   sections: [
     {
