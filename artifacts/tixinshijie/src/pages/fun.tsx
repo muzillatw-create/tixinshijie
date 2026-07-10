@@ -21,6 +21,9 @@ const data: ArticleDarkData = {
   seriesImage3: "/images/fun-series3.jpg",
   seriesImage3Title: "樂系列",
   seriesImage3Text: "享受每一刻，讓生活充滿快樂！閱讀的悠閒午後、與家人一起看電影的歡笑、煙火下的美好瞬間，都是屬於自己的幸福時光。",
+  seriesImage4: "/images/fun-series4.jpg",
+  seriesImage4Title: "樂｜與親友共享的美好時光",
+  seriesImage4Text: "沙灘上的歡唱、野餐時的笑聲、演唱會的熱血、靜靜閱讀的午後——每一種快樂，都是生活裡最珍貴的片刻。",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg"],
   sections: [
     {
