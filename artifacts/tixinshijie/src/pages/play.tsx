@@ -24,6 +24,9 @@ const data: ArticleDarkData = {
   seriesImage4: "/images/play-series4.jpg",
   seriesImage4Title: "玩｜走出去，遇見更精彩的世界",
   seriesImage4Text: "旅行，不只是抵達目的地，而是在每一次出發中，收藏屬於自己的回憶。無論是露營、登山、海邊散步，還是與家人好友一起探索未知，都能讓生活充滿驚喜。勇敢出發，把每一天都活成值得珍藏的故事。",
+  seriesImage5: "/images/play-series5.jpg",
+  seriesImage5Title: "玩｜探索世界的每一種可能",
+  seriesImage5Text: "帶上相機去健行，穿上救生衣去划獨木舟，戴上安全扣去攀岩，或是在綠色球場上挑戰高爾夫——每一種玩法都是對生活的熱愛。走出舒適圈，嘗試從未做過的事，才能讓生命的故事更加精彩豐富。",
   inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg"],
   sections: [
     {

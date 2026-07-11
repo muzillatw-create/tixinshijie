@@ -21,6 +21,9 @@ const data: ArticleDarkData = {
   seriesImage4: "/images/drink-series4.jpg",
   seriesImage4Title: "喝｜一杯飲品，療癒一天的心情",
   seriesImage4Text: "清晨的一杯咖啡，午後的一壺好茶，傍晚的一杯果汁，每一種飲品都有屬於自己的故事。生活不需要太匆忙，給自己幾分鐘，好好享受這片刻的寧靜。當心情放鬆了，每一天都會變得更加美好。",
+  seriesImage5: "/images/drink-series5.jpg",
+  seriesImage5Title: "喝｜每一杯，都是對自己的溫柔款待",
+  seriesImage5Text: "一杯清水解渴，一壺好茶靜心，一杯咖啡提神，一杯鮮榨果汁為身體加油——飲品雖小，卻能在每一個日常時刻為我們帶來滿足與能量。學會好好喝水、好好喝茶，就是對身體最溫柔的愛護。",
   inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg"],
   sections: [
     {

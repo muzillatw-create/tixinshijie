@@ -24,6 +24,9 @@ const data: ArticleDarkData = {
   seriesImage4: "/images/fun-series4.jpg",
   seriesImage4Title: "樂｜幸福，其實就在生活裡",
   seriesImage4Text: "最快樂的時光，不一定轟轟烈烈。有時候，一場音樂、一段聊天、一個微笑、一頓晚餐，就能讓平凡的一天變得特別。珍惜身邊的人，把握每一次相聚，讓歡笑成為每天最美的風景。",
+  seriesImage5: "/images/fun-series5.jpg",
+  seriesImage5Title: "樂｜讓每一天都充滿歡笑與驚喜",
+  seriesImage5Text: "在吊床上彈奏烏克麗麗迎接夕陽，在草地上吹泡泡感受純真快樂，在燈光閃爍的音樂節跟著節奏搖擺，或是窩在沙發上戴著3D眼鏡看電影——「樂」的方式千百種，最重要的是帶著開心的心情。讓生活多一些輕鬆，多一點笑聲，就是最幸福的日常。",
   inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg"],
   sections: [
     {
