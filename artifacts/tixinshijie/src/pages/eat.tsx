@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/eat-series5.jpg",
   seriesImage5Title: "吃｜每一口，都是幸福的開始",
   seriesImage5Text: "美食，不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的麵、一份香氣四溢的點心，還是與家人朋友共享的餐桌時光，都值得細細品味。幸福，不一定很遙遠，也許就在下一口美味之中。慢下腳步，好好享受每一天的美好。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -71,6 +71,60 @@ const data: ArticleDarkData = {
       h2: "🍜 美食，是每天最簡單的幸福",
       content: [
         "一頓用心準備的美食，不只是填飽肚子，更能讓生活充滿溫暖。放慢腳步，好好享受每一口食物的香氣與味道，把平凡的一天變成值得珍藏的幸福時光。因為，美食不只是味覺的享受，更是生活最真實的感動。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-bubbletea",
+      h2: "手搖飲料｜台灣最甜蜜的風景",
+      content: [
+        "珍珠奶茶、芋頭拿鐵、多肉葡萄，每一杯手搖飲料都是台灣街頭最動人的風景。不論是趕路時的隨手一杯，還是與朋友下午茶的愉快時光，手搖飲料總能在瞬間讓人感到滿足。",
+        "一杯好喝的手搖飲，不只是解渴，更是生活中最甜蜜的小確幸。下次出門，記得帶上最喜歡的那一杯，讓美好延續一整天。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-coffee",
+      h2: "咖啡時光｜一杯咖啡的溫度",
+      content: [
+        "早晨第一杯咖啡的香氣，是許多人開啟美好一天最重要的儀式。無論是手沖的清晰果酸、義式濃縮的醇厚苦香，還是拿鐵的溫柔奶泡，每一種都是屬於咖啡愛好者的幸福語言。",
+        "在咖啡館裡找到一個角落，捧著熱咖啡慢慢品味——這樣的片刻，就是日常生活中最珍貴的喘息時光。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-couple-dining",
+      h2: "雙人餐桌｜兩個人的幸福滋味",
+      content: [
+        "和最喜歡的人一起用餐，是生活中最美好的事之一。不需要刻意安排，只要一張小桌、兩杯飲品，就能讓平凡的午餐變成值得回味的約會時光。",
+        "分享食物，也是分享心情。每一次舉杯碰撞，每一次相視微笑，都讓眼前的食物更加美味，也讓彼此的距離更加靠近。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-fruit",
+      h2: "水果的鮮甜｜大自然最純粹的美味",
+      content: [
+        "台灣是水果王國，四季都有令人讚嘆的當季鮮果。夏天的芒果、西瓜，秋天的柿子、文旦，冬天的草莓、橘子——每一口都是大地給予的最純粹甜蜜。",
+        "水果不只是飯後甜點，更是生活中最簡單的享受。選一盤當季鮮果，細細品嚐那份自然的鮮甜，讓身心都感到清爽與滿足。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-solo-dining",
+      h2: "獨享美食｜一個人吃飯，也是幸福",
+      content: [
+        "一個人用餐，不需要遷就任何人，可以慢慢品嚐、細細感受。挑一家喜歡的餐廳，點一道一直想嚐的料理，讓這頓飯成為專屬於自己的小小犒賞。",
+        "獨享美食不是孤獨，而是學會與自己相處、好好愛自己的一種方式。每一口都是對自己最溫柔的告白。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-hotpot",
+      h2: "火鍋季節｜圍爐最暖心",
+      content: [
+        "天氣一涼，最令人期待的就是一鍋熱氣騰騰的火鍋。蔬菜、肉片、豆腐、丸子在滾滾湯底中翻騰，沾上獨家醬料，每一口都是暖到心底的幸福。",
+        "火鍋最美妙的地方，不只是食物的美味，而是圍坐在一起的那份溫暖。和家人朋友共享一鍋，聊聊近況、說說笑話，這就是最接地氣的幸福時光。",
       ],
       imageAfter: true,
     },

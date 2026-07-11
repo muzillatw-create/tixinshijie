@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg", "/images/fun-helmet.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -81,6 +81,15 @@ const data: ArticleDarkData = {
       h2: "🎉 把快樂分享給每一個人",
       content: [
         "快樂，其實很簡單。一場聚會、一首喜歡的音樂、一部感動的電影，或是與家人朋友一起度過的時光，都能讓心裡充滿幸福。珍惜每一個微笑、每一次相聚，因為每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-safe-ride",
+      h2: "安全出行｜戴上頭盔，平安是最大的幸福",
+      content: [
+        "不管是騎單車環島、機車兜風，還是各種戶外騎乘活動，戴上安全頭盔是對自己和家人最重要的承諾。安全不只是一種規定，更是一種對生命的尊重與愛護。",
+        "每一次出行前戴上頭盔，就是告訴自己：我要好好的回家。平安出行，才能繼續享受生活中更多的美好與快樂。",
       ],
       imageAfter: true,
     },

@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -107,6 +107,24 @@ const data: ArticleDarkData = {
       h2: "🌿 走出去，看見世界的美好",
       content: [
         "旅行不一定要很遠，重要的是願意踏出第一步。無論是山林、海邊、露營，還是城市漫遊，每一次探索都會留下珍貴的回憶。讓自己擁抱大自然，收藏每一段快樂時光，讓人生充滿更多精彩故事。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-hat-style",
+      h2: "裝備齊全｜出發前的最後一哩路",
+      content: [
+        "一頂好帽子、一雙合腳的鞋、一個輕巧的背包，是每一次戶外冒險最重要的準備。裝備到位，心情也隨之放鬆，才能全心全意享受旅途中的每一個驚喜。",
+        "不管是登山健行、海邊漫步還是城市探索，帶上對的裝備，就是對自己和旅途最好的尊重。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-on-the-road",
+      h2: "旅途中｜每一個轉彎都是驚喜",
+      content: [
+        "旅行最迷人的地方，往往不是目的地，而是沿途中那些意料之外的風景。一條陌生的小路、一間偶遇的咖啡館、一個陌生人的微笑，都能成為記憶裡最閃亮的畫面。",
+        "慢下來，讓自己沉浸在旅途的每一個當下，你會發現，世界比想像中更加美好。",
       ],
       imageAfter: true,
     },

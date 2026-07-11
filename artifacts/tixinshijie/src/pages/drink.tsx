@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -71,6 +71,15 @@ const data: ArticleDarkData = {
       h2: "☕ 一杯好飲品，讓心情重新出發",
       content: [
         "清晨的一杯咖啡、午後的一壺熱茶，或是一杯沁涼的果汁，都能為生活增添美好的節奏。每一口飲品，都像是在提醒自己放鬆片刻，享受當下。幸福，其實就藏在每一次舉杯之間。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-oolong",
+      h2: "烏龍茶｜台灣之驕傲，一壺千年香",
+      content: [
+        "台灣高山烏龍茶舉世聞名，從阿里山到梨山，每一款都承載著茶農的心血與大地的恩賜。金黃的茶湯、醇厚的香氣、回甘的滋味，讓每一口都是對台灣風土最深情的品味。",
+        "泡一壺好茶，靜靜地坐下來，讓茶香帶走一天的疲憊。這樣的時刻，就是屬於自己最純粹的幸福。",
       ],
       imageAfter: true,
     },
