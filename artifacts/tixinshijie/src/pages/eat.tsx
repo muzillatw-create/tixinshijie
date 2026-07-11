@@ -25,8 +25,8 @@ const data: ArticleDarkData = {
   seriesImage4Title: "吃｜每一口，都是幸福的開始",
   seriesImage4Text: "忙碌了一整天，最期待的就是坐下來，好好享受一頓美食。真正讓人難忘的，不只是食物本身，而是與家人、朋友一起分享的笑容。放慢腳步，細細品味每一道料理，讓生活多一點溫暖、多一點幸福。幸福時光，從每一口美味開始。",
   seriesImage5: "/images/eat-series5.jpg",
-  seriesImage5Title: "吃｜生活不止詩和遠方，還有眼前的好吃的",
-  seriesImage5Text: "人生最美好的事，就是吃到讓自己開心的食物。無論是一籠熱氣騰騰的小籠包、新鮮的西瓜、一碗濃郁的拉麵，還是甜蜜的冰淇淋，每一口都是對生活最純粹的喜愛。記得在忙碌中停下來，好好品嚐這些平凡卻珍貴的幸福滋味。",
+  seriesImage5Title: "吃｜每一口，都是幸福的開始",
+  seriesImage5Text: "美食，不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的麵、一份香氣四溢的點心，還是與家人朋友共享的餐桌時光，都值得細細品味。幸福，不一定很遙遠，也許就在下一口美味之中。慢下腳步，好好享受每一天的美好。",
   inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg"],
   sections: [
     {
