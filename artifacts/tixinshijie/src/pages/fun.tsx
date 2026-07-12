@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg", "/images/fun-helmet.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg", "/images/fun-helmet.jpg", "/images/fun-series6.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -90,6 +90,15 @@ const data: ArticleDarkData = {
       content: [
         "不管是騎單車環島、機車兜風，還是各種戶外騎乘活動，戴上安全頭盔是對自己和家人最重要的承諾。安全不只是一種規定，更是一種對生命的尊重與愛護。",
         "每一次出行前戴上頭盔，就是告訴自己：我要好好的回家。平安出行，才能繼續享受生活中更多的美好與快樂。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-puppy",
+      h2: "毛孩的快樂哲學｜簡單，就是最大的幸福",
+      content: [
+        "一個玩具、一塊墊子、一縷陽光照進窗台——對小貴賓來說，這就是完美的一天。牠抱著玩具打盹、趴在沙發角落讀書（用眼神），或是在黃昏的陽台上曬太陽，每一個畫面都讓人覺得，快樂真的不需要太複雜。",
+        "毛孩教會我們的事：放慢腳步、珍惜當下、用全部的心去感受每一個小小的美好。這，就是幸福時光最真實的模樣。",
       ],
       imageAfter: true,
     },

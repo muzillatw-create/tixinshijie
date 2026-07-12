@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series6.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -125,6 +125,15 @@ const data: ArticleDarkData = {
       content: [
         "旅行最迷人的地方，往往不是目的地，而是沿途中那些意料之外的風景。一條陌生的小路、一間偶遇的咖啡館、一個陌生人的微笑，都能成為記憶裡最閃亮的畫面。",
         "慢下來，讓自己沉浸在旅途的每一個當下，你會發現，世界比想像中更加美好。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-puppy",
+      h2: "毛孩的運動會｜全力衝刺，盡情玩耍",
+      content: [
+        "追球、奔跑、玩繩子、踩滑板——這隻精力充沛的小貴賓，把「玩」這件事詮釋得淋漓盡致。看著牠在草地上全力衝刺的樣子，讓人忍不住想跟著一起放電！",
+        "玩耍，是毛孩釋放活力的方式，也是人類放下壓力的秘訣。帶著毛孩去公園奔跑，讓身心都徹底放鬆，這就是最真實的幸福時光。",
       ],
       imageAfter: true,
     },

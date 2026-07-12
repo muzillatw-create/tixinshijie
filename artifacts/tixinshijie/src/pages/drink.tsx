@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg", "/images/drink-series6.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -80,6 +80,15 @@ const data: ArticleDarkData = {
       content: [
         "台灣高山烏龍茶舉世聞名，從阿里山到梨山，每一款都承載著茶農的心血與大地的恩賜。金黃的茶湯、醇厚的香氣、回甘的滋味，讓每一口都是對台灣風土最深情的品味。",
         "泡一壺好茶，靜靜地坐下來，讓茶香帶走一天的疲憊。這樣的時刻，就是屬於自己最純粹的幸福。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-puppy",
+      h2: "毛孩補水學｜喝水也可以這麼可愛",
+      content: [
+        "看著毛孩子大口大口喝水，小舌頭輕輕舔著水碗邊緣，再用那雙圓滾滾的眼睛看著你——這一幕，簡直把幸福的定義寫得清清楚楚。",
+        "補水是健康的第一步，對毛孩如此，對我們也是。讓每一口水都喝得滿足、喝得開心，這就是最簡單的養生之道。",
       ],
       imageAfter: true,
     },
