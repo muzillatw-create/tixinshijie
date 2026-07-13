@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -63,16 +63,6 @@ const data: ArticleDarkData = {
       content: [
         "未來在「樂」這個主題中，我們會持續整理居家生活靈感、電影與音樂推薦、親子活動、寵物日常、生活儀式感與放鬆小技巧，讓每一天都更有溫度。",
         "幸福不是等待未來，而是從今天開始，用心感受身邊的一切美好。",
-      ],
-      imageAfter: true,
-    },
-    {
-      id: "fun-le-series",
-      h2: "🌿 樂系列｜讓生活，多一點美好與放鬆",
-      content: [
-        "忙碌的生活，也別忘了留點時間給自己。無論是與家人相聚、好友聊天，或是一個人的悠閒時光，都值得細細品味。",
-        "放慢腳步，享受每一刻的幸福，讓快樂成為每天最自然的習慣。",
-        "幸福時光｜吃喝玩樂——每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,
     },
