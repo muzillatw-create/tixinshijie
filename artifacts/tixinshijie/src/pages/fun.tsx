@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg", "/images/fun-helmet.jpg", "/images/fun-series6.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-le-tea.jpg", "/images/fun-gathering.jpg", "/images/fun-helmet.jpg", "/images/fun-series6.jpg", "/images/fun-series7.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -90,6 +90,15 @@ const data: ArticleDarkData = {
       content: [
         "不管是騎單車環島、機車兜風，還是各種戶外騎乘活動，戴上安全頭盔是對自己和家人最重要的承諾。安全不只是一種規定，更是一種對生命的尊重與愛護。",
         "每一次出行前戴上頭盔，就是告訴自己：我要好好的回家。平安出行，才能繼續享受生活中更多的美好與快樂。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-adventure",
+      h2: "活力冒險｜用行動，書寫屬於自己的故事",
+      content: [
+        "陽光湖面上的皮艇、林間小路的單車、朋友圍聚的野餐，還有飄揚在天際的熱氣球——這些畫面，不只是照片裡的風景，更是真實生活裡最值得珍藏的回憶。",
+        "不要等到「有空」才出發，現在就是最好的時機。帶上你最喜歡的人，一起去創造讓自己心跳加速的幸福時光！",
       ],
       imageAfter: true,
     },

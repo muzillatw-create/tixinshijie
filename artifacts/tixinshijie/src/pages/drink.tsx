@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg", "/images/drink-series6.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg", "/images/drink-series6.jpg", "/images/drink-series7.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -80,6 +80,15 @@ const data: ArticleDarkData = {
       content: [
         "台灣高山烏龍茶舉世聞名，從阿里山到梨山，每一款都承載著茶農的心血與大地的恩賜。金黃的茶湯、醇厚的香氣、回甘的滋味，讓每一口都是對台灣風土最深情的品味。",
         "泡一壺好茶，靜靜地坐下來，讓茶香帶走一天的疲憊。這樣的時刻，就是屬於自己最純粹的幸福。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-infused",
+      h2: "注入水果能量｜每一口都是對身體的善待",
+      content: [
+        "檸檬、小黃瓜、薄荷的清新組合，讓普通的水變成充滿活力的能量飲品。搭配一杯清澈的綠茶、一杯香醇的黑咖啡，或是一杯鮮榨果昔，每一種選擇都是對自己健康的投資。",
+        "選對每天喝的東西，就是生活中最簡單的養生之道。讓清爽的好飲品成為每一天的開始，為自己注入滿滿活力！",
       ],
       imageAfter: true,
     },

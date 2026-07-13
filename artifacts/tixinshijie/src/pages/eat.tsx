@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/eat-series5.jpg",
   seriesImage5Title: "吃｜每一口，都是幸福的開始",
   seriesImage5Text: "美食，不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的麵、一份香氣四溢的點心，還是與家人朋友共享的餐桌時光，都值得細細品味。幸福，不一定很遙遠，也許就在下一口美味之中。慢下腳步，好好享受每一天的美好。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series6.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series6.jpg", "/images/eat-series7.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -125,6 +125,15 @@ const data: ArticleDarkData = {
       content: [
         "天氣一涼，最令人期待的就是一鍋熱氣騰騰的火鍋。蔬菜、肉片、豆腐、丸子在滾滾湯底中翻騰，沾上獨家醬料，每一口都是暖到心底的幸福。",
         "火鍋最美妙的地方，不只是食物的美味，而是圍坐在一起的那份溫暖。和家人朋友共享一鍋，聊聊近況、說說笑話，這就是最接地氣的幸福時光。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-dailynuts",
+      h2: "每日堅果｜吃出好狀態，元氣每一刻",
+      content: [
+        "核桃仁、腰果、杏仁、南瓜子仁、蔓越莓乾、藍莓乾、榛子仁——7種食材科學配比，一袋滿足一天所需的多種營養。精挑細選的天然原料，搭配獨立小袋鎖鮮設計，讓健康零食隨時隨地陪伴你。",
+        "吃對食物，才能維持好狀態。每天一包每日堅果，為身體補充天然能量，讓幸福從每一口健康的選擇開始。",
       ],
       imageAfter: true,
     },

@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series6.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-nature-explore.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series6.jpg", "/images/play-series7.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -125,6 +125,15 @@ const data: ArticleDarkData = {
       content: [
         "旅行最迷人的地方，往往不是目的地，而是沿途中那些意料之外的風景。一條陌生的小路、一間偶遇的咖啡館、一個陌生人的微笑，都能成為記憶裡最閃亮的畫面。",
         "慢下來，讓自己沉浸在旅途的每一個當下，你會發現，世界比想像中更加美好。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-outdoor-variety",
+      h2: "戶外冒險全攻略｜露營、單車、皮艇、高爾夫",
+      content: [
+        "湖畔紮營看日落、踩著單車穿越山林、划著皮艇感受水波輕拍、在綠草如茵的球場揮桿——每一種戶外活動，都是釋放壓力、重新連結自我的絕佳方式。",
+        "下雨天也不怕，找幾個好友圍坐桌遊，笑聲此起彼落。人生最美好的時光，不在螢幕裡，而在與朋友一起的每一個當下。",
       ],
       imageAfter: true,
     },
