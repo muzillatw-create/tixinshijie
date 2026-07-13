@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-coffee-culture.jpg", "/images/drink-oolong.jpg", "/images/drink-series6.jpg", "/images/drink-series7.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -63,14 +63,6 @@ const data: ArticleDarkData = {
       content: [
         "未來在「喝」這個主題中，我們會持續整理咖啡知識、茶葉文化、手搖飲推薦、果汁分享、飲品搭配、聚會飲品與生活儀式感內容，讓每一次舉杯，都成為幸福時光的一部分。",
         "每一杯飲品，都是生活中最美好的停頓。願你在忙碌之餘，也能好好享受屬於自己的那一杯。",
-      ],
-      imageAfter: true,
-    },
-    {
-      id: "drink-fresh-start",
-      h2: "☕ 一杯好飲品，讓心情重新出發",
-      content: [
-        "清晨的一杯咖啡、午後的一壺熱茶，或是一杯沁涼的果汁，都能為生活增添美好的節奏。每一口飲品，都像是在提醒自己放鬆片刻，享受當下。幸福，其實就藏在每一次舉杯之間。",
       ],
       imageAfter: true,
     },

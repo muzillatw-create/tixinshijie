@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/eat-series5.jpg",
   seriesImage5Title: "吃｜每一口，都是幸福的開始",
   seriesImage5Text: "美食，不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的麵、一份香氣四溢的點心，還是與家人朋友共享的餐桌時光，都值得細細品味。幸福，不一定很遙遠，也許就在下一口美味之中。慢下腳步，好好享受每一天的美好。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series6.jpg", "/images/eat-series7.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series7.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -133,16 +133,6 @@ const data: ArticleDarkData = {
       h2: "🍽️ 吃｜幸福，從每一口開始",
       content: [
         "美食不僅能填飽肚子，更能讓心情變得更美好。無論是一頓熱騰騰的家常菜，還是一道精緻的甜點，都值得慢慢品嚐。今天，放慢腳步，享受屬於自己的幸福食光。",
-      ],
-      imageAfter: true,
-    },
-    {
-      id: "eat-puppy",
-      h2: "🐶【吃】幸福，從每一口開始",
-      content: [
-        "美味的食物，不只是填飽肚子，更是一份充滿愛的陪伴。看著小狗開心地享受每一口餐點，那滿足的笑容，就是一天最美好的開始。珍惜每一次相聚，讓幸福從餐桌延續到生活中的每一天。",
-        "✨ 幸福時光｜吃喝玩樂",
-        "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,
     },
