@@ -163,14 +163,15 @@ router.patch("/admin/videos/:videoId", async (req, res): Promise<void> => {
     res.status(403).json({ error: "Unauthorized" });
     return;
   }
-  const { title, youtubeUrl } = req.body as { title?: string; youtubeUrl?: string };
-  if (!title && !youtubeUrl) {
-    res.status(400).json({ error: "title or youtubeUrl required" });
+  const { title, youtubeUrl, description } = req.body as { title?: string; youtubeUrl?: string; description?: string };
+  if (!title && !youtubeUrl && description === undefined) {
+    res.status(400).json({ error: "title, youtubeUrl, or description required" });
     return;
   }
-  const updates: { title?: string; youtubeUrl?: string } = {};
+  const updates: { title?: string; youtubeUrl?: string; description?: string } = {};
   if (title) updates.title = title;
   if (youtubeUrl) updates.youtubeUrl = youtubeUrl;
+  if (description !== undefined) updates.description = description;
   const [video] = await db
     .update(videosTable)
     .set(updates)
