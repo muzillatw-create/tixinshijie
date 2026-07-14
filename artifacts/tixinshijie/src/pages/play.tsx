@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg", "/images/play-series9.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -134,6 +134,17 @@ const data: ArticleDarkData = {
       content: [
         "陽光、草地、歡笑聲，小狗盡情奔跑的模樣總能感染身邊每一個人。生活不需要太多理由，只要願意走出戶外、享受每一段旅程，每一天都能創造屬於自己的幸福回憶。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-series9",
+      h2: "💑【玩】溫馨故事｜兩個人的旅行，最美的風景是你",
+      content: [
+        "牽著手走在花海小徑，陽光灑落在彼此臉上，不需要說太多，只是走著、笑著，就已經是這一生最幸福的旅行。",
+        "旅行的意義，不只在於去了哪裡，而在於和誰一起。帶著最愛的人出發，把每一個風景都變成共同的回憶，把每一次出走都變成愛情最好的見證。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,

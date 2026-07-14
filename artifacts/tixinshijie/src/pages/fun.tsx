@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -91,6 +91,17 @@ const data: ArticleDarkData = {
       content: [
         "一天的最後，和最愛的家人、小狗一起放鬆休息，就是最簡單的幸福。真正讓人難忘的，不是多麼精彩的安排，而是彼此陪伴的每一個瞬間。把握今天，也期待明天更多美好的故事。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series9",
+      h2: "🏡【樂】溫馨故事｜陪伴，是最長情的告白",
+      content: [
+        "窩在沙發上，一家人蓋著毛毯看電影，爆米花的香味飄在空氣中，孩子的笑聲是今晚最美的背景音樂。不需要特別的地點，不需要特別的理由，只要在一起，就是最完整的快樂。",
+        "生命中最珍貴的，不是去了多遠的地方，而是有多少個這樣的夜晚——平凡、溫暖、充滿愛。願每個家庭，都能擁有這樣的幸福時光。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,

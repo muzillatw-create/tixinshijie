@@ -90,6 +90,30 @@ uri = "file://attached_assets/generated_images/fun_varieties_v2.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "PrZDQ8L37nLwQJWUTyZ11"
+uri = "file://attached_assets/eat-series9.png"
+type = "image"
+title = "family dining together warm"
+
+[[generated]]
+id = "2HH0RXLnZ-ZR8DHBGL2Tb"
+uri = "file://attached_assets/drink-series9.png"
+type = "image"
+title = "friends afternoon tea cafe"
+
+[[generated]]
+id = "L5kPUqz9X2brrwg4eAnMI"
+uri = "file://attached_assets/play-series9.png"
+type = "image"
+title = "couple traveling outdoors romantic"
+
+[[generated]]
+id = "ZadYd6efml_N65EsWl0HG"
+uri = "file://attached_assets/fun-series9.png"
+type = "image"
+title = "family cozy time at home"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"
