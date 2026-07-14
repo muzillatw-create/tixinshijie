@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -135,6 +135,15 @@ const data: ArticleDarkData = {
         "陽光、草地、歡笑聲，小狗盡情奔跑的模樣總能感染身邊每一個人。生活不需要太多理由，只要願意走出戶外、享受每一段旅程，每一天都能創造屬於自己的幸福回憶。",
         "✨ 幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-series8",
+      h2: "📸 玩｜探索世界，玩出精彩！",
+      content: [
+        "舉起相機，定格海天一色的壯闊美景；揮動球拍，在草地上盡情揮灑汗水；撥動吉他弦，在星空下的營火旁唱出心裡的歌；坐上雲霄飛車，讓歡呼聲響徹整個樂園——每一種玩法，都是屬於自己的精彩故事。",
+        "探索世界不需要理由，只需要一顆願意出發的心。走出去，你會發現生活比想像中更豐富、更美好！",
       ],
       imageAfter: true,
     },

@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -92,6 +92,15 @@ const data: ArticleDarkData = {
         "一天的最後，和最愛的家人、小狗一起放鬆休息，就是最簡單的幸福。真正讓人難忘的，不是多麼精彩的安排，而是彼此陪伴的每一個瞬間。把握今天，也期待明天更多美好的故事。",
         "✨ 幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series8",
+      h2: "🌅 樂｜享受生活，每一刻的快樂",
+      content: [
+        "夕陽下張開雙臂，感受微風輕撫臉龐；戴上耳機，讓喜歡的音樂充滿整個空間；坐在海邊，端著一杯果汁，看浪花一波波湧來；在煙火盛開的夜晚，穿上美麗的衣裳，和最好的朋友一起慶祝——這些，都是生活給我們最珍貴的禮物。",
+        "快樂不需要等到特別的日子，就在此刻，就在當下。享受生活，讓每一刻都成為值得珍藏的幸福時光！",
       ],
       imageAfter: true,
     },

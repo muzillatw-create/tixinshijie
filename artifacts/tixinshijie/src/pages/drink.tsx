@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -90,6 +90,15 @@ const data: ArticleDarkData = {
         "喝水看似平凡，卻是健康生活不可缺少的一部分。陪伴小狗養成良好的飲水習慣，也是在照顧牠每一天的活力。幸福，其實就藏在這些微小而溫暖的日常裡。",
         "✨ 幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-series8",
+      h2: "💧 喝｜好喝的水，好心情每一天！",
+      content: [
+        "一杯清透的檸檬水、一壺香氣四溢的綠茶、一杯濃醇的咖啡，或是一口清涼的葡萄珍珠奶茶，每一種飲品都有它獨特的溫度與故事。",
+        "好喝的水，帶來好心情。讓每天從一杯喜歡的飲品開始，為自己補充元氣，也為生活注入一份小小的幸福與期待。",
       ],
       imageAfter: true,
     },
