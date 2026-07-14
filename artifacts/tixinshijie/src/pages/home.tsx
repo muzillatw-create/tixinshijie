@@ -120,7 +120,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6">
-              <img src="/images/hot-air-balloon.jpg" alt="每一天都值得" className="w-full max-w-lg mx-auto rounded-2xl object-cover" />
+              <img src="/images/home-banner2.jpg" alt="我們的每一天都值得回憶" className="w-full max-w-lg mx-auto rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
