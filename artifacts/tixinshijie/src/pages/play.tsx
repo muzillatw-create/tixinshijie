@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg", "/images/play-series9.jpg", "/images/play-series10.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg", "/images/play-series9.jpg", "/images/play-series10.jpg", "/images/play-series11.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -134,6 +134,17 @@ const data: ArticleDarkData = {
       content: [
         "陽光、草地、歡笑聲，小狗盡情奔跑的模樣總能感染身邊每一個人。生活不需要太多理由，只要願意走出戶外、享受每一段旅程，每一天都能創造屬於自己的幸福回憶。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-series11",
+      h2: "🎈【玩】夢幻童話｜乘著熱氣球，飛向屬於你的奇幻世界",
+      content: [
+        "色彩繽紛的熱氣球緩緩升空，腳下是一片無邊的花海與魔法森林，遠方隱約可見夢幻城堡的尖塔。站在氣球籃中，風拂過臉龐，整個世界都變得渺小而美麗。",
+        "人生最精彩的冒險，往往從一個大膽的出發開始。願你也能乘著夢想的熱氣球，飛越每一道界線，抵達心中那片屬於自己的童話天地。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,

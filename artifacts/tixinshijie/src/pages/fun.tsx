@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -91,6 +91,17 @@ const data: ArticleDarkData = {
       content: [
         "一天的最後，和最愛的家人、小狗一起放鬆休息，就是最簡單的幸福。真正讓人難忘的，不是多麼精彩的安排，而是彼此陪伴的每一個瞬間。把握今天，也期待明天更多美好的故事。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series11",
+      h2: "🌈【樂】夢幻童話｜躺在花海裡，讓快樂像彩虹一樣綻放",
+      content: [
+        "夕陽把天空染成金橘粉紫，熱氣球在遠方悠悠飄過，四周是一望無際的花海，蝴蝶在耳邊輕輕飛舞。躺下來，閉上眼，深呼吸——這一刻，整個世界都是你的。",
+        "快樂不需要追趕，它就像這片花海一樣，靜靜地在你身邊盛開。願你隨時都能找到屬於自己的那一片夢幻天地，讓每一天都活得像童話一樣美麗。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,

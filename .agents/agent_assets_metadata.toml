@@ -138,6 +138,30 @@ uri = "file://attached_assets/fun-series10.png"
 type = "image"
 title = "family pets cuddling cozy home"
 
+[[generated]]
+id = "5p1qJ0UxGf5-dFjvzkNJq"
+uri = "file://attached_assets/eat-series11.png"
+type = "image"
+title = "fairy tale flower field picnic"
+
+[[generated]]
+id = "UMNX8Tn_qUYbiW-65QRO1"
+uri = "file://attached_assets/drink-series11.png"
+type = "image"
+title = "fairy tale starry night tea forest"
+
+[[generated]]
+id = "zjVLtV8bofjXjYGCT_VAG"
+uri = "file://attached_assets/play-series11.png"
+type = "image"
+title = "hot air balloon fairy tale adventure"
+
+[[generated]]
+id = "zM-dGfwtyh7ikuPWEHpXL"
+uri = "file://attached_assets/fun-series11.png"
+type = "image"
+title = "fairy tale meadow sunset magical joy"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"

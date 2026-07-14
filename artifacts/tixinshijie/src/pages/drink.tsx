@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg", "/images/drink-series11.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -89,6 +89,17 @@ const data: ArticleDarkData = {
       content: [
         "喝水看似平凡，卻是健康生活不可缺少的一部分。陪伴小狗養成良好的飲水習慣，也是在照顧牠每一天的活力。幸福，其實就藏在這些微小而溫暖的日常裡。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-series11",
+      h2: "🌙【喝】夢幻童話｜星空下的一杯茶，時間都慢了下來",
+      content: [
+        "深邃的星空為頂，發光的蘑菇為燈，水晶茶杯中盛著閃閃發亮的魔法飲品——在這片夢幻的森林空地裡，每一口都帶著星塵的甘甜與月光的清涼。",
+        "有時候，喝一杯茶不只是解渴，更是給自己一段與星空對話的時光。放下所有煩惱，讓這份寧靜的魔法，輕輕填滿你的心。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,
