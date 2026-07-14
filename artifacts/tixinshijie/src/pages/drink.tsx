@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -89,6 +89,17 @@ const data: ArticleDarkData = {
       content: [
         "喝水看似平凡，卻是健康生活不可缺少的一部分。陪伴小狗養成良好的飲水習慣，也是在照顧牠每一天的活力。幸福，其實就藏在這些微小而溫暖的日常裡。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-series10",
+      h2: "🐾【喝】毛小孩系列｜喝水喝得認真，連貓咪都有儀式感",
+      content: [
+        "貓咪蹲在水碗前，認真地用小舌頭一下一下舔著水；小狗則把整個臉埋進水盆，喝得滿地水花，抬起頭還帶著一臉滿足的表情。",
+        "連毛小孩都懂得，好好補水才能好好生活。看著牠們認真喝水的模樣，不禁也想為自己倒上一杯，細細品味這份純粹的日常小幸福。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,

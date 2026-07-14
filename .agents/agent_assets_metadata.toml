@@ -114,6 +114,30 @@ uri = "file://attached_assets/fun-series9.png"
 type = "image"
 title = "family cozy time at home"
 
+[[generated]]
+id = "6MuT9GQy6OH7blpT2MMNH"
+uri = "file://attached_assets/eat-series10.png"
+type = "image"
+title = "dog cat food dining cute"
+
+[[generated]]
+id = "d76Q2XsFINrZGrvbjaXqP"
+uri = "file://attached_assets/drink-series10.png"
+type = "image"
+title = "cat dog drinking water cute"
+
+[[generated]]
+id = "ommemoTFQ1ktfM2dx8cF_"
+uri = "file://attached_assets/play-series10.png"
+type = "image"
+title = "dog playing park outdoor sunny"
+
+[[generated]]
+id = "rh3GU0I1BdB2tvNO9388c"
+uri = "file://attached_assets/fun-series10.png"
+type = "image"
+title = "family pets cuddling cozy home"
+
 [[outputs]]
 id = "0aPMetG4Rb0DcBOhQfd7S"
 uri = "file://attached_assets/facebook-qrcode.png"

@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -91,6 +91,17 @@ const data: ArticleDarkData = {
       content: [
         "一天的最後，和最愛的家人、小狗一起放鬆休息，就是最簡單的幸福。真正讓人難忘的，不是多麼精彩的安排，而是彼此陪伴的每一個瞬間。把握今天，也期待明天更多美好的故事。",
         "✨ 幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series10",
+      h2: "🐾【樂】毛小孩系列｜有牠在，家就是最溫暖的地方",
+      content: [
+        "回到家，牠第一個衝過來迎接你。不管今天多辛苦、多疲憊，看見那搖著尾巴的身影或是慵懶蜷縮在沙發角落的貓咪，一切都值得了。",
+        "毛小孩不會說話，卻是最懂得陪伴的生命。牠們用全部的愛守著這個家，讓每一個平凡的夜晚，都充滿了無聲卻深厚的幸福。",
+        "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
       imageAfter: true,
