@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜飲品文化",
   publishDate: "2026-07-02",
-  intro: "一杯好茶、一杯咖啡，或是一杯沁涼飲品，都能為生活增添美好節奏。無論清晨、午後或夜晚，都值得放慢腳步，好好享受飲品帶來的放鬆與愉悅，讓每天都充滿活力與好心情。",
+  intro: "生活可以很忙碌，但別忘了留一點時間給自己。一杯香濃咖啡、一壺清香好茶、一杯沁涼果汁，或是夜晚與好友共享的一杯紅酒，都能讓心情慢慢沉澱。喝的不只是飲品，更是生活的節奏，也是屬於自己的放鬆時光。",
   seriesImage: "/images/drink-series.jpg",
   seriesImage2: "/images/drink-series2.jpg",
   seriesImage2Title: "喝｜品味生活，從每一杯開始",

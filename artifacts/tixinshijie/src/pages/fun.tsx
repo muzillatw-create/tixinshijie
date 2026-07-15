@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜生活享受",
   publishDate: "2026-07-02",
-  intro: "快樂來自生活中的每一個瞬間，與家人相聚、朋友歡笑、音樂陪伴、閱讀放鬆，都能帶來滿滿幸福感。珍惜每一天的美好時光，讓快樂成為生活的一部分，創造屬於自己的幸福人生。",
+  intro: "真正的快樂，不一定來自轟轟烈烈，而是那些溫暖的小瞬間。和家人野餐、陪毛小孩散步、與朋友歡聚、欣賞夕陽、閱讀一本好書、享受音樂帶來的感動，都能讓平凡的日子充滿幸福。珍惜每一個微笑，每一天，都值得留下最美好的回憶。",
   seriesImage: "/images/fun-series.jpg",
   seriesImage2: "/images/fun-series2.jpg",
   seriesImage2Title: "樂｜把快樂留在每一天",

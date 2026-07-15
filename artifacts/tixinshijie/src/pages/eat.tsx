@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜美食探索",
   publishDate: "2026-07-02",
-  intro: "美食不只是填飽肚子，更是一種生活的享受。從熱騰騰的家常料理到各地特色美食，每一道佳餚都值得細細品味。帶著愉快的心情探索不同風味，讓每一餐都成為幸福時光，留下最美好的回憶。",
+  intro: "每一道料理，都藏著一段故事；每一次相聚，都值得細細品味。無論是熱騰騰的家常菜、夜市小吃，還是精緻甜點，只要和喜歡的人一起享用，平凡的一餐也能成為最難忘的回憶。今天，不妨放慢腳步，好好享受眼前的美味，讓幸福從每一口開始。",
   seriesImage: "/images/eat-series.jpg",
   seriesImage2: "/images/eat-series2.jpg",
   seriesImage2Title: "吃｜品味每一口幸福",

@@ -13,7 +13,7 @@ const data: ArticleDarkData = {
   heroSrc,
   heroAlt: "幸福時光｜旅遊探索",
   publishDate: "2026-07-02",
-  intro: "旅行讓人開闊視野，戶外活動讓人釋放壓力。不論是騎單車、露營、衝浪、登山，還是體驗各地風景，都能創造屬於自己的精彩故事。勇敢探索世界，讓每一次出發都成為珍貴的回憶。",
+  intro: "世界很大，值得慢慢去體驗。騎自行車迎著微風、划著獨木舟親近大海、搭乘熱氣球俯瞰美景、挑戰飛行傘、潛入海底欣賞繽紛魚群，每一次出發都是新的冒險。勇敢踏出第一步，讓旅程成為人生最珍貴的回憶。",
   seriesImage: "/images/play-series.jpg",
   seriesImage2: "/images/play-series2.jpg",
   seriesImage2Title: "玩｜探索世界的精彩",
