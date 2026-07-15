@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg", "/images/drink-series11.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg", "/images/drink-series11.jpg", "/images/drink-series12.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -132,6 +132,17 @@ const data: ArticleDarkData = {
       content: [
         "一杯好喝的飲品，為今天補充滿滿的好心情。",
         "清涼的果汁、香濃的咖啡、回甘的好茶，每一口都讓生活更加輕鬆自在。與家人朋友一起分享，就是最簡單的幸福時光。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-series12",
+      h2: "☕【喝】從清晨到深夜，每一杯都有滋味",
+      content: [
+        "一杯茶，是對自己的溫柔；一壺手沖咖啡，是山間露營的儀式感；一杯調酒，是夜晚與朋友的默契；一瓶鮮奶，是牧場清晨的純粹——每一種飲品，都有它獨特的語言，訴說著不同的生活故事。",
+        "慢下來，為自己沖一杯喜歡的飲料，感受它帶來的那份寧靜與滿足。生活的美好，有時就藏在這樸實的一口裡。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],

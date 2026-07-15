@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg", "/images/fun-series12.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -134,6 +134,17 @@ const data: ArticleDarkData = {
       content: [
         "快樂，其實就在生活裡的每一個瞬間。",
         "聽一首喜歡的音樂、欣賞夕陽、參加節慶活動，或陪伴最愛的人，都能讓平凡的一天充滿幸福。願每一天都笑容滿滿，快樂相伴。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series12",
+      h2: "🎡【樂】生活的精彩，就藏在每一個當下",
+      content: [
+        "春日公園裡，一家四口吹著泡泡，孩子的笑聲是最美的背景音樂；夜晚KTV裡，朋友們高舉麥克風，忘掉所有煩惱；溫泉裡，讓疲憊在熱氣中緩緩散去；夜景山頂，靜靜俯瞰城市的燦爛燈火。",
+        "快樂從來不是一種奢侈品，它就藏在家人的擁抱、朋友的歡笑、一個人安靜閱讀的片刻裡。找到屬於自己的樂趣，每天都是值得慶祝的日子。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
