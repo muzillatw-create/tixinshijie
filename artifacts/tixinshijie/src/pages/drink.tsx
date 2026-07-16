@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/drink-series5.jpg",
   seriesImage5Title: "喝｜讓每一天充滿活力",
   seriesImage5Text: "一杯清水、一杯咖啡、一壺好茶，都是生活中不可缺少的陪伴。從早晨的第一口開始，為自己補充滿滿元氣，享受片刻寧靜，也迎接新的挑戰。放慢節奏，感受飲品帶來的溫暖，讓生活多一份自在、多一份幸福。",
-  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg", "/images/drink-series11.jpg", "/images/drink-series12.jpg"],
+  inlineImages: ["/images/drink-morning.jpg", "/images/drink-tea.jpg", "/images/drink-wine-gathering.jpg", "/images/drink-oolong.jpg", "/images/drink-series7.jpg", "/images/drink-series6.jpg", "/images/drink-series8.jpg", "/images/drink-series9.jpg", "/images/drink-series10.jpg", "/images/drink-series11.jpg", "/images/drink-series12.jpg", "/images/drink-series13.jpg"],
   sections: [
     {
       id: "drink-as-lifestyle",
@@ -132,6 +132,17 @@ const data: ArticleDarkData = {
       content: [
         "一杯好喝的飲品，為今天補充滿滿的好心情。",
         "清涼的果汁、香濃的咖啡、回甘的好茶，每一口都讓生活更加輕鬆自在。與家人朋友一起分享，就是最簡單的幸福時光。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "drink-series13",
+      h2: "☕【喝】漫畫系列｜每一杯飲品，都是生活的小確幸",
+      content: [
+        "清晨一杯溫水喚醒身體，一壺好茶讓心平靜，咖啡是對自己的獎勵，奶茶是午後的甜蜜，熱可可像幸福的擁抱，湯品暖胃又暖心——每一種飲品，都有它最適合的時刻。",
+        "享受當下，就是最好的時光。願你每天都能喝出好心情，喝出好生活！",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
