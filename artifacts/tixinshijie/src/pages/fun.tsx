@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg", "/images/fun-series12.jpg", "/images/fun-series13.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg", "/images/fun-series12.jpg", "/images/fun-series13.jpg", "/images/fun-series14.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -134,6 +134,17 @@ const data: ArticleDarkData = {
       content: [
         "快樂，其實就在生活裡的每一個瞬間。",
         "聽一首喜歡的音樂、欣賞夕陽、參加節慶活動，或陪伴最愛的人，都能讓平凡的一天充滿幸福。願每一天都笑容滿滿，快樂相伴。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series14",
+      h2: "🌅【樂】張開雙臂，擁抱每一個美好瞬間",
+      content: [
+        "面朝夕陽海景的陽台、手捧咖啡的愜意時光，彈著吉他沉浸在音符裡，一家人在草地上野餐歡笑，熱氣球漂浮在彩霞之中——這些畫面，就是「樂」最真實的模樣。",
+        "快樂不需要理由，只需要你願意張開雙臂，去擁抱每一個當下。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],

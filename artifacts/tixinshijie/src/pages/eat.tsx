@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/eat-series5.jpg",
   seriesImage5Title: "吃｜每一口，都是幸福的開始",
   seriesImage5Text: "美食，不只是填飽肚子，更是生活中的小確幸。無論是一碗熱騰騰的麵、一份香氣四溢的點心，還是與家人朋友共享的餐桌時光，都值得細細品味。幸福，不一定很遙遠，也許就在下一口美味之中。慢下腳步，好好享受每一天的美好。",
-  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series7.jpg", "/images/eat-series8.jpg", "/images/eat-series9.jpg", "/images/eat-series10.jpg", "/images/eat-series11.jpg", "/images/eat-series12.jpg", "/images/eat-series13.jpg"],
+  inlineImages: ["/images/eat-beefnoodle.jpg", "/images/eat-nightmarket.jpg", "/images/eat-family-meal.jpg", "/images/eat-breakfast.jpg", "/images/eat-bubbletea.jpg", "/images/eat-coffee.jpg", "/images/eat-couple-drink.jpg", "/images/eat-fruit.jpg", "/images/eat-girl-dining.jpg", "/images/eat-hotpot.jpg", "/images/eat-series7.jpg", "/images/eat-series8.jpg", "/images/eat-series9.jpg", "/images/eat-series10.jpg", "/images/eat-series11.jpg", "/images/eat-series12.jpg", "/images/eat-series13.jpg", "/images/eat-series14.jpg"],
   sections: [
     {
       id: "memory-and-food",
@@ -175,6 +175,17 @@ const data: ArticleDarkData = {
       content: [
         "每一道美食，都藏著一段幸福回憶。",
         "無論是一碗熱騰騰的麵、一份香噴噴的燒烤，還是甜蜜的小點心，都讓生活多了一份溫暖。放慢腳步，享受每一口美味，把今天的快樂收藏起來。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "eat-series14",
+      h2: "🐾【吃】萌寵與美食，每一口都是幸福",
+      content: [
+        "小狗守著炸雞、寶寶捧著西瓜、熊貓啃著竹子、倉鼠抱著零食——吃東西的快樂，跨越物種、跨越年齡，是最純粹的幸福表情。",
+        "不管是毛茸茸的牠，還是笑瞇瞇的你，能好好吃一頓飯，就是今天最美好的事。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
