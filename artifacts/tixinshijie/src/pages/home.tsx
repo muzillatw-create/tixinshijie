@@ -14,10 +14,7 @@ import { useToast } from "../hooks/use-toast";
 import { useCart } from "../lib/cart-context";
 import { useState } from "react";
 import newVideo1 from "@assets/介紹99_compressed.mp4";
-import eat1 from "@assets/吃喝玩樂1_1782913834936.jpg";
-import eat2 from "@assets/吃喝玩樂2_1782913834937.jpg";
-import eat3 from "@assets/吃喝玩樂3_1782913834937.jpg";
-import eat4 from "@assets/吃喝玩樂4_1782913834938.jpg";
+
 import bannerPurple from "@assets/bannerPurple.jpg";
 import bannerHappiness from "@assets/bannerHappiness.jpg";
 import bannerHappinessHero from "@assets/home-paragliding.jpg";
@@ -155,19 +152,19 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <img src={eat1} alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
+              <img src="/images/eat-series6.jpg" alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <img src={eat2} alt="幸福時光 品味好時光" className="w-full rounded-2xl object-cover" />
+              <img src="/images/drink-series9.jpg" alt="幸福時光 品味好時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <img src={eat3} alt="幸福時光 玩樂時光" className="w-full rounded-2xl object-cover" />
+              <img src="/images/play-series7.jpg" alt="幸福時光 玩樂時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
-              <img src={eat4} alt="幸福時光 樂活時光" className="w-full rounded-2xl object-cover" />
+              <img src="/images/fun-series7.jpg" alt="幸福時光 樂活時光" className="w-full rounded-2xl object-cover" />
             </motion.div>
 
             <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
