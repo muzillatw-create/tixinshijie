@@ -151,20 +151,44 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
               <img src="/images/eat-series6.jpg" alt="幸福時光 好味時刻" className="w-full rounded-2xl object-cover" />
+              <div className="mt-3 text-left px-1">
+                <h3 className="text-white font-bold text-lg mb-1">🍜 吃｜幸福，藏在每一口美味裡</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-1">有時候，真正讓人難忘的不是昂貴的大餐，而是和家人、朋友圍坐在一起，共享一頓熱騰騰的美食。每一道料理，都承載著歡笑與回憶。</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-2">放慢腳步，好好享受每一口幸福，讓今天成為值得珍藏的一天。</p>
+                <p className="text-cyan-400/70 text-xs">#幸福時光 #吃出幸福 #美食分享 #生活日常 #每一天都值得回憶</p>
+              </div>
             </motion.div>
 
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
               <img src="/images/drink-series9.jpg" alt="幸福時光 品味好時光" className="w-full rounded-2xl object-cover" />
+              <div className="mt-3 text-left px-1">
+                <h3 className="text-white font-bold text-lg mb-1">☕ 喝｜一杯好飲品，溫暖一整天</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-1">忙碌的生活，也別忘了為自己留一點悠閒時光。一杯咖啡、一壺熱茶，或是一杯清涼果汁，都能讓心情慢慢沉澱。</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-2">幸福，不一定很遠，有時候就在手中的這一杯。</p>
+                <p className="text-cyan-400/70 text-xs">#幸福時光 #喝出好心情 #咖啡時光 #悠閒生活 #每一天都值得回憶</p>
+              </div>
             </motion.div>
 
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
               <img src="/images/play-series7.jpg" alt="幸福時光 玩樂時光" className="w-full rounded-2xl object-cover" />
+              <div className="mt-3 text-left px-1">
+                <h3 className="text-white font-bold text-lg mb-1">✈️ 玩｜探索世界，也發現更好的自己</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-1">旅行不一定要很遠，重要的是願意出發。無論是海邊、山林、露營，還是城市漫步，每一次體驗都會成為人生最美好的故事。</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-2">帶著笑容出門，把快樂裝滿回憶。</p>
+                <p className="text-cyan-400/70 text-xs">#幸福時光 #旅行日記 #玩出精彩 #探索生活 #每一天都值得回憶</p>
+              </div>
             </motion.div>
 
-            <motion.div variants={item} className="mb-6 w-full max-w-2xl mx-auto">
+            <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
               <img src="/images/fun-series7.jpg" alt="幸福時光 樂活時光" className="w-full rounded-2xl object-cover" />
+              <div className="mt-3 text-left px-1">
+                <h3 className="text-white font-bold text-lg mb-1">🎵 樂｜快樂，其實很簡單</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-1">陪伴家人、和毛小孩玩耍、聽一首喜歡的歌、看看夕陽、吹吹晚風，這些平凡的小事，就是生活最珍貴的禮物。</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-2">願我們都能珍惜眼前的幸福，讓每一天都充滿溫暖與笑容。</p>
+                <p className="text-cyan-400/70 text-xs">#幸福時光 #快樂生活 #珍惜當下 #幸福每一天 #每一天都值得回憶</p>
+              </div>
             </motion.div>
 
             <motion.div variants={item} className="mb-10 w-full max-w-2xl mx-auto">
