@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/play-series5.jpg",
   seriesImage5Title: "玩｜探索世界，收藏回憶",
   seriesImage5Text: "旅行、露營、登山、散步，每一次出發都是新的故事。放下忙碌，走進大自然，看看不同的風景，感受不同的人情味。人生最珍貴的，不只是目的地，而是一路上的歡笑與回憶，讓每一次旅行都成為幸福時光的一部分。",
-  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg", "/images/play-series9.jpg", "/images/play-series10.jpg", "/images/play-series11.jpg", "/images/play-series12.jpg", "/images/play-series13.jpg", "/images/play-series14.jpg"],
+  inlineImages: ["/images/play-rollercoaster.jpg", "/images/play-picnic.jpg", "/images/play-golf.jpg", "/images/play-helmet.jpg", "/images/play-travel2.jpg", "/images/play-hat.jpg", "/images/play-travel.jpg", "/images/play-series7.jpg", "/images/play-series6.jpg", "/images/play-series8.jpg", "/images/play-series9.jpg", "/images/play-series10.jpg", "/images/play-series11.jpg", "/images/play-series12.jpg", "/images/play-series13.jpg", "/images/play-series14.jpg", "/images/play-series15.jpg"],
   sections: [
     {
       id: "play-recharge",
@@ -177,6 +177,16 @@ const data: ArticleDarkData = {
       content: [
         "世界這麼大，總有值得探索的風景。",
         "帶著笑容出發，去旅行、去露營、去公園散步，或體驗各種有趣的新事物。每一次出發，都是創造美好回憶的開始。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "play-series15",
+      h2: "🪁【玩】童年的快樂，永遠不嫌多",
+      content: [
+        "陽光下奔跑放風箏、和家人一起露營野餐、踢一場酣暢淋漓的足球、用積木蓋出心中的城堡、沉浸在遊戲世界裡的歡呼——每一種玩法，都是屬於這個年紀最珍貴的回憶。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
