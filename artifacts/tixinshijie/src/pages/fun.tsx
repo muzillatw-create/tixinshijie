@@ -27,7 +27,7 @@ const data: ArticleDarkData = {
   seriesImage5: "/images/fun-series5.jpg",
   seriesImage5Title: "樂｜快樂，其實很簡單",
   seriesImage5Text: "快樂不需要等待特別的日子，一次聚會、一場電影、一首喜歡的音樂，甚至一個燦爛的笑容，都能讓生活更加精彩。珍惜身邊的人，享受當下的每一刻，把平凡的日子過得充滿溫度，讓幸福陪伴每一天。",
-  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg", "/images/fun-series12.jpg", "/images/fun-series13.jpg", "/images/fun-series14.jpg", "/images/fun-series15.jpg"],
+  inlineImages: ["/images/fun-pain-patch.jpg", "/images/fun-shoe.jpg", "/images/fun-movie.jpg", "/images/fun-helmet.jpg", "/images/fun-series7.jpg", "/images/fun-series6.jpg", "/images/fun-series8.jpg", "/images/fun-series9.jpg", "/images/fun-series10.jpg", "/images/fun-series11.jpg", "/images/fun-series12.jpg", "/images/fun-series13.jpg", "/images/fun-series14.jpg", "/images/fun-series15.jpg", "/images/fun-series16.jpg"],
   sections: [
     {
       id: "fun-attitude",
@@ -134,6 +134,16 @@ const data: ArticleDarkData = {
       content: [
         "快樂，其實就在生活裡的每一個瞬間。",
         "聽一首喜歡的音樂、欣賞夕陽、參加節慶活動，或陪伴最愛的人，都能讓平凡的一天充滿幸福。願每一天都笑容滿滿，快樂相伴。",
+        "✨幸福時光｜吃喝玩樂",
+        "每一天，都值得留下最美好的回憶。",
+      ],
+      imageAfter: true,
+    },
+    {
+      id: "fun-series16",
+      h2: "🌅 樂｜把每一個美好瞬間，收藏進心裡",
+      content: [
+        "夕陽下與愛人並肩而坐、公園裡家人吉他野餐的溫馨、室內投影電影的歡笑、海邊迎風起舞的自在、花園讀書的靜謐、面海作畫的詩意、彈著吉他微笑的愉悅——每一刻，都是最值得珍藏的幸福。",
         "✨幸福時光｜吃喝玩樂",
         "每一天，都值得留下最美好的回憶。",
       ],
