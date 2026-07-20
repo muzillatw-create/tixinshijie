@@ -121,15 +121,18 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={item} className="mb-8 w-full max-w-2xl mx-auto">
-              <div className="grid grid-cols-3 gap-2 items-center">
+              <div className="grid grid-cols-3 gap-2 items-start">
                 <Link href="/happiness" className="block">
                   <img src="/images/side-video1-thumb.jpg" alt="幸福時光" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                  <p className="text-center text-cyan-400 text-xs mt-1 animate-pulse">👆 點擊進入</p>
                 </Link>
-                <Link href="/purple-videos">
+                <Link href="/purple-videos" className="block">
                   <img src={bannerPurple} alt="貼片使用方式和說明" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                  <p className="text-center text-cyan-400 text-xs mt-1 animate-pulse">👆 點擊進入</p>
                 </Link>
                 <Link href="/order" className="block">
                   <img src="/images/side-video2-thumb.jpg" alt="立即訂購" className="w-full rounded-2xl cursor-pointer hover:opacity-90 transition-opacity" />
+                  <p className="text-center text-cyan-400 text-xs mt-1 animate-pulse">👆 點擊進入</p>
                 </Link>
               </div>
             </motion.div>
