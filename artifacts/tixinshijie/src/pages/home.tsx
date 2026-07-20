@@ -144,6 +144,7 @@ export default function Home() {
               <Link href="/videos">
                 <Button variant="outline" className="border-white/20 text-gray-300 hover:text-white cursor-pointer">查看全部影片</Button>
               </Link>
+              <p className="text-cyan-400 text-sm mt-2 animate-pulse">👆 點擊進入</p>
             </motion.div>
 
             <motion.div variants={item} className="flex justify-center mb-4">
